@@ -1,18 +1,13 @@
 System.config({
-  baseURL: "/",
+  baseURL: "/XinAo/",
   defaultJSExtensions: true,
   transpiler: "typescript",
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
-  },
-  bundles: {
-    "build.js": [
-      "index.js",
-      "npm:jquery@3.1.1.js",
-      "npm:jquery@3.1.1/dist/jquery.js"
-    ]
-  },
+
+  },  
+
 
   map: {
     "jquery": "npm:jquery@3.1.1",
