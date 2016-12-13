@@ -131,7 +131,7 @@ var watchExampleVM = new Vue({
           vm.answer = 'Questions usually contain a question mark. ;-)'
           return
         }
-         vm.answer = 'shit';
+         vm.answer = 'yes , this is a shit';
       } 
       
   }
