@@ -1,4 +1,7 @@
-import * as echarts from 'echarts';
+ /// <reference path="echarts.d.ts" />
+
+
+//import * as echarts from 'echarts';
 
 
 let myChart = echarts.init(document.getElementById('main'));
@@ -25,3 +28,7 @@ let myChart = echarts.init(document.getElementById('main'));
 
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
+
+ 
+
+ 
