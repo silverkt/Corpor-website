@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+      
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>  
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       
+ 
+<div id="enpie" style="width:100%;height:100%;">
+</div>
+
+       
+       
+ 
+
+
+
+ 
+
+
+
+
+<script>
+
+    option = {
+       // color: ['#eee','#999', '#fff', '#d48265'],
+        title: {
+                        text: '能源结构',
+                        subtext: 'data from XinAo',
+                        sublink: 'http://www.Xinao.cn',
+                        x:'center',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize:30,
+                        },
+                        padding:[
+                            20,
+                            20,
+                            20,
+                            20
+                        ]
+                },
+        
+        
+        legend: {
+                         
+                        
+                        orient: 'vertical',
+                        x: 'left',
+                        y: 'bottom',
+                        data:['天然气24%','传统化石能源31%','清洁能源35%','其他10%'],
+                        textStyle: {
+                            color: '#fff',
+                        },
+                        padding: 20,
+                        
+                },
+        backgroundColor: '#024272',
+        textStyle: {
+            color: 'rgba(255, 255, 255, 1)'
+        },
+//        tooltip: {
+//                    trigger: 'item',
+//                    formatter: "{a} <br/>{b}: {c} ({d}%)"
+//                },
+
+        series: [
+            {
+                
+                startAngle: '-90',
+                name:'访问来源',
+                type:'pie',
+                selectedMode: 'single',
+                center: ['40%','50%'],
+                radius: [0, '60%'],
+                
+
+                label: {
+                    normal: {
+                        position: 'outside'
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: true
+                    }
+                },
+                data:[
+                    {value:29, name:'天然气24%'},
+
+                    {value:31, name:'传统化石能源31%'},
+                    {value:35, name:'清洁能源35%'},
+
+                    {value:10, name:'其他10%'}
+//                     {
+//                         value:105, 
+//                          name:'__other',
+//                          itemStyle:{
+//                              normal:{
+//                                  color:'rgba(0,0,0,0)'                              
+//                              }
+//                          },
+//                          label:{
+//                                      normal:{
+//                                          show:false
+//                                      }
+//                                  }
+//                     }
+                    
+                ] 
+            },
+            
+            
+            
+            
+            
+            {
+                startAngle: '-90',
+                name:'访问来源2',
+                type:'pie',
+                selectedMode: 'single',
+                center: ['70%','30%'],
+                radius: [0, '30%'],
+
+                label: {
+                    normal: {
+                        position: 'outside'
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: true
+                    }
+                },
+                data:[
+                    {value:29, 
+                     
+                    name:'__other',
+                          itemStyle:{
+                              normal:{
+                                  color:'rgba(0,0,0,0)'                              
+                              }
+                          },
+                          label:{
+                                      normal:{
+                                          show:false
+                                      }
+                                  }
+                    },
+
+                    {value:31, 
+                    name:'__other',
+                          itemStyle:{
+                              normal:{
+                                  color:'rgba(0,0,0,0)'                              
+                              }
+                          },
+                          label:{
+                                      normal:{
+                                          show:false
+                                      }
+                                  }
+                    },
+                    {value:25, name:'可再生能源25%'},
+                     {value:10, name:'天然气10%'},
+
+                    {value:10, 
+                    name:'__other',
+                          itemStyle:{
+                              normal:{
+                                  color:'rgba(0,0,0,0)'                              
+                              }
+                          },
+                          label:{
+                                      normal:{
+                                          show:false
+                                      }
+                                  }
+                    },
+//                     {
+//                         value:105, 
+//                          name:'__other',
+//                          itemStyle:{
+//                              normal:{
+//                                  color:'rgba(0,0,0,0)'                              
+//                              }
+//                          },
+//                          label:{
+//                                      normal:{
+//                                          show:false
+//                                      }
+//                                  }
+//                     }
+                    
+                ] 
+            } ,
+            
+            
+            
+            
+            
+             {
+                startAngle: '-90',
+                name:'访问来源2',
+                type:'pie',
+                selectedMode: 'single',
+                center: ['70%','70%'],
+                radius: [0, '30%'],
+
+                label: {
+                    normal: {
+                        position: 'outside'
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: true
+                    }
+                },
+                data:[
+                    {value:29, 
+                     
+                    name:'__other',
+                          itemStyle:{
+                              normal:{
+                                  color:'rgba(0,0,0,0)'                              
+                              }
+                          },
+                          label:{
+                                      normal:{
+                                          show:false
+                                      }
+                                  }
+                    },
+
+                    {value:31, 
+                    name:'__other',
+                          itemStyle:{
+                              normal:{
+                                  color:'rgba(0,0,0,0)'                              
+                              }
+                          },
+                          label:{
+                                      normal:{
+                                          show:false
+                                      }
+                                  }
+                    },
+                    {value:12, name:'ee'},
+                    {value:13, name:'3e'},
+                     {value:10,
+                        name:'__other',
+                          itemStyle:{
+                              normal:{
+                                  color:'rgba(0,0,0,0)'                              
+                              }
+                          },
+                          label:{
+                                      normal:{
+                                          show:false
+                                      }
+                                  }
+                     },
+
+                    {value:10, 
+                    name:'__other',
+                          itemStyle:{
+                              normal:{
+                                  color:'rgba(0,0,0,0)'                              
+                              }
+                          },
+                          label:{
+                                      normal:{
+                                          show:false
+                                      }
+                                  }
+                    },
+//                     {
+//                         value:105, 
+//                          name:'__other',
+//                          itemStyle:{
+//                              normal:{
+//                                  color:'rgba(0,0,0,0)'                              
+//                              }
+//                          },
+//                          label:{
+//                                      normal:{
+//                                          show:false
+//                                      }
+//                                  }
+//                     }
+                    
+                ] 
+            } 
+            
+            
+        ]
+        
+        
+        
+        
+        
+};
+    
+    
+    var dom = document.getElementById("enpie");
+var myChart = echarts.init(dom);
+ myChart.setOption(option);
+</script>
+
+
+
+   
+   </body>
+</html>
