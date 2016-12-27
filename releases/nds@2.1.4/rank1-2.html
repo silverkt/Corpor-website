@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+           
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+ 
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+ 
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+ 
+       <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+   </head>
+   <body style="height: 100%; margin: 0">
+
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>  
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       
+<div id="rownavi" style="height:5%; margin:0; width:100%;background-color:#013c64; color:#fff;">
+   
+    
+                <div class="btn-group">
+                    <a type="button" class="btn btn-default" href="rank1-1.html">微网排名</a>
+                    <a type="button" class="btn btn-default" href="rank1-2.html">单站排名</a>
+                    <a type="button" class="btn btn-default" href="rank1-3.html">设备排名</a>
+                    <a type="button" class="btn btn-default" href="rank1-4.html">省级排名</a>
+                    <a type="button" class="btn btn-default" href="rank1-5.html">大区排名</a>
+            </div>
+</div>
+<div id="row1" style="height:50%; margin:0; width:100%;">
+    <div id="rank11" style="height:100%;width:33%;float:left;"></div>  
+    <div id="rank12" style="height:100%;width:33%;float:left;"></div>  
+    <div id="rank13" style="height:100%;width:34%;float:right;"></div>  
+</div>     
+<div id="row2" style="height:50%; margin:0; width:100%;"> 
+    <div id="rank21" style="height:100%;width:33%;float:left;"></div>  
+    <div id="rank22" style="height:100%;width:33%;float:left;"></div>  
+    <div id="rank23" style="height:100%;width:34%;float:right;"></div>       
+</div>
+       
+       
+<div id="row3" style="height:50%; margin:0; width:100%;"> 
+    <div id="rank31" style="height:100%;width:33%;float:left;"></div>  
+    <div id="rank32" style="height:100%;width:33%;float:left;"></div>  
+    <div id="rank33" style="height:100%;width:34%;float:right;"></div>     
+</div>       
+ 
+
+       
+ 
+
+
+
+
+
+ <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('rank11'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            backgroundColor: '#013c64',
+            textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+            },
+            title: {
+                text: '综合运行时间',
+                textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+                },
+            },
+            tooltip: {},
+//            legend: {
+//                data:['能源站个数']
+//            },
+            xAxis: {
+                data: ["新朝阳","中德","海宁国际航海","肇庆","黄花机场"],
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            yAxis: {
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            series: [{
+                name: '能源站个数',
+                type: 'bar',
+                data: [140,70,40,89,90],
+                itemStyle: {
+                    normal: {
+                        color: '#f1f07c'
+                    },
+                    emphasis: {
+                        color: '#cccb69'
+                    }
+                }
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+       </script>
+       
+       
+       
+       
+
+       
+       
+       
+       
+       
+       
+       
+
+
+ <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('rank12'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            backgroundColor: '#013c64',
+            textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+            },
+            title: {
+                text: '总输出能源',
+                textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+                },
+            },
+            tooltip: {},
+//            legend: {
+//                data:['能源站个数']
+//            },
+            xAxis: {
+                data: ["新朝阳","中德","海宁国际航海","肇庆","黄花机场"],
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            yAxis: {
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            series: [{
+                name: '总输出能源',
+                type: 'bar',
+                data: [140,70,40,89,90],
+                itemStyle: {
+                    normal: {
+                        color: '#f1f07c'
+                    },
+                    emphasis: {
+                        color: '#cccb69'
+                    }
+                }
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+       </script>
+       
+              
+   
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+
+ <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('rank13'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            backgroundColor: '#013c64',
+            textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+            },
+            title: {
+                text: '总能源净收益',
+                textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+                },
+            },
+            tooltip: {},
+//            legend: {
+//                data:['能源站个数']
+//            },
+            xAxis: {
+                data: ["新朝阳","中德","海宁国际航海","肇庆","黄花机场"],
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            yAxis: {
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            series: [{
+                name: '能源站个数',
+                type: 'bar',
+                data: [140,70,40,89,90],
+                itemStyle: {
+                    normal: {
+                        color: '#f1f07c'
+                    },
+                    emphasis: {
+                        color: '#cccb69'
+                    }
+                }
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+       </script>
+       
+    
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+
+ <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('rank21'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            backgroundColor: '#013c64',
+            textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+            },
+            title: {
+                text: '清洁能源利用率',
+                textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+                },
+            },
+            tooltip: {},
+//            legend: {
+//                data:['能源站个数']
+//            },
+            xAxis: {
+                data: ["新朝阳","中德","海宁国际航海","肇庆","黄花机场"],
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            yAxis: {
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            series: [{
+                name: '能源站个数',
+                type: 'bar',
+                data: [140,70,40,89,90],
+                itemStyle: {
+                    normal: {
+                        color: '#f1f07c'
+                    },
+                    emphasis: {
+                        color: '#cccb69'
+                    }
+                }
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+       </script>
+       
+       
+       
+       
+
+       
+       
+       
+       
+       
+       
+       
+
+
+ <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('rank22'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            backgroundColor: '#013c64',
+            textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+            },
+            title: {
+                text: '二氧化碳减排率',
+                textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+                },
+            },
+            tooltip: {},
+//            legend: {
+//                data:['能源站个数']
+//            },
+            xAxis: {
+                data: ["新朝阳","中德","海宁国际航海","肇庆","黄花机场"],
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            yAxis: {
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            series: [{
+                name: '能源站个数',
+                type: 'bar',
+                data: [140,70,40,89,90],
+                itemStyle: {
+                    normal: {
+                        color: '#f1f07c'
+                    },
+                    emphasis: {
+                        color: '#cccb69'
+                    }
+                }
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+       </script>
+       
+              
+   
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+
+ <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('rank23'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            backgroundColor: '#013c64',
+            textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+            },
+            title: {
+                text: '节能率',
+                textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+                },
+            },
+            tooltip: {},
+//            legend: {
+//                data:['能源站个数']
+//            },
+            xAxis: {
+                data: ["新朝阳","中德","海宁国际航海","肇庆","黄花机场"],
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            yAxis: {
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            series: [{
+                name: '能源站个数',
+                type: 'bar',
+                data: [140,70,40,89,90],
+                itemStyle: {
+                    normal: {
+                        color: '#f1f07c'
+                    },
+                    emphasis: {
+                        color: '#cccb69'
+                    }
+                }
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+       </script>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+
+ <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('rank31'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            backgroundColor: '#013c64',
+            textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+            },
+            title: {
+                text: '综合能源利用率',
+                textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+                },
+            },
+            tooltip: {},
+//            legend: {
+//                data:['能源站个数']
+//            },
+            xAxis: {
+                data: ["新朝阳","中德","海宁国际航海","肇庆","黄花机场"],
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            yAxis: {
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            series: [{
+                name: '能源站个数',
+                type: 'bar',
+                data: [140,70,40,89,90],
+                itemStyle: {
+                    normal: {
+                        color: '#f1f07c'
+                    },
+                    emphasis: {
+                        color: '#cccb69'
+                    }
+                }
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+       </script>
+       
+       
+       
+       
+
+       
+       
+       
+       
+       
+       
+       
+
+
+ <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('rank32'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            backgroundColor: '#013c64',
+            textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+            },
+            title: {
+                text: '发电量占机房用电量比例',
+                textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+                },
+            },
+            tooltip: {},
+//            legend: {
+//                data:['能源站个数']
+//            },
+            xAxis: {
+                data: ["新朝阳","中德","海宁国际航海","肇庆","黄花机场"],
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            yAxis: {
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            series: [{
+                name: '能源站个数',
+                type: 'bar',
+                data: [140,70,40,89,90],
+                itemStyle: {
+                    normal: {
+                        color: '#f1f07c'
+                    },
+                    emphasis: {
+                        color: '#cccb69'
+                    }
+                }
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+       </script>
+       
+              
+   
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+
+ <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('rank33'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            backgroundColor: '#013c64',
+            textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+            },
+            title: {
+                text: '投资回报年限',
+                textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+                },
+            },
+            tooltip: {},
+//            legend: {
+//                data:['能源站个数']
+//            },
+            xAxis: {
+                data: ["新朝阳","中德","海宁国际航海","肇庆","黄花机场"],
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            yAxis: {
+                axisLine: {
+                       lineStyle: {
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+
+                 }
+            },
+            series: [{
+                name: '能源站个数',
+                type: 'bar',
+                data: [140,70,40,89,90],
+                itemStyle: {
+                    normal: {
+                        color: '#f1f07c'
+                    },
+                    emphasis: {
+                        color: '#cccb69'
+                    }
+                }
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+       </script>
+       
+       
+       
+       
+
+ 
+   </body>
+</html>

@@ -3,8 +3,7 @@
    <head>
        <meta charset="utf-8">
    </head>
-   <body style="height: 100%; margin: 0;background-color:#013c64;">
-
+   <body style="height: 100%; margin: 0">
       
        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
@@ -59,7 +58,6 @@
         trigger: 'item',
         formatter: '{a} <br/>{b} : {c}'
     },
-    color:['#367fc7','#ff0000','#ffc68b'],
     legend: {
     	textStyle: {
         color: 'rgba(255, 255, 255, 1)'
@@ -72,7 +70,7 @@
         type: 'category',
         name: '年',
         splitLine: {show: false},
-             data: ['2011', '2012', '2013', '2014', '2015', '2016'],
+        data: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
         axisLine: {
     	       lineStyle: {
                 color: 'rgba(255, 255, 255, 1)'
@@ -98,21 +96,20 @@
     },
     
     series: [
-         {
+        {
             name: '冷',
             type: 'line',
-            data: [10,15,50,80,168,320]
-            
+            data: [1, 2, 5, 1, 81, 247, 741, 2223, 6669]
         },
         {
             name: '热',
             type: 'line',
-             data: [5,9,35,48,110,192]
+            data: [1, 2, 4, 8, 16, 32, 64, 128, 256]
         },
         {
             name: '电',
             type: 'line',
-            data: [4,7.2,25,38,75,153.6]
+             data: [2, 4, 8, 16, 32, 1, 28,256, 512]
         }
     ]
 };
@@ -148,7 +145,6 @@ var myChart = echarts.init(dom);
         trigger: 'item',
         formatter: '{a} <br/>{b} : {c}'
     },
-    color:['#367fc7','#ff0000','#ffc68b'],
     legend: {
     	textStyle: {
         color: 'rgba(255, 255, 255, 1)'
@@ -161,7 +157,7 @@ var myChart = echarts.init(dom);
         type: 'category',
         name: '年',
         splitLine: {show: false},
-             data: ['2011', '2012', '2013', '2014', '2015', '2016'],
+        data: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
         axisLine: {
     	       lineStyle: {
                 color: 'rgba(255, 255, 255, 1)'
@@ -187,21 +183,20 @@ var myChart = echarts.init(dom);
     },
     
     series: [
-         {
+        {
             name: '冷',
             type: 'line',
-            data: [10,15,50,80,168,320]
-            
+            data: [1, 2, 5, 1, 81, 247, 741, 2223, 6669]
         },
         {
             name: '热',
             type: 'line',
-             data: [5,9,35,48,110,192]
+            data: [1, 2, 4, 8, 16, 32, 64, 128, 256]
         },
         {
             name: '电',
             type: 'line',
-            data: [4,7.2,25,38,75,153.6]
+             data: [2, 4, 8, 16, 32, 1, 28,256, 512]
         }
     ]
 };
@@ -232,20 +227,19 @@ var myChart = echarts.init(dom);
         trigger: 'item',
         formatter: '{a} <br/>{b} : {c}'
     },
-    color:['#367fc7','#ff0000','#ffc68b','#ffff00'],
     legend: {
     	textStyle: {
         color: 'rgba(255, 255, 255, 1)'
     },
         left: 'left',
-        data: ['冷', '热','电','天然气']
+        data: ['冷', '热','电']
     },
     xAxis: {
     	   
         type: 'category',
         name: '年',
         splitLine: {show: false},
-             data: ['2011', '2012', '2013', '2014', '2015', '2016'],
+        data: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
         axisLine: {
     	       lineStyle: {
                 color: 'rgba(255, 255, 255, 1)'
@@ -271,26 +265,20 @@ var myChart = echarts.init(dom);
     },
     
     series: [
-         {
+        {
             name: '冷',
             type: 'line',
-            data: [10,15,50,80,168,320]
-            
+            data: [1, 2, 5, 1, 81, 247, 741, 2223, 6669]
         },
         {
             name: '热',
             type: 'line',
-             data: [5,9,35,48,110,192]
+            data: [1, 2, 4, 8, 16, 32, 64, 128, 256]
         },
         {
             name: '电',
             type: 'line',
-            data: [4,7.2,25,38,75,153.6]
-        },
-        {
-            name: '天然气',
-            type: 'line',
-            data: [15,22.5,75,120,252,480]
+            data: [2, 4, 8, 16, 32, 1, 28,256, 512]
         }
     ]
 };
@@ -321,20 +309,19 @@ var myChart = echarts.init(dom);
         trigger: 'item',
         formatter: '{a} <br/>{b} : {c}'
     },
-    color:['#367fc7','#ff0000','#ffc68b','#ffff00'],
     legend: {
     	textStyle: {
         color: 'rgba(255, 255, 255, 1)'
     },
         left: 'left',
-        data: ['冷', '热','电','天然气']
+        data: ['冷', '热','电']
     },
     xAxis: {
     	   
         type: 'category',
         name: '年',
         splitLine: {show: false},
-             data: ['2011', '2012', '2013', '2014', '2015', '2016'],
+        data: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
         axisLine: {
     	       lineStyle: {
                 color: 'rgba(255, 255, 255, 1)'
@@ -360,26 +347,20 @@ var myChart = echarts.init(dom);
     },
     
     series: [
-         {
+        {
             name: '冷',
             type: 'line',
-            data: [10,15,50,80,168,320]
-            
+            data: [1, 2, 5, 1, 81, 247, 741, 2223, 6669]
         },
         {
             name: '热',
             type: 'line',
-             data: [5,9,35,48,110,192]
+            data: [1, 2, 4, 8, 16, 32, 64, 128, 256]
         },
         {
             name: '电',
             type: 'line',
-            data: [4,7.2,25,38,75,153.6]
-        },
-        {
-            name: '天然气',
-            type: 'line',
-            data: [15,22.5,75,120,252,480]
+            data: [0, 4, 8, 6, 32, 64,128, 256,512]
         }
     ]
 };
@@ -415,7 +396,7 @@ var myChart = echarts.init(dom);
         type: 'category',
         name: '年',
         splitLine: {show: false},
-             data: ['2011', '2012', '2013', '2014', '2015', '2016'],
+        data: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
         axisLine: {
     	       lineStyle: {
                 color: 'rgba(255, 255, 255, 1)'
@@ -444,7 +425,7 @@ var myChart = echarts.init(dom);
         {
             name: '冷',
             type: 'line',
-            data: [10,20,40,80,160,320]
+            data: [1, 2, 5, 1, 81, 247, 741, 2223, 6669]
         }
       
     ]
@@ -487,7 +468,7 @@ var myChart = echarts.init(dom);
         type: 'category',
         name: '月',
         splitLine: {show: false},
-             data: ['2011', '2012', '2013', '2014', '2015', '2016'],
+        data: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
         axisLine: {
     	       lineStyle: {
                 color: 'rgba(255, 255, 255, 1)'
@@ -513,21 +494,20 @@ var myChart = echarts.init(dom);
     },
     
     series: [
-         {
+        {
             name: '冷',
             type: 'line',
-            data: [10,15,50,80,168,320]
-            
+            data: [1, 2, 5, 1, 81, 247, 741, 2223, 6669]
         },
         {
             name: '热',
             type: 'line',
-             data: [5,9,35,48,110,192]
+            data: [1, 2, 4, 8, 16, 32, 64, 128, 256]
         },
         {
             name: '电',
             type: 'line',
-            data: [4,7.2,25,38,75,153.6]
+            data: [2, 4, 8, 16, 32, 1, 28,256, 512]
         }
     ]
 };
