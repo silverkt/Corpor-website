@@ -12,10 +12,10 @@
        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
        
  
-<div id="leftone" style="height:100%; margin:0; width:33%; float:left;">
-      <div id="pie" style="width: 640px;height:50%;"></div> 
+<div id="leftone" style="height:100%; margin:0; width:35%; float:left;">
+      <div id="pie" style="width: 100%;height:50%;"></div> 
         <div id="zhu" style="width:100%;height:50%;margin:0;">
-                  <div style="width:100%;height:10%; text-align:center;  background-color:#013c64; color:#fff;">排名情况</div>
+                  <div style="width:100%;height:10%; text-align:center;  background-color:#013c64; color:#a9ccaf; font-size:30px; font-weight:bold; font-family:'sans-serif'; line-height:60px;">排名情况</div>
                  <div style="width:100%;height:90%;">
                     <div id="main" style="width: 33%;height:100%;float:left;"></div> 
                     <div id="main1" style="width: 33%;height:100%;float:left;"></div>  
@@ -26,15 +26,14 @@
        
        
 </div>     
-<div id="centerone" style="height:100%; margin:0; width:33%; float:left;"> 
-    <div id="container-revise" style="height:80%; width:100%;"><img src="img/area.jpg" style="width:100%;height:100%;"></div>   
-    <div style="height:20%;width:100%;"><img style="margin:0;padding:0px; width:100%; height:100%;" src="img/u3_01.gif"></div>
+<div id="centerone" style="height:100%; margin:0; width:34%; float:left;"> 
+    <div id="container-revise" style="height:70%; width:100%; background-color:#013b61;text-align:center;"><img src="img/area.png" style="width:90%;"></div>   
+    <div style="height:30%;width:100%;position:position:relative;background-color:#013b61;"><img style="margin:0;padding:0px; position:absolute; bottom:0px;" valign="bottom" src="img/area-bottom.png"></div>
    
 </div>
-<div id="rightone" style="height:100%; margin:0; width:34%; float:left;">
+<div id="rightone" style="height:100%; margin:0; width:31%; float:left;">
      <div style="width:100%;height:70%;">
-         <div id="effect" style="width:100%;height:50%;"><img style="margin:0;padding:0px;width:100%;height:100%;" src="img/u3_03.jpg"></div> 
-         <div id="zhe1" style="width:100%;height:50%;"><img  style="margin:0;padding:0px;width:100%;height:100%;" src="img/u3_04.gif"></div>
+         <img  style="margin:0;padding:0px;width:100%;" src="img/ensys.jpeg">
     </div>
     
        <div id="zhe" style="width: 100%;height:30%;"></div>    
@@ -67,8 +66,15 @@
 //            legend: {
 //                data:['能源站个数']
 //            },
+                    grid: {
+        left: '3%',
+        right: '3%',
+        bottom: '3%',
+        
+        containLabel: true
+    },
             xAxis: {
-                data: ["浙江","江苏","山东"],
+                data: ["承德","保定","石家庄"],
                 axisLine: {
                        lineStyle: {
                         color: 'rgba(255, 255, 255, 1)'
@@ -126,8 +132,15 @@
 //            legend: {
 //                data:['销量']
 //            },
+                    grid: {
+        left: '3%',
+        right: '3%',
+        bottom: '3%',
+        
+        containLabel: true
+    },
             xAxis: {
-                data: ["浙江","黑龙江","山东"],
+                data: ["保定","承德","石家庄"],
                 axisLine: {
                        lineStyle: {
                         color: 'rgba(255, 255, 255, 1)'
@@ -183,6 +196,13 @@
 //            legend: {
 //                data:['销量']
 //            },
+                    grid: {
+        left: '3%',
+        right: '13%',
+        bottom: '3%',
+        
+        containLabel: true
+    },
             xAxis: {
                 data: ["黄花机场","新朝阳","亭湖医院"],
                 axisLine: {
@@ -232,14 +252,17 @@
     
     <script type="text/javascript">
     	option = {
+             color:["#5b9dd9","#59a565","#f6a144","#df6967","#dc90f2","#626063"],  
     backgroundColor: '#024272',
      title: {
         text: '能源结构',
 //        subtext: 'data from XinAo',
 //        sublink: 'http://www.Xinao.cn',
         x:'center',
+         padding:30,
         textStyle: {
-            color: '#fff'
+            color: '#a9ccaf',
+            fontSize: 30
         }
     },
     textStyle: {
@@ -250,6 +273,7 @@
             name: '能源结构',
             type: 'pie',
             radius: '55%',
+            startAngle:-40,
             data:[
                 {value:29, name:'天然气29%, 290kwh'},
                 {value:12.5, name:'地热12.5%, 125kwh'},
@@ -283,25 +307,25 @@ var myChart = echarts.init(dom);
    	textStyle: {
         color: 'rgba(255, 255, 255, 1)'
     },
-    title: {
-    	textStyle: {
-        color: 'rgba(255, 255, 255, 1)'
-    },
-        text: '产能趋势图',
-        left: 'center'
-    },
+//    title: {
+//    	textStyle: {
+//        color: 'rgba(255, 255, 255, 1)'
+//    },
+//        text: '产能趋势图',
+//        left: 'center'
+//    },
     tooltip: {
 
         trigger: 'item',
         formatter: '{a} <br/>{b} : {c}'
     },
-    color:['#367fc7','#ff0000','#ffc68b'],
+    color:['#367fc7','#ff0000','#ffc68b','#ffff00'],
     legend: {
     	textStyle: {
         color: 'rgba(255, 255, 255, 1)'
     },
         left: 'left',
-        data: ['冷', '热','电']
+        data: ['冷', '热','电','天然气']
     },
     xAxis: {
     	   
@@ -349,6 +373,11 @@ var myChart = echarts.init(dom);
             name: '电',
             type: 'line',
             data: [4,7.2,25,38,75,153.6]
+        },
+        {
+            name: '天然气',
+            type: 'line',
+            data: [15,22.5,75,120,252,480]
         }
     ]
 };
@@ -366,6 +395,10 @@ var myChart = echarts.init(dom);
          $("#effect").click(function(){
              window.location.href="./effect.html"; 
         });
+        
+        $("#container-revise").click(function(){
+            window.location.href="./about.html";
+        })
     </script>
 
 

@@ -13,7 +13,7 @@
        
  
 <div id="leftone" style="height:100%; margin:0; width:33%; float:left;">
-       <div style="width:100%;height:70%;margin:0;padding:0px;"><div  style="width:100%;height:30%"><img style="width:100%;height:100%" src="img/u3_01.gif"></div><div id="zhe1" style="width:100%;height:70%;"><img  style="width:100%;height:100%;" src="img/u3_04.gif"></div></div>
+       <div style="width:100%;height:70%;margin:0;padding:0px;"><div  style="width:100%;height:30%" id="netintro"><img style="width:100%;height:100%" src="img/u3_01.gif"></div><div id="zhe1" style="width:100%;height:70%;"><img  style="width:100%;height:100%;" src="img/u3_04.gif"></div></div>
        <div id="zhe" style="width: 640px;height:30%;"></div>   
 </div>     
 <div id="centerone" style="height:100%; margin:0; width:33%; float:left;"> 
@@ -23,7 +23,7 @@
 <div id="rightone" style="height:100%; margin:0; width:34%; float:left;">
      <div style="width:100%;height:50%;margin:0;padding:0px;"><div id="effect" style="width:100%;height:50%;"><img style="width:100%;height:100%;"  src="img/u3_03.jpg"></div><div style="width:100%;height:50%;"><img style="width:100%;height:100%;" src="img/u3_05.gif"></div></div>
      <div id="zhu" style="width:100%;height:50%;margin:0;">
-         <div style="width:100%;height:10%; text-align:center;  background-color:#013c64; color:#fff;">排名情况</div>
+         <div style="width:100%;height:10%; text-align:center;  background-color:#013c64; color:#a9ccaf; font-size:30px;font-weight:bold;font-family:'sans-serif';line-height:60px;">排名情况</div>
          <div style="width:100%;height:90%;">
             <div id="main" style="width: 33%;height:100%;float:left;"></div> 
             <div id="main1" style="width: 33%;height:100%;float:left;"></div>  
@@ -49,6 +49,8 @@
                 color: 'rgba(255, 255, 255, 1)'
             },
             title: {
+                 
+                padding:[5,0,0,30],
                 text: '能源站数量(个)',
                 textStyle: {
                 color: 'rgba(255, 255, 255, 1)'
@@ -58,6 +60,13 @@
 //            legend: {
 //                data:['能源站个数']
 //            },
+            grid: {
+        left: '13%',
+        right: '3%',
+        bottom: '3%',
+        
+        containLabel: true
+    },
             xAxis: {
                 data: ["浙江","江苏","山东"],
                 axisLine: {
@@ -112,6 +121,7 @@
                 color: 'rgba(255, 255, 255, 1)'
             },
             title: {
+                padding:[5,0,0,30],
                 text: '二氧化碳减排率(%)',
                 textStyle: {
                 color: 'rgba(255, 255, 255, 1)'
@@ -121,6 +131,13 @@
 //            legend: {
 //                data:['销量']
 //            },
+            grid: {
+        left: '3%',
+        right: '3%',
+        bottom: '3%',
+        
+        containLabel: true
+    },
             xAxis: {
                 data: ["浙江","黑龙江","山东"],
                 axisLine: {
@@ -173,6 +190,7 @@
                 color: 'rgba(255, 255, 255, 1)'
             },
             title: {
+                padding:[5,0,0,30],
                 text: '投资回报年限(年)',
                 textStyle: {
                 color: 'rgba(255, 255, 255, 1)'
@@ -182,6 +200,13 @@
 //            legend: {
 //                data:['销量']
 //            },
+            grid: {
+        left: '3%',
+        right: '3%',
+        bottom: '3%',
+        
+        containLabel: true
+    },
             xAxis: {
                 data: ["黄花机场","新朝阳","亭湖医院"],
                 axisLine: {
@@ -243,6 +268,10 @@
         
          $("#zhe1").click(function(){
              window.location.href="./energy-analysis.html"; 
+        });
+        
+        $("#netintro").click(function(){
+             window.location.href="./netintro.html"; 
         })
  
     </script>
@@ -252,14 +281,17 @@
     
     <script type="text/javascript">
     	option = {
+    color:["#5b9dd9","#59a565","#f6a144","#df6967","#dc90f2","#626063"],        
     backgroundColor: '#024272',
      title: {
+        padding:20,
         text: '能源结构',
 //        subtext: 'data from XinAo',
 //        sublink: 'http://www.Xinao.cn',
         x:'center',
         textStyle: {
-            color: '#fff'
+            color: '#a9ccaf',
+            fontSize:30
         }
     },
     textStyle: {
@@ -267,9 +299,11 @@
     },
     series : [
         {
+             
             name: '能源结构',
             type: 'pie',
             radius: '55%',
+            startAngle:-40,
             data:[
                 {value:29, name:'天然气29%, 290kwh'},
                 {value:12.5, name:'地热12.5%, 125kwh'},
@@ -306,8 +340,10 @@ var myChart = echarts.init(dom);
     },
     title: {
     	textStyle: {
-        color: 'rgba(255, 255, 255, 1)'
+        color: 'rgba(255, 255, 255, 1)',
+        fontSize:30
     },
+        padding:20,
         text: '产能趋势图',
         left: 'center'
     },
@@ -321,6 +357,7 @@ var myChart = echarts.init(dom);
     	textStyle: {
         color: 'rgba(255, 255, 255, 1)'
     },
+         padding:20,
         left: 'left',
         data: ['冷', '热','电']
     },
@@ -339,8 +376,9 @@ var myChart = echarts.init(dom);
     },
     grid: {
         left: '3%',
-        right: '4%',
+        right: '6%',
         bottom: '3%',
+        top: '26%',
         containLabel: true
     },
     yAxis: {
@@ -601,6 +639,7 @@ var convertData = function (data) {
 };
 
 option = {
+    color:["#a85255","#70a658","#199f96"],    
     backgroundColor: '#013c64',
     //backgroundColor: '#404a59',
     title: {
@@ -609,8 +648,10 @@ option = {
 //        sublink: 'http://www.Xinao.cn',
         x:'center',
         textStyle: {
-            color: '#fff'
-        }
+            color: '#72b1e6',
+            fontSize:30
+        },
+        padding:20
     },
     tooltip: {
         trigger: 'item',
@@ -619,9 +660,10 @@ option = {
         }
     },
     legend: {
+        padding:20,
         orient: 'vertical',
         y: 'bottom',
-        x:'right',
+        x:'left',
         data:['已建','在建','待建'],
         textStyle: {
             color: '#fff'
