@@ -1,40 +1,54 @@
+<head>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <style>
 .ss {
   color:blue;
 }
 </style>
- 
+</head>
 
 <div id="app">
-
-<conp1></conp1>
-
-
+<conp1 v-bind:message=message v-on:childevent="fatherevent"></conp1>
 thsi is just git
 
+{{message}}
 </div>
-
-
-
-
 <script>
-
  
 
-Vue.component('conp1', {
-  template: '<div class="ss">shit</div>'
-}) 
+
+var comp = {
+  data:function(){
+    return{
+      ss:'ss'
+    }
+  },
+  props:['message'],
+  template:'<div><div v-bind:class="ss"> shit {{message}}</div><button v-on:click="childevent">create shit</button></div>',
+  methods:{
+    childevent:function(){
+       this.$emit('childevent');
+    }
+  }
+}
+
 
 
 var app = new Vue({
-  el: '#app',
-  data: {
-
+  el:'#app',
+  data:{
+    message:'ass'
   },
-  method: {
-
+   components:{
+     
+     conp1:comp
+     },
+  methods:{
+    fatherevent:function(){
+      this.message = 'child changed you shit!'
+    }
   }
+
 })
 
 </script>
