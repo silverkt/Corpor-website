@@ -15,7 +15,7 @@ thsi is just git
 </div>
 <script>
  
-
+ 
 
 var comp = {
   data:function(){
@@ -27,11 +27,11 @@ var comp = {
   template:'<div><div v-bind:class="ss"> shit {{message}}</div><button v-on:click="childevent">create shit</button></div>',
   methods:{
     childevent:function(){
-       this.$emit('childevent');
+       this.$emit('childevent','hi');
     }
   }
 }
-
+   
 
 
 var app = new Vue({
@@ -45,10 +45,17 @@ var app = new Vue({
      },
   methods:{
     fatherevent:function(){
+     
       this.message = 'child changed you shit!'
     }
   }
 
 })
+
+
+
+app.$on('childevent',function(msg){
+        console.log(msg);
+      })
 
 </script>
