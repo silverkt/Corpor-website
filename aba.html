@@ -14,13 +14,15 @@ thsi is just git
 {{message}}
 </div>
 <script>
+
+ 
  
  
 
 var comp = {
   data:function(){
     return{
-      ss:'ss'
+      ss:'sssss'
     }
   },
   props:['message'],
@@ -44,18 +46,12 @@ var app = new Vue({
      conp1:comp
      },
   methods:{
-    fatherevent:function(){
-     
-      this.message = 'child changed you shit!'
+    fatherevent:function(msg){
+      console.log(msg);
+      this.message = 'child changed you shit!';
     }
   }
 
 })
-
-
-
-app.$on('childevent',function(msg){
-        console.log(msg);
-      })
 
 </script>
