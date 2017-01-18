@@ -1,0 +1,285 @@
+﻿body {
+  margin:0px;
+  background-image:none;
+  position:static;
+  left:auto;
+  width:1900px;
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+#base {
+  position:absolute;
+  z-index:0;
+}
+#u1 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1900px;
+  height:950px;
+  font-size:20px;
+}
+#u1_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1900px;
+  height:950px;
+}
+#u2 {
+  position:absolute;
+  left:2px;
+  top:467px;
+  width:1896px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u3 {
+  position:absolute;
+  left:50px;
+  top:50px;
+  width:1390px;
+  height:850px;
+}
+#u3_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1390px;
+  height:850px;
+}
+#u4 {
+  position:absolute;
+  left:2px;
+  top:417px;
+  width:1386px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u5 {
+  position:absolute;
+  left:260px;
+  top:480px;
+  width:250px;
+  height:120px;
+  font-family:'华文楷体 Bold', '华文楷体';
+  font-weight:700;
+  font-style:normal;
+  font-size:36px;
+  color:#FFFFFF;
+  text-align:left;
+}
+#u5_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:250px;
+  height:120px;
+}
+#u6 {
+  position:absolute;
+  left:2px;
+  top:36px;
+  width:246px;
+  word-wrap:break-word;
+}
+#u7 {
+  position:absolute;
+  left:972px;
+  top:60px;
+  width:145px;
+  height:60px;
+}
+#u7_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:145px;
+  height:60px;
+}
+#u8 {
+  position:absolute;
+  left:2px;
+  top:22px;
+  width:141px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u9 {
+  position:absolute;
+  left:500px;
+  top:60px;
+  width:490px;
+  height:80px;
+  font-family:'华文楷体 Bold', '华文楷体';
+  font-weight:700;
+  font-style:normal;
+  font-size:60px;
+  color:#FFFFFF;
+}
+#u9_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:490px;
+  height:80px;
+}
+#u10 {
+  position:absolute;
+  left:2px;
+  top:0px;
+  width:486px;
+  word-wrap:break-word;
+}
+#u11 {
+  position:absolute;
+  left:1440px;
+  top:580px;
+  width:410px;
+  height:320px;
+  font-family:'华文楷体 Bold', '华文楷体';
+  font-style:normal;
+  color:#FFFFFF;
+}
+#u11_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:410px;
+  height:320px;
+}
+#u12 {
+  position:absolute;
+  left:2px;
+  top:0px;
+  width:406px;
+  word-wrap:break-word;
+}
+#u13 {
+  position:absolute;
+  left:370px;
+  top:740px;
+  width:250px;
+  height:120px;
+  font-family:'华文楷体 Bold', '华文楷体';
+  font-weight:700;
+  font-style:normal;
+  font-size:36px;
+  color:#FFFFFF;
+}
+#u13_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:250px;
+  height:120px;
+}
+#u14 {
+  position:absolute;
+  left:2px;
+  top:13px;
+  width:246px;
+  word-wrap:break-word;
+}
+#u15 {
+  position:absolute;
+  left:950px;
+  top:480px;
+  width:250px;
+  height:120px;
+  font-family:'华文楷体 Bold', '华文楷体';
+  font-weight:700;
+  font-style:normal;
+  font-size:36px;
+  color:#FFFFFF;
+}
+#u15_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:250px;
+  height:120px;
+}
+#u16 {
+  position:absolute;
+  left:2px;
+  top:13px;
+  width:246px;
+  word-wrap:break-word;
+}
+#u17 {
+  position:absolute;
+  left:835px;
+  top:740px;
+  width:250px;
+  height:120px;
+  font-family:'华文楷体 Bold', '华文楷体';
+  font-weight:700;
+  font-style:normal;
+  font-size:36px;
+  color:#FFFFFF;
+}
+#u17_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:250px;
+  height:120px;
+}
+#u18 {
+  position:absolute;
+  left:2px;
+  top:13px;
+  width:246px;
+  word-wrap:break-word;
+}
+#u19 {
+  position:absolute;
+  left:595px;
+  top:280px;
+  width:250px;
+  height:120px;
+  font-family:'华文楷体 Bold', '华文楷体';
+  font-weight:700;
+  font-style:normal;
+  font-size:36px;
+  color:#FFFFFF;
+  text-align:left;
+}
+#u19_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:250px;
+  height:120px;
+}
+#u20 {
+  position:absolute;
+  left:2px;
+  top:36px;
+  width:246px;
+  word-wrap:break-word;
+}
+#u21 {
+  position:absolute;
+  left:1440px;
+  top:50px;
+  width:410px;
+  height:530px;
+}
+#u21_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:410px;
+  height:530px;
+}
+#u22 {
+  position:absolute;
+  left:2px;
+  top:257px;
+  width:406px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
