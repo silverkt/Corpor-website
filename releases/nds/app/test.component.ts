@@ -23,7 +23,7 @@ export class TestComponent{
     }
 
     test():void {
-        this.http.get('http://localhost:3002/app/test.json')
+        this.http.get('http://localhost:3000/app/test.json')
         .toPromise().then((response) => {
             console.log(response.json());
              console.log(response.json().code_search_url);
