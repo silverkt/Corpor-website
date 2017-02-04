@@ -9,8 +9,15 @@ import 'rxjs/add/operator/toPromise';
 
 
 @Component({
-    selector: 'map',
-    template: '',
+    selector: 'main-board',
+    template: `
+     
+<div class="container-fluid">
+     eeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+</div>
+
+    
+    `,
 })
 
  

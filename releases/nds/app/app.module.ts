@@ -5,6 +5,7 @@ import { HttpModule }    from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { MainboardComponent } from './mainboard.component';
+import { Mainboardlv1Component } from './mainboard.lv1.component';
 import { EnergyvideoComponent } from './energy.video.component';
 import { EnergyanalysisComponent } from './energy.analysis.component';
 import { EnergytrendComponent } from './energy.trend.component';
@@ -21,6 +22,7 @@ import { TestComponent } from './test.component';
                 ],
   declarations: [ 
                       MainboardComponent, 
+                      Mainboardlv1Component,
                       TestComponent, 
                       EnergyvideoComponent, 
                       EnergyanalysisComponent, 
