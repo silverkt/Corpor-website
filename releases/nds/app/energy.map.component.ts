@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { geoCoordMap } from './energy.map.component.geodata';
 import { mapOption } from './energy.map.component.option';
 
+declare var echarts: any;
+
 @Component({
     moduleId: module.id,
     selector: 'energy-map',
@@ -27,9 +29,10 @@ import { mapOption } from './energy.map.component.option';
 })
 export class EnergymapComponent {
     title: string = "全国3D轮廓图";
-    option: Object = {};
-    geomap: Object = {};
-    data: Object = {};
+    option: any = {};
+    geomap: any = {};
+    data: any = {};
+    
     constructor() {
         // 指定图表的配置项和数据
         //配置信息开始
@@ -39,7 +42,8 @@ export class EnergymapComponent {
         this.option.series[0].data = this.convertData(this.data.accomplish);
         this.option.series[1].data = this.convertData(this.data.ongoing);
         this.option.series[2].data = this.convertData(this.data.onplan);
-        console.log(this.option.series[0].data); 
+        //console.log(this.option);
+        //console.log(this.option.series[0].data); 
          //配置信息结束
     }
 
@@ -55,8 +59,8 @@ export class EnergymapComponent {
         });          
     }
 
-    convertData(data: Array<Object>): Array<Object> {
-        var res: Array<Object> = [];
+    convertData(data: Array<any>): Array<any> {
+        var res: Array<any> = [];
         for (var i = 0; i < data.length; i++) {
             var geoCoord = this.geomap[data[i].name];
             if (geoCoord) {
@@ -69,7 +73,7 @@ export class EnergymapComponent {
         return res;
     }
 
-    getServiceData(): Object {
+    getServiceData(): any {
         return {
                     accomplish: [
                                     {name: "莱芜", value: 148},
