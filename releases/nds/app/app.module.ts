@@ -11,6 +11,8 @@ import { EnergyanalysisComponent } from './energy.analysis.component';
 import { EnergytrendComponent } from './energy.trend.component';
 import { EnergymapComponent } from './energy.map.component';
 
+import { Mainboardlv2Component } from './mainboard.lv2.component';
+
 import { TestComponent } from './test.component';
 
  
@@ -23,6 +25,7 @@ import { TestComponent } from './test.component';
   declarations: [ 
                       MainboardComponent, 
                       Mainboardlv1Component,
+                      Mainboardlv2Component,
                       TestComponent, 
                       EnergyvideoComponent, 
                       EnergyanalysisComponent, 

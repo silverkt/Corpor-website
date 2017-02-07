@@ -3,6 +3,7 @@ import { NgModule }      from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { Mainboardlv1Component } from './mainboard.lv1.component';
+import { Mainboardlv2Component } from './mainboard.lv2.component';
 import { TestComponent } from './test.component';
 
 
@@ -12,6 +13,11 @@ const routes: Routes = [
                                 component: Mainboardlv1Component,
                             },
                             
+                            {
+                                path: 'prov/:id',
+                                component: Mainboardlv2Component,                                                    
+                            },
+
                             {
                                 path: 'heroes/:id',
                                 component: TestComponent,                                                    
