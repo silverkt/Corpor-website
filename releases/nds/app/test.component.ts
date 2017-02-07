@@ -1,6 +1,8 @@
 import { Component }               from '@angular/core';
+import { ActivatedRoute, Params }   from '@angular/router';
 import { Injectable }              from '@angular/core';
 import { Http, Response } from '@angular/http';
+import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 
 
@@ -23,10 +25,15 @@ import 'rxjs/add/operator/toPromise';
  
 export class TestComponent{    
 
-    constructor(private http: Http){ }
+    constructor(private http: Http, private route: ActivatedRoute){ }
 
     ngOnInit(){
-        this.test();
+    //    const id = this.route.params;
+    //    console.log(id);
+        //console.log(this.route.params.id);
+        //this.test();
+
+        this.route.params.subscribe((v:any) => console.log(v.id));
     }
 
     test():void {

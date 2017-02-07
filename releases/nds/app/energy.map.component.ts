@@ -55,7 +55,7 @@ export class EnergymapComponent {
         myChart.setOption(this.option);
         myChart.on('click', function (params: any) {
             console.log(params.name);
-            window.location.href="./heroes";         
+            window.location.href="./heroes/"+params.name;         
         });          
     }
 

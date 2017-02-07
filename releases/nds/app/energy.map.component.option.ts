@@ -21,7 +21,10 @@ export const mapOption = {
         map: 'china',
         label: {
             emphasis: {
-                show: false
+                show: true,
+                textStyle: {
+                    color: '#ffffff',
+                }
             }
         },
         itemStyle: {
@@ -40,7 +43,8 @@ export const mapOption = {
             type: 'scatter',
             coordinateSystem: 'geo',
             data:'',
-            symbolSize: 10,
+            symbolSize: 8,
+            silent: true,
             label: {
                 normal: {
                     show: false
@@ -62,7 +66,8 @@ export const mapOption = {
             type: 'scatter',
             coordinateSystem: 'geo',
             data:'',
-            symbolSize: 10,
+            symbolSize: 8,
+            silent: true,
             label: {
                 normal: {
                     show: false
@@ -83,7 +88,8 @@ export const mapOption = {
             type: 'scatter',
             coordinateSystem: 'geo',
             data:'',
-            symbolSize: 10,
+            symbolSize: 8,
+            silent: true,
             label: {
                 normal: {
                     show: false
