@@ -12,6 +12,7 @@ import { EnergytrendComponent } from './energy.trend.component';
 import { EnergymapComponent } from './energy.map.component';
 
 import { Mainboardlv2Component } from './mainboard.lv2.component';
+import { Energymaplv2Component } from './energy.map.lv2.component';
 
 import { TestComponent } from './test.component';
 
@@ -30,7 +31,8 @@ import { TestComponent } from './test.component';
                       EnergyvideoComponent, 
                       EnergyanalysisComponent, 
                       EnergytrendComponent, 
-                      EnergymapComponent
+                      EnergymapComponent,
+                      Energymaplv2Component
                  ],
   bootstrap:    [ MainboardComponent ],
   providers: [ ],  

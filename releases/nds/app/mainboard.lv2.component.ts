@@ -15,7 +15,7 @@ import { ActivatedRoute, Params }   from '@angular/router';
                     <energy-trend></energy-trend>
               </div></div>
               <div class="col-md-4"><div class="row mainCol">
-                    <energy-map></energy-map>
+                    <energy-map-prov [prov]="test"></energy-map-prov>
                     <div  id="energy-structure"></div>                  
               </div></div>
               <div class="col-md-4" style="background-color: black; "><div class="row mainCol">
