@@ -5,7 +5,6 @@ import 'rxjs/add/operator/toPromise';
 import { geoCoordMap } from './energy.map.component.geodata';
 import { mapOption } from './energy.map.component.option';
 declare var echarts: any;
-declare var $: any;
 
 @Component({
     moduleId: module.id,
@@ -31,7 +30,7 @@ declare var $: any;
 })
 export class Energymaplv2Component {
     @Input()
-    prov: string;
+    prov: any;
     
     title: string;
     option: any = {};
@@ -43,58 +42,31 @@ export class Energymaplv2Component {
     constructor(private http: Http ) {
         // 指定图表的配置项和数据
         //配置信息开始
-        this.geomap = geoCoordMap;
+        this.geomap = geoCoordMap; //获取全国地理城市坐标
         this.option = mapOption;
-        this.data = this.getServiceData();       
+        this.data = this.getServiceData(this.prov);   //获取建站城市    
         this.option.series[0].data = this.convertData(this.data.accomplish);
         this.option.series[1].data = this.convertData(this.data.ongoing);
         this.option.series[2].data = this.convertData(this.data.onplan);
-        //console.log(this.option);
-        //console.log(this.option.series[0].data); 
          //配置信息结束
     }
 
     ngOnInit(): void {
         // 基于准备好的dom，初始化echarts实例
-        this.title = this.prov;
-        //var myChart = echarts.init(document.getElementById('energy-map'));
+        this.title = this.prov.name;
+        var myChart = echarts.init(document.getElementById('energy-map'));
         //console.log(this.option);
-        // 使用刚指定的配置项和数据显示图表。
-
-
-
-//-------
-        this.http.get('map/json/hebei.json')
-        .toPromise().then((response) => {
-              this.provjson = response.json();
-              console.log(this.provjson);
-            });
-            // 利用angular本身的http+ promise get获取 json
-
-            
-
-
-
-
-        $.get('map/json/hebei.json', function (chinaJson: any) {
-            console.log("/n");
-            console.log(chinaJson);
-            echarts.registerMap('hebei', chinaJson);
-            var myChart = echarts.init(document.getElementById('energy-map'));
-            myChart.setOption({
-                series: [{
-                    type: 'map',
-                    map: 'hebei'
-                }]
-            });
-        });
-        //利用 jquery 的.get 获取json
-//---------------------
-
-
-
-
-
+        // 使用默认的配置项和数据显示图表。
+        this.option.legend.show = false; //暂且关闭图例现实
+        var mapjsonfile = 'map/json/'+this.prov.pinyin+'.json';
+         this.http.get(mapjsonfile)
+            .toPromise().then((response) => {
+                                                this.provjson = response.json();
+                                                echarts.registerMap(this.prov.pinyin, this.provjson);
+                                                this.option.geo.map = this.prov.pinyin;
+                                                //console.log(this.option);
+                                                myChart.setOption(this.option);    
+                                            });
     //     myChart.setOption(this.option);
     //     myChart.on('click', function (params: any) {
     //         console.log(params.name);
@@ -117,49 +89,50 @@ export class Energymaplv2Component {
         return res;
     }
 
-    getServiceData(): any {
+    getServiceData(prov: any): any {
+        //prov是一个省的对象 一般格式应为 { name: "河北", pinyin: "hebei", id: 121 } 通过此对象向后端获取对应返回数据
         return {
                     accomplish: [
-                                    {name: "莱芜", value: 148},
-                                    {name: "常德", value: 152},
-                                    {name: "保定", value: 153},
-                                    {name: "湘潭", value: 154},
-                                    {name: "金华", value: 157},
-                                    {name: "岳阳", value: 169},
-                                    {name: "长沙", value: 175},
-                                    {name: "衢州", value: 177},
-                                    {name: "廊坊", value: 193},
-                                    {name: "菏泽", value: 194},
-                                    {name: "合肥", value: 229},
-                                    {name: "武汉", value: 273},
-                                    {name: "大庆", value: 279}
+                                    // {name: "莱芜", value: 148},
+                                    // {name: "常德", value: 152},
+                                    // {name: "保定", value: 153},
+                                    // {name: "湘潭", value: 154},
+                                    // {name: "金华", value: 157},
+                                    // {name: "岳阳", value: 169},
+                                    // {name: "长沙", value: 175},
+                                    // {name: "衢州", value: 177},
+                                    // {name: "廊坊", value: 193},
+                                    // {name: "菏泽", value: 194},
+                                    // {name: "合肥", value: 229},
+                                    // {name: "武汉", value: 273},
+                                    // {name: "大庆", value: 279}
                     ],
                     ongoing:    [
-                                    {name: "海门", value: 9},
-                                    {name: "鄂尔多斯", value: 12},
-                                    {name: "招远", value: 12},
-                                    {name: "舟山", value: 12},
-                                    {name: "齐齐哈尔", value: 14},
-                                    {name: "盐城", value: 15},
-                                    {name: "赤峰", value: 16},
-                                    {name: "青岛", value: 18},
-                                    {name: "乳山", value: 18},
-                                    {name: "大庆", value: 279}
+                                    // {name: "海门", value: 9},
+                                    // {name: "鄂尔多斯", value: 12},
+                                    // {name: "招远", value: 12},
+                                    // {name: "舟山", value: 12},
+                                    // {name: "齐齐哈尔", value: 14},
+                                    // {name: "盐城", value: 15},
+                                    // {name: "赤峰", value: 16},
+                                    // {name: "青岛", value: 18},
+                                    // {name: "乳山", value: 18},
+                                    // {name: "大庆", value: 279}
                     ],
                     onplan:     [
-                                    {name: "鞍山", value: 86},
-                                    {name: "溧阳", value: 86},
-                                    {name: "库尔勒", value: 86},
-                                    {name: "安阳", value: 90},
-                                    {name: "开封", value: 90},
-                                    {name: "济南", value: 92},
-                                    {name: "德阳", value: 93},
-                                    {name: "温州", value: 95},
-                                    {name: "九江", value: 96},
-                                    {name: "邯郸", value: 98},
-                                    {name: "临安", value: 99},
-                                    {name: "兰州", value: 99},
-                                    {name: "沧州", value: 100}
+                                    // {name: "鞍山", value: 86},
+                                    // {name: "溧阳", value: 86},
+                                    // {name: "库尔勒", value: 86},
+                                    // {name: "安阳", value: 90},
+                                    // {name: "开封", value: 90},
+                                    // {name: "济南", value: 92},
+                                    // {name: "德阳", value: 93},
+                                    // {name: "温州", value: 95},
+                                    // {name: "九江", value: 96},
+                                    // {name: "邯郸", value: 98},
+                                    // {name: "临安", value: 99},
+                                    // {name: "兰州", value: 99},
+                                    // {name: "沧州", value: 100}
 
                     ]
 

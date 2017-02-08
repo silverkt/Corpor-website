@@ -15,7 +15,7 @@ import { ActivatedRoute, Params }   from '@angular/router';
                     <energy-trend></energy-trend>
               </div></div>
               <div class="col-md-4"><div class="row mainCol">
-                    <energy-map-prov [prov]="test"></energy-map-prov>
+                    <energy-map-prov [prov]="clickedProv"></energy-map-prov>
                     <div  id="energy-structure"></div>                  
               </div></div>
               <div class="col-md-4" style="background-color: black; "><div class="row mainCol">
@@ -34,13 +34,7 @@ import { ActivatedRoute, Params }   from '@angular/router';
     styles: [`
               .mainCol{              
               height: 1079px;
-          }
-          
-          
-          
-          
-          
-           
+          }       
           #energy-structure{
               height:539px;
               background-color: #003654;
@@ -63,9 +57,27 @@ import { ActivatedRoute, Params }   from '@angular/router';
 })
 
 export class Mainboardlv2Component implements OnInit {
-    test: string = '';
+    provsData: Array<any> = [
+        { name: "河北", pinyin: "hebei"},
+        { name: "山东", pinyin: "shandong"}
+    ];
+    clickedProv: any = {};
+    tempProv: any = '';
     constructor(private route: ActivatedRoute ) {}
     ngOnInit(): void {
-        this.route.params.subscribe((v:any) => {console.log(v.id); this.test = v.id;});
+        this.route.params.subscribe((v:any) => {
+            console.log(v.id); 
+            for (let prov of this.provsData ) {
+                if (prov.name == v.id) {
+                    //console.log("##"+prov.pinyin);
+                    this.tempProv = prov;
+                }
+            }
+            if (this.tempProv == '') {
+                window.location.href="/";   
+            } else {
+                this.clickedProv = this.tempProv;
+            }
+        });
     }
 }
