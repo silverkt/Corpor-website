@@ -8,7 +8,7 @@ declare var echarts: any;
 @Component({
     moduleId: module.id,
     selector: 'energy-map',
-    template: `<div class ="energy-title">{{title}}</div><div  id="energy-map"></div>`,
+    template: `<div class ="energy-title" >{{title}}</div><div  id="energy-map"></div>`,
     styles: [`
         .energy-title {
             height: 50px;

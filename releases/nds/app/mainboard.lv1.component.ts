@@ -15,9 +15,8 @@ import { Component } from '@angular/core';
                     <energy-map></energy-map>
                     <div  id="energy-structure"></div>                  
               </div></div>
-              <div class="col-md-4" style="background-color: black; "><div class="row mainCol">
-                    
-                    <div  id="energy-persentage"></div>
+              <div class="col-md-4" style="background-color: black; "><div class="row mainCol">                    
+                    <energy-percentage [scope]="'全国'"></energy-percentage>
                     <div  id="energy-plan"></div>
                     <div  id="energy-rank">
                         <div class="col-md-4"></div>
@@ -31,22 +30,10 @@ import { Component } from '@angular/core';
     styles: [`
               .mainCol{              
               height: 1079px;
-          }
-          
-          
-          
-          
-          
-           
+          }      
           #energy-structure{
               height:539px;
               background-color: #003654;
-          }
-          
-          #energy-persentage {
-              height:220px;
-              background-color: #003654;
-              
           }
           #energy-plan {
               height:320px;
