@@ -36,7 +36,7 @@ import { Component } from '@angular/core';
               background-color: #003654;
           }
           #energy-plan {
-              height:320px;
+              height:310px;
               background-color: #003654;
           }
           #energy-rank {
