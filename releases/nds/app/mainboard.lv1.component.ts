@@ -49,6 +49,6 @@ import { Component } from '@angular/core';
 export class Mainboardlv1Component {
     title: string = '';
     navjump(id: number) {
-        window.location.href="http://www.tsingpost.com/"+id;
+        window.location.href="http://www.baidu.com/"+id;
     }
 }
