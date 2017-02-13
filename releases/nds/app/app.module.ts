@@ -15,6 +15,7 @@ import { EnergypercentageComponent } from './energy.percentage.component';
 import { EnergypercentageallComponent } from './energy.percentage.all.component';
 import { Energypercentageco2Component } from './energy.percentage.co2.component';
 import { EnergypercentagesaveComponent } from './energy.percentage.save.component';
+import { EnergypercentageclearComponent } from './energy.percentage.clear.component';
 
 import { Mainboardlv2Component } from './mainboard.lv2.component';
 import { Energymaplv2Component } from './energy.map.lv2.component';
@@ -42,7 +43,8 @@ import { TestComponent } from './test.component';
                       EnergypercentageallComponent,
                       Energypercentageco2Component,
                       EnergypercentagesaveComponent,
-                      
+                      EnergypercentageclearComponent,
+
                       Energymaplv2Component
                  ],
   bootstrap:    [ MainboardComponent ],

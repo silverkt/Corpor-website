@@ -37,4 +37,16 @@ export class DatamainboardServices {
             renewable: "12222Wh"
         }
     }
+    /**
+     * 获取主页面四率中的清洁能源利用率
+     */
+    get4lclear(scope: string) {
+        console.log(scope+"4lclear");
+        return {
+            percentage: "22%",
+            geothermal_energy: "44444Wh",   //地热
+            light_energy: "12121Wh",        //光热
+            electric_energy: "3333Wh"       //电热
+        }
+    }
 }
