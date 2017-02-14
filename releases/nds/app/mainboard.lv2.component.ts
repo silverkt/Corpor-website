@@ -18,9 +18,8 @@ import { ActivatedRoute, Params }   from '@angular/router';
                     <energy-map-prov [prov]="clickedProv"></energy-map-prov>
                     <div  id="energy-structure"></div>                  
               </div></div>
-              <div class="col-md-4" style="background-color: black; "><div class="row mainCol">
-                    
-                    <div  id="energy-persentage"></div>
+              <div class="col-md-4" style="background-color: black; "><div class="row mainCol">                    
+                     <energy-percentage [scope]="clickedProv.name" ></energy-percentage>
                     <div  id="energy-plan"></div>
                     <div  id="energy-rank">
                         <div class="col-md-4"></div>
