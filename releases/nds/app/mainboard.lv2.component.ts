@@ -19,11 +19,11 @@ import { ActivatedRoute, Params }   from '@angular/router';
                     <div  id="energy-structure"></div>                  
               </div></div>
               <div class="col-md-4" style="background-color: black; "><div class="row mainCol">                    
-                     <energy-percentage [scope]="clickedProv.name" ></energy-percentage>
+                     <energy-percentage [scope]="clickedProv.name"></energy-percentage>
                     <div  id="energy-plan"></div>
                     <div  id="energy-rank">
                         <div class="col-md-4"></div>
-                        <div class="col-md-4"  style="background-color: black;">{{test}}</div>
+                        <div class="col-md-4"  style="background-color: black;">121211</div>
                         <div class="col-md-4"></div>
                     </div>   
               </div></div>
@@ -39,13 +39,9 @@ import { ActivatedRoute, Params }   from '@angular/router';
               background-color: #003654;
           }
           
-          #energy-persentage {
-              height:220px;
-              background-color: #003654;
-              
-          }
+          
           #energy-plan {
-              height:320px;
+              height:310px;
               background-color: #003654;
           }
           #energy-rank {
