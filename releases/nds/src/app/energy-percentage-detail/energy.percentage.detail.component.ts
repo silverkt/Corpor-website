@@ -7,28 +7,28 @@ import { ActivatedRoute, Params }   from '@angular/router';
     template: `
 <div class="container-fluid">
     <div class="row" id="all">
-        <div class="col-md-2"><div class="sample1"></div></div>
-        <div class="col-md-2"><div class="sample2"></div></div>
-        <div class="col-md-2"><div class="sample1"></div></div>
-        <div class="col-md-6"><div class="sample2"></div></div>              
+        <div class="col-md-2"><energy-percentage-gauge [timeScope]="'当年'" [type]="'综合能源利用率'" [scope]="scope"></energy-percentage-gauge></div>
+        <div class="col-md-2"><energy-percentage-gauge [timeScope]="'当月'" [type]="'综合能源利用率'" [scope]="scope"></energy-percentage-gauge></div>
+        <div class="col-md-2"><energy-percentage-gauge [timeScope]="'当日'" [type]="'综合能源利用率'" [scope]="scope"></energy-percentage-gauge></div>
+        <div class="col-md-6"><energy-percentage-gridline [timeScope]="'即时'" [type]="'综合能源利用率'" [scope]="scope"></energy-percentage-gridline></div>              
     </div>
     <div class="row" id="co2">
-        <div class="col-md-2">1</div>
-        <div class="col-md-2"><div class="sample1"></div></div>
-        <div class="col-md-2">1</div>
-        <div class="col-md-6"><div class="sample1"></div></div>              
+        <div class="col-md-2"><energy-percentage-gauge [timeScope]="'当年'" [type]="'co2减排率'" [scope]="scope"></energy-percentage-gauge></div>
+        <div class="col-md-2"><energy-percentage-gauge [timeScope]="'当月'" [type]="'co2减排率'" [scope]="scope"></energy-percentage-gauge></div>
+        <div class="col-md-2"><energy-percentage-gauge [timeScope]="'当日'" [type]="'co2减排率'" [scope]="scope"></energy-percentage-gauge></div>
+        <div class="col-md-6"><energy-percentage-gridline [timeScope]="'即时'" [type]="'co2减排率'" [scope]="scope"></energy-percentage-gridline></div>           
     </div>  
     <div class="row" id="save">
-        <div class="col-md-2"><div class="sample1"></div></div>
-        <div class="col-md-2">1</div>
-        <div class="col-md-2"><div class="sample1"></div></div>
-        <div class="col-md-6">1</div>              
+        <div class="col-md-2"><energy-percentage-gauge [timeScope]="'当年'" [type]="'节能率'" [scope]="scope"></energy-percentage-gauge></div>
+        <div class="col-md-2"><energy-percentage-gauge [timeScope]="'当月'" [type]="'节能率'" [scope]="scope"></energy-percentage-gauge></div>
+        <div class="col-md-2"><energy-percentage-gauge [timeScope]="'当日'" [type]="'节能率'" [scope]="scope"></energy-percentage-gauge></div>
+        <div class="col-md-6"><energy-percentage-gridline [timeScope]="'即时'" [type]="'节能率'" [scope]="scope"></energy-percentage-gridline></div>            
     </div>  
     <div class="row" id="clear">
-        <div class="col-md-2">1</div>
-        <div class="col-md-2">1</div>
-        <div class="col-md-2">1</div>
-        <div class="col-md-6">1</div>              
+        <div class="col-md-2"><energy-percentage-gauge [timeScope]="'当年'" [type]="'清洁能源利用'" [scope]="scope"></energy-percentage-gauge></div>
+        <div class="col-md-2"><energy-percentage-gauge [timeScope]="'当月'" [type]="'清洁能源利用'" [scope]="scope"></energy-percentage-gauge></div>
+        <div class="col-md-2"><energy-percentage-gauge [timeScope]="'当日'" [type]="'清洁能源利用'" [scope]="scope"></energy-percentage-gauge></div>
+        <div class="col-md-6"><energy-percentage-gridline [timeScope]="'即时'" [type]="'清洁能源利用'" [scope]="scope"></energy-percentage-gridline></div>               
     </div>  
 </div>
     `,
@@ -47,19 +47,10 @@ import { ActivatedRoute, Params }   from '@angular/router';
           
           #clear>div{
               height:269px;
-              background-color: aquamarine;
-          }
-          
-          .sample1{
-              width: 100%;
-              background-color: black;
-              height: 270px;
-          }
-          .sample2{
-              width: 100%;
-               height: 270px;
                
           }
+          
+          
           
         
 

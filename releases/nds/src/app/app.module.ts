@@ -17,6 +17,8 @@ import { Energypercentageco2Component } from './energy.percentage.co2.component'
 import { EnergypercentagesaveComponent } from './energy.percentage.save.component';
 import { EnergypercentageclearComponent } from './energy.percentage.clear.component';
 import { EnergyPercentageDetailComponent } from './energy-percentage-detail/energy.percentage.detail.component';
+import { EnergyPercentageGaugeComponent } from './energy-percentage-detail/energy-percentage-gauge.component';
+import { EnergyPercentageGridlineComponent } from './energy-percentage-detail/energy-percentage-gridline.component';
 
 import { Mainboardlv2Component } from './mainboard.lv2.component';
 import { Energymaplv2Component } from './energy.map.lv2.component';
@@ -46,6 +48,8 @@ import { TestComponent } from './test.component';
                       EnergypercentagesaveComponent,
                       EnergypercentageclearComponent,
                       EnergyPercentageDetailComponent,
+                      EnergyPercentageGaugeComponent,
+                      EnergyPercentageGridlineComponent,
 
                       Energymaplv2Component
                  ],

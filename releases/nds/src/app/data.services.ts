@@ -13,6 +13,7 @@ export class DatamainboardServices {
             outputall: "12234Wh"  //总输出
         }
     }
+
     /**
      * 获取主页面四率中co2减排率
      */
@@ -26,6 +27,7 @@ export class DatamainboardServices {
             rated_electric_produce: "12436Wh"   //额定发电量 
         }
     }
+
     /**
      * 获取主页面四率中的节能率
      */
@@ -37,6 +39,7 @@ export class DatamainboardServices {
             renewable: "12222Wh"
         }
     }
+    
     /**
      * 获取主页面四率中的清洁能源利用率
      */

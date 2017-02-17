@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
                     <div  id="energy-structure"></div>                  
               </div></div>
               <div class="col-md-4" style="background-color: black; "><div class="row mainCol">                    
-                    <energy-percentage [scope]="'全国'" (click)="navjump(1)"></energy-percentage>
+                    <energy-percentage [scope]="'全国'" (click)="navjump('全国')"></energy-percentage>
                     <div  id="energy-plan">sasdasd</div>
                     <div  id="energy-rank">
                         <div class="col-md-4"></div>
@@ -49,6 +49,6 @@ import { Component } from '@angular/core';
 export class Mainboardlv1Component {
     title: string = '';
     navjump(id: number) {
-        window.location.href="http://www.baidu.com/"+id;
+        window.location.href="/percentage/"+id;
     }
 }

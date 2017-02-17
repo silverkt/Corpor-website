@@ -19,7 +19,7 @@ import { ActivatedRoute, Params }   from '@angular/router';
                     <div  id="energy-structure"></div>                  
               </div></div>
               <div class="col-md-4" style="background-color: black; "><div class="row mainCol">                    
-                     <energy-percentage [scope]="clickedProv.name"></energy-percentage>
+                     <energy-percentage [scope]="clickedProv.name" (click)="navjump(clickedProv.name)"></energy-percentage>
                     <div  id="energy-plan"></div>
                     <div  id="energy-rank">
                         <div class="col-md-4"></div>
@@ -74,5 +74,12 @@ export class Mainboardlv2Component implements OnInit {
                 this.clickedProv = this.tempProv;
             }
         });
+    }
+
+    /**
+     * 四率跳转
+     */
+    navjump(id: string) {
+        window.location.href="/percentage/"+id;
     }
 }
