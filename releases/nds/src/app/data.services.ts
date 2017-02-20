@@ -52,4 +52,5 @@ export class DatamainboardServices {
             electric_energy: "3333Wh"       //电热
         }
     }
+    
 }

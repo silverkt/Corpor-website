@@ -36,10 +36,10 @@ export const GridlineOption = {
                 color: 'rgba(255, 255, 255, 1)'
             }
          },
-         axisLabel: {
-             rotate: 45,
-         },
-         boundaryGap: false,
+        //  axisLabel: {
+        //      rotate: 45,  //刻度值倾斜
+        //  },
+         boundaryGap: false, //对准刻度线
     },
     grid: {
         show: true,
