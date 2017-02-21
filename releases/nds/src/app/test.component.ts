@@ -41,6 +41,24 @@ export class TestComponent{
             console.log(response.json());
              console.log(response.json().code_search_url);
             });
+
+            // Using Rxjs Observable -> toPromise to transfer observable into Promise
+            // Using ES2015 Promise & then to handle the response
+            this.http.get('https://api.github.com/').toPromise().then((response) => 
+            {
+                console.log(response.json());
+                console.log("toPromise");
+            });
+
+            // Using Rxjs  Observable -> subscribe to handle the response
+            this.http.get('https://api.github.com/').subscribe((res:Response) => 
+            {
+                this.people = res.json();
+                console.log(this.people.current_user_url);
+                this.shit = this.people.current_user_url;
+                console.log("subscribe");
+            });
+    
     }
 
 }
