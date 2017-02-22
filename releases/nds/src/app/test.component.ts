@@ -23,6 +23,8 @@ import 'rxjs/add/operator/toPromise';
 
  
 export class TestComponent{    
+    people:any;
+    shit:any;
 
     constructor(private http: Http, private route: ActivatedRoute){ }
 
