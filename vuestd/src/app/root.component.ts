@@ -63,7 +63,15 @@ export class RootComponent implements OnInit{
         this.Data.myData.then((response) => 
         {
             this.myData = response.json();
-            console.log(response.json());
+            console.log(this.myData.items.length);
+            // for (var i in this.myData.items) {
+            //   console.log(i);
+            //   console.log(this.myData.items[i]);
+            //   console.log('---------');
+            // }
+
+           
+            //console.log(response.json());
         });
          
     }

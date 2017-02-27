@@ -6,7 +6,7 @@ export class DataService {
     myData: Promise<any>;
     constructor(private http: Http){}
     getData(): void {
-        this.myData =  this.http.get('http://localhost:4200/data.json').toPromise();
+        this.myData =  this.http.get('http://pz.webcity3d.com/data.json').toPromise();
     }
     
 }
