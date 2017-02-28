@@ -11,6 +11,10 @@ const routes: Routes = [
                             { 
                                 path: 'sec',
                                 component: SecondComponent,
+                            },
+                            { 
+                                path: 'vid/:id',
+                                component: SecondComponent,
                             }
                                           
                             

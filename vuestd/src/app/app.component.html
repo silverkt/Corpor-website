@@ -9,6 +9,7 @@
                             <!-- Link to another page -->
                             <a routerLink="/sec">aaaa</a>
                             {{jdata.site}}
+                            <li *ngFor="let a of pageData"><a routerLink="/vid/{{a.link}}">{{a.name }}</a></li>111
                             
                           </div>
                         </div>
