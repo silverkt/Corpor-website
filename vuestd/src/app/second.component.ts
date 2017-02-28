@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy, trigger, state, transition, animate, style } from '@angular/core';
+import { Component, OnInit, AfterViewInit, trigger, state, transition, animate, style } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
 import { Http, Response } from "@angular/http";
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/toPromise';
@@ -20,7 +21,7 @@ declare var $: any;
                            
 
 
-    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+   
     <iframe id="vd" style="padding:0;" scrolling="no" frameborder="0"></iframe>
     <button id="button">click</button>
 
@@ -55,12 +56,16 @@ declare var $: any;
     ])
   ],
 })
-export class SecondComponent implements OnInit, OnDestroy {
+export class SecondComponent implements OnInit, AfterViewInit {
   title = 'app works!';
   state: string;
   people: any;
   site: string;
-  constructor(private http: Http, private dataService: DataService) {}
+  constructor(
+    private http: Http, 
+    private dataService: DataService, 
+    private activatedroute: ActivatedRoute,
+    ) {}
   ngOnInit() {
     this.state = 'in';
     // this.http.get('https://api.github.com/').toPromise().then((response) => 
@@ -76,42 +81,36 @@ export class SecondComponent implements OnInit, OnDestroy {
     //     this.shit = this.people.current_user_url;
     //     console.log("subscribe");
     // }); 
+    
+  }
+
+  ngAfterViewInit(){
     this.dataService.myData.then((response)=>{
       this.site = response.json().site;
-    }); 
-
-
-
-     
-      $(document).ready(function() { 
-              
-              
-                var lwidth = screen.width;
-              var lheight = Math.floor(lwidth * 213 / 299);
-              $("#vd").width(lwidth);
-              $("#vd").height(lheight);
-              $("#vd").prop({
-                  src: "http://91.p9p.co/ev.php?VID=89a3AjI0rOMKYqCqz28jnZvINzlpfF7vCbWDpX7GGNThl46i"
-              });
-              var shit = $("#vd").contents().find("#mediaplayer");
-              console.log();
-              
-      
-      }); 
-      
+      this.activatedroute.params.subscribe((param: any)=>{
+        this.site = 'http://'+this.site+param.id;
+                     
+                          var lwidth = screen.width;
+                          var lheight = Math.floor(lwidth * 213 / 299);
+                          $("#vd").width(lwidth);
+                          $("#vd").height(lheight);
+                          $("#vd").prop({
+                              src: this.site,
+                          });
+                         
+                          console.log(this.site); 
+                  
         
-         
-     
+      });  
+    });      
+    
   }
 
-  ngOnDestroy() {
-    this.state = 'out';
-    console.log('destroy11');
-  }
   changeState() {
     this.state = 'out';
     console.log("clicked");
   }
+
 
 
 }
