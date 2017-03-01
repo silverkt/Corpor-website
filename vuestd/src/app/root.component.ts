@@ -44,8 +44,8 @@ import { DataService } from "./data.service";
                       <div class="toolbar">
                         <div class="toolbar-inner">
                           <!-- Toolbar links -->
-                          <a href="#" class="link">Link 1</a>
-                          <a href="#" class="link">Link 2</a>
+                           <a href="#" class="link"> </a>
+                          <a href="#" class="link">Link</a>
                         </div>
                       </div>
                     </div>
@@ -55,7 +55,7 @@ import { DataService } from "./data.service";
 })
 
 export class RootComponent implements OnInit{
-    title: string = 'Tour of Heroes';
+    title: string = '小明的美好生活';
     myData: any = {};
     constructor(private Data: DataService) {}
     ngOnInit() {

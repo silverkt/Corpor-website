@@ -23,6 +23,7 @@ export class AppComponent implements AfterViewInit {
   jdata: any = {};
   totalItemNo: number;
   pageNo: number;
+  pageNoArray: Array<number>;
   itemPerPg: number;
   pageData: Array<any>;
 
@@ -39,8 +40,9 @@ export class AppComponent implements AfterViewInit {
     this.dataService.myData.then((response) => {
       this.jdata = response.json();
       this.totalItemNo = this.jdata.totalno;
-      this.itemPerPg = 10;
-      this.pageNo = this.totalItemNo/this.itemPerPg;
+      this.itemPerPg = 8;
+      this.pageNo = Math.floor(this.totalItemNo/this.itemPerPg);
+      this.pageNoArray = new Array(this.pageNo);
       let pData: Array<any> = [];
       let sum: number = 1;
       let startNo: number = (no - 1) * this.itemPerPg;
@@ -52,12 +54,16 @@ export class AppComponent implements AfterViewInit {
              link: this.jdata.items[i],
              site: this.jdata.site
            };
-           console.log(jsond);
+           //console.log(jsond);
            pData.push(jsond);           
          }        
          sum++;
       }       
       this.pageData = pData;
     });
+  }
+
+  changeNav(no: number) {
+    this.getPageData(no);
   }            
 }

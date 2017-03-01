@@ -23,7 +23,7 @@ declare var $: any;
 
    
     <iframe id="vd" style="padding:0;" scrolling="no" frameborder="0"></iframe>
-    <button id="button">click</button>
+ 
 
 
 
@@ -34,9 +34,9 @@ declare var $: any;
 
 
 
-                            ssss <a routerLink="/" (click)="changeState()">Heroes</a><br><br>{{site}}
+                             <a class="button button-fill"routerLink="/" (click)="changeState()">返回目录列表</a> 
 
-                               <div style="width:100%;height:20px;background-color:#333;" (click)="changeState()">click</div>
+                               
                           </div>
                         </div>
                       </div>                    
@@ -98,7 +98,7 @@ export class SecondComponent implements OnInit, AfterViewInit {
                               src: this.site,
                           });
                          
-                          console.log(this.site); 
+                         // console.log(this.site); 
                   
         
       });  

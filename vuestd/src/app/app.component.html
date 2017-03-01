@@ -5,12 +5,25 @@
                         <div data-page="index" class="page">
                           <!-- Scrollable page content -->
                           <div class="page-content">
-                            <p>Page content goes here</p>
-                            <!-- Link to another page -->
-                            <a routerLink="/sec">aaaa</a>
-                            {{jdata.site}}
-                            <li *ngFor="let a of pageData"><a routerLink="/vid/{{a.link}}">{{a.name }}</a></li>111
-                            
+
+
+<div class="content-block-title">点击标题进入正题</div>
+    <div class="list-block">
+      <ul>
+        <li *ngFor="let a of pageData" class="item-content">
+          <div class="item-inner">
+            <div class="item-title"><a routerLink="/vid/{{a.link}}">{{a.name }}</a></div>
+          </div>
+        </li>        
+      </ul>
+    </div>
+
+<div class="buttons-row">
+  <a class="button" *ngFor= "let one of pageNoArray; let i = index" (click)="changeNav(i+1)">{{i+1}}</a>
+ 
+
+</div>                            
+                           
                           </div>
                         </div>
                       </div>
