@@ -1,0 +1,34 @@
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    
+      <div class="col-md-2"> </div>
+      <div class="col-md-8">
+
+
+
+<h1>
+ 
+ 项目ID {{jsonData.projectid}} - {{nodeList[jsonData.projectid]}}
+ 
+</h1>
+<table class="table table-hover">
+  <tr>
+   <td class="success"><strong>测点</strong></td><td class="warning"><strong>测点值</strong></td><td class="info"><strong>测点状态值</strong></td><td class="active"><strong>收取时间</strong></td>
+   <tr>
+  <tr *ngFor="let i of jsonData.nodes; let z = index">
+   <td class="success">{{i.code}}</td><td class="warning">{{i.curvalue}}</td><td class="info">{{i.quality}}</td><td class="active">{{i.collTime}}</td>
+   <tr>
+</table>
+
+
+
+      </div>
+      <div class="col-md-2"> </div>
+  </div>
+</div> 
+
+
+
