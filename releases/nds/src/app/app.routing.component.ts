@@ -1,12 +1,23 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { GroupIndexComponent } from './group-leader/index.component';
+
 import { AppComponent } from './app.component';
+import { GroupIndexComponent } from './group-leader/index.component';
+import { GroupIndex2Component } from './group-leader/index2.component';
+
 
 const routes: Routes = [
                             {   
                                 path: '',
                                 component: GroupIndexComponent,
+                            },
+                            {   
+                                path: 'group-leader/map',
+                                component: GroupIndexComponent,
+                            },
+                            {   
+                                path: 'group-leader/project',
+                                component: GroupIndex2Component,
                             },
                             { 
                                 path: ':id',
