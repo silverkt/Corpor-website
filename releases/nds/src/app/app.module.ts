@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from "./app.routing.component";
 import { GroupIndexComponent } from './group-leader/index.component';
 import { GroupIndex2Component } from './group-leader/index2.component';
+import { LeftbarNaviComponent } from "./navi/leftbar.component";
 import { RootComponent } from "./root.component";
 import { TopbarNaviComponent } from "./navi/topbar.component";
 
@@ -18,6 +19,7 @@ import { TopbarNaviComponent } from "./navi/topbar.component";
     AppComponent,
     GroupIndexComponent,
     GroupIndex2Component,
+    LeftbarNaviComponent,
     RootComponent,
     TopbarNaviComponent,
     
