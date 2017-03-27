@@ -8,6 +8,7 @@ import { AppRoutingModule } from "./app.routing.component";
 import { GroupIndexComponent } from './group-leader/index.component';
 import { GroupIndex2Component } from './group-leader/index2.component';
 import { RootComponent } from "./root.component";
+import { TopbarNaviComponent } from "./navi/topbar.component";
 
 
 
@@ -18,6 +19,7 @@ import { RootComponent } from "./root.component";
     GroupIndexComponent,
     GroupIndex2Component,
     RootComponent,
+    TopbarNaviComponent,
     
   ],
   imports: [
