@@ -37,6 +37,13 @@
     z-index: 1002;    
 }
 
+.rightbottomnav {
+    position: absolute;
+    bottom:0px;
+    right:0px;
+    z-index: 1002;
+}
+
 
 
 .leftbar {
