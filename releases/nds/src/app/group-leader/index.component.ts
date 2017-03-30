@@ -63,6 +63,11 @@ export class GroupIndexComponent implements OnInit {
 
         // 指定图表的配置项和数据
         var option2 = {
+            legend: {
+                data: ['交易量','交易额'],
+                padding: [30,0,0,0]
+            },
+ 
             grid: {
                 show: true,
                 containLabel: true
@@ -71,20 +76,58 @@ export class GroupIndexComponent implements OnInit {
                 type: 'category',
                 data: ['2/4','2/6','2/8','2/10','2/12','2/14'],
                 axisLabel: {
-                    interval: 0
+                    interval: 0,
+                    textStyle: {
+                        fontSize: 9 
+                    }
+                },
+                axisTick: {
+                    alignWithLabel: true,
                 }
             },
-            yAxis: {
+            yAxis: [{
                 name: '交易量/MW',
                 nameLocation: 'middle',
-                type: 'value'
+                nameGap: 20,
+                type: 'value',
+                axisLabel: {
+                    textStyle: {
+                        fontSize: 9 
+                    }
+                },
             },
+            {
+                name: '交易额/元',
+                nameLocation: 'middle',
+                nameGap: 20,
+                type: 'value',
+                axisLabel: {
+                    textStyle: {
+                        fontSize: 9 
+                    }
+                },
+            }],
             series: [
                 {
-                    name:'交易量/MW',
+                    name:'交易量',
                     type:'line',
-                    stack: '总量',
-                    data:[120, 132, 101, 134, 90, 230]
+                    data:[3, 6, 8, 9, 10, 8],
+                    itemStyle: {
+                        normal: {
+                            color: '#00b0f0',
+                        }
+                    }
+                },
+                {
+                    name:'交易额',
+                    type:'line',
+                    yAxisIndex:1,
+                    data:[2, 4, 6, 8, 9, 7],
+                    itemStyle: {
+                        normal: {
+                            color: '#9bbb59',
+                        }
+                    }
                 },
             ]
         };
