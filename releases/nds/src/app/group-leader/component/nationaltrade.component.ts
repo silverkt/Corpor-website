@@ -1,4 +1,4 @@
-import { Component,AfterViewInit } from "@angular/core";
+import { Component, AfterViewInit, Input } from "@angular/core";
 
 import { NationalTradeLine } from "./nationaltrade.line.option";
 import { NationalTradePie } from "./nationaltrade.pie.option";
@@ -22,28 +22,42 @@ declare var echarts: any;
     `],
     providers:[ GpleaderDataService ],
 })
-export class NationalTradeComponent implements AfterViewInit{
+export class NationalTradeComponent implements AfterViewInit{    
     option: any = {};
+    option1: any = {};
+    private _scope: string;
+    @Input() 
+    set scope(scope: string) {
+        this._scope = scope;
+        this.option = NationalTradePie; 
+        this.option1 = NationalTradeLine;
+        this.getComData();        
+    }
+    get scope(): string {
+        return this._scope;
+    }
 
     constructor(private data: GpleaderDataService) { }
     ngAfterViewInit() {
-    //百度chart  pie
-    // 指定图表的配置项和数据
-    this.option = NationalTradePie;
-    var myChart = echarts.init(document.getElementById('nationaltrade1'));
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(this.option);
-    this.data.getPieData();
+        // this.option = NationalTradePie; 
+        // this.option1 = NationalTradeLine;
+        // this.getComData();
+    }
 
+    getComData() {
+        this.data.getPieData(this._scope).then(response => {
+            var myChart = echarts.init(document.getElementById('nationaltrade1'));         
+            this.option.series[0].data = response.json().pie;
+            myChart.setOption(this.option);        
+        }); 
 
-
-    //百度chart   grid
-    var myChart = echarts.init(document.getElementById('nationaltrade2'));
-    // 指定图表的配置项和数据     
-    this.option = NationalTradeLine;
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(this.option);
-
+        this.data.getLineData(this._scope).then(response => {
+            var myChart = echarts.init(document.getElementById('nationaltrade2'));         
+            this.option1.xAxis.data = response.json().linex;
+            this.option1.series[0].data = response.json().liney1;
+            this.option1.series[1].data = response.json().liney2;         
+            myChart.setOption(this.option1);        
+        });          
 
     }
 }

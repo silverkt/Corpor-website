@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 declare var BMap: any;
 declare var echarts: any;
  
@@ -10,6 +10,13 @@ declare var echarts: any;
     styleUrls: ['index.component.css'],
 })
 export class GroupIndexComponent implements OnInit {
+    clickedScope: any = {
+        name: "全国",
+        id: 1
+    };
+
+    constructor(private zone: NgZone) { }
+
     ngOnInit() {
         // 百度地图API功能
 	var map = new BMap.Map("allmap");    // 创建Map实例
@@ -18,5 +25,10 @@ export class GroupIndexComponent implements OnInit {
 	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
 	map.enableScrollWheelZoom(false);     //开启鼠标滚轮缩放   
 
+    }
+
+    changeScope() {
+        this.clickedScope.name = "山东";
+        console.log('changeScope');      
     }
 }

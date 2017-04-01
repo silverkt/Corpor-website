@@ -75,14 +75,14 @@
         <header>全国泛能交易情况</header>
         <section>
             <div class="barblock">
-                <national-trade></national-trade>
+                <national-trade [scope]="clickedScope.name" ></national-trade>
             </div>
         </section>
     </article>
 
 
     <article>
-        <header>全国泛能收益状况</header>
+        <header (click)="changeScope()">全国泛能收益状况</header>
         <section>
             <div class="barblock">sss
             </div>
