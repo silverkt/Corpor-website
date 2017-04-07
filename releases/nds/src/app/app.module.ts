@@ -9,6 +9,7 @@ import { BottombarNaviComponent } from "./navi/bottombar.component";
 import { GroupIndexComponent } from './group-leader/index.component';
 import { GroupIndex2Component } from './group-leader/index2.component';
 import { LeftbarNaviComponent } from "./navi/leftbar.component";
+import { NationalProfitComponent } from "./group-leader/component/nationalprofit.component";
 import { NationalTradeComponent } from "./group-leader/component/nationaltrade.component";
 import { RightbarNaviComponent } from "./navi/rightbar.component";
 import { RootComponent } from "./root.component";
@@ -24,6 +25,7 @@ import { TopbarNaviComponent } from "./navi/topbar.component";
     GroupIndexComponent,
     GroupIndex2Component,
     LeftbarNaviComponent,
+    NationalProfitComponent,
     NationalTradeComponent,
     RightbarNaviComponent,
     RootComponent,

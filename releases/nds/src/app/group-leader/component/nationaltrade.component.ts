@@ -45,13 +45,13 @@ export class NationalTradeComponent implements AfterViewInit{
     }
 
     getComData() {
-        this.data.getPieData(this._scope).then(response => {
+        this.data.getTradePieData(this._scope).then(response => {
             var myChart = echarts.init(document.getElementById('nationaltrade1'));         
             this.option.series[0].data = response.json().pie;
             myChart.setOption(this.option);        
         }); 
 
-        this.data.getLineData(this._scope).then(response => {
+        this.data.getTradeLineData(this._scope).then(response => {
             var myChart = echarts.init(document.getElementById('nationaltrade2'));         
             this.option1.xAxis.data = response.json().linex;
             this.option1.series[0].data = response.json().liney1;
