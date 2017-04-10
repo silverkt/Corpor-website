@@ -26,6 +26,17 @@ export class GpleaderDataService {
     /**
      * 获取集团领导区域地图首页全国泛能收益状况数据
      */
+    getProfitPieData(scope?: string): Promise<any> {
+        console.log('profilePie'+scope);
+        let url: string = "http://pz.webcity3d.com/eos/web/images/glprofitpie.json?scope="+scope;
+        return this.http.get(url).toPromise();
+    }
+
+    getProfitLineData(scope?: string): Promise<any> {
+        console.log('profileLine'+scope);
+        let url: string = "http://pz.webcity3d.com/eos/web/images/glprofitline.json?scope="+scope;
+        return this.http.get(url).toPromise();
+    }
 
 
 

@@ -25,7 +25,7 @@ declare var echarts: any;
 export class NationalTradeComponent implements AfterViewInit{    
     option: any = {};
     option1: any = {};
-    private _scope: string;
+    public _scope: string;
     @Input() 
     set scope(scope: string) {
         this._scope = scope;
@@ -37,7 +37,7 @@ export class NationalTradeComponent implements AfterViewInit{
         return this._scope;
     }
 
-    constructor(private data: GpleaderDataService) { }
+    constructor(public data: GpleaderDataService) { }
     ngAfterViewInit() {
         // this.option = NationalTradePie; 
         // this.option1 = NationalTradeLine;
@@ -45,13 +45,13 @@ export class NationalTradeComponent implements AfterViewInit{
     }
 
     getComData() {
-        this.data.getTradePieData(this._scope).then(response => {
+        this.data.getTradePieData(this.scope).then(response => {
             var myChart = echarts.init(document.getElementById('nationaltrade1'));         
             this.option.series[0].data = response.json().pie;
             myChart.setOption(this.option);        
         }); 
 
-        this.data.getTradeLineData(this._scope).then(response => {
+        this.data.getTradeLineData(this.scope).then(response => {
             var myChart = echarts.init(document.getElementById('nationaltrade2'));         
             this.option1.xAxis.data = response.json().linex;
             this.option1.series[0].data = response.json().liney1;
