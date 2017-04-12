@@ -14,6 +14,44 @@ export class GroupIndexComponent implements OnInit {
         name: "全国",
         id: 1
     };
+    rank : Array<any> = [
+            {
+                "id":"1",
+                "region": "华北",
+                "benifit": "500",
+                "percent": "60%"
+            },
+            {
+                "id":"2",
+                "region": "华北",
+                "benifit": "500",
+                "percent": "60%"
+            },
+            {
+                "id":"3",
+                "region": "华北",
+                "benifit": "500",
+                "percent": "60%"
+            },
+            {
+                "id":"4",
+                "region": "华北",
+                "benifit": "500",
+                "percent": "60%"
+            },
+            {
+                "id":"5",
+                "region": "华北",
+                "benifit": "500",
+                "percent": "60%"
+            },
+            {
+                "id":"6",
+                "region": "华北",
+                "benifit": "500",
+                "percent": "60%"
+            }
+        ];
 
     constructor(private zone: NgZone) { }
 

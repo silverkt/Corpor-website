@@ -104,14 +104,8 @@
                                 <th>排名</th><th>区域</th><th>泛能收益</th><th>占比</th>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>1</td><td>华东</td><td>456</td><td>60%</td>
-                            </tr>
-                            <tr>
-                                <td>2</td><td>华东</td><td>456</td><td>60%</td>
-                            </tr>
-                            <tr>
-                                <td>3</td><td>华东</td><td>456</td><td>60%</td>
+                            <tr *ngFor="let item of rank">
+                                <td>{{item.id}}</td><td>{{item.region}}</td><td>{{item.benifit}}</td><td>{{item.percent}}</td>
                             </tr>
                             </tbody>
                         </table>
