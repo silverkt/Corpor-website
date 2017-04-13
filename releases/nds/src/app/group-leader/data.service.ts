@@ -38,6 +38,15 @@ export class GpleaderDataService {
         return this.http.get(url).toPromise();
     }
 
+    /**
+     * 获取集团领导区域地图首页区域泛能收入排行榜数据
+     */
+    getRankPieData(scope?: string): Promise<any> {
+        console.log('rankPle'+scope);
+        let url: string = "http://pz.webcity3d.com/eos/web/images/glrankpie.json?scope="+scope;
+        return this.http.get(url).toPromise();
+    }
+
 
 
 }
