@@ -1,3 +1,9 @@
+/**
+ * 根模块
+ * 入口文件首先加载此模块，此模块将引入基础angular模块和核心模块
+ * 声明组件及引导根组件
+ */
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';

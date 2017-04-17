@@ -1,3 +1,6 @@
+/**
+ * 全国凡能收益排行饼图组件初始化配置文件
+ */
 export const NationalRankPie = {
     title: {
                 text: ' ',

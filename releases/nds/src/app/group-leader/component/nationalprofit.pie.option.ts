@@ -1,3 +1,6 @@
+/**
+ * 全国凡能收益饼图组件初始化配置文件
+ */
 export const NationalProfitPie = {
     title: {
                 text: '各多能源泛能收益对比',

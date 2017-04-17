@@ -1,3 +1,8 @@
+/**
+ * 全国泛能交易情况组件
+ * 此组件内包含两个子组件
+ * 全国凡能交易饼图组件和全国凡能交易双曲线组件
+ */
 import { Component, AfterViewInit, Input } from "@angular/core";
 
 import { NationalTradeLine } from "./nationaltrade.line.option";
@@ -26,6 +31,11 @@ export class NationalTradeComponent implements AfterViewInit{
     option: any = {};
     option1: any = {};
     public _scope: string;
+
+    /**
+     * 通过get方法监听输入属性scope的变化，变化时初始化子组件配置
+     * 而后调用后端获取数据方法
+     */
     @Input() 
     set scope(scope: string) {
         this._scope = scope;
@@ -37,6 +47,9 @@ export class NationalTradeComponent implements AfterViewInit{
         return this._scope;
     }
 
+    /**
+     * 构造函数，注入数据服务
+     */
     constructor(public data: GpleaderDataService) { }
     ngAfterViewInit() {
         // this.option = NationalTradePie; 
@@ -44,6 +57,11 @@ export class NationalTradeComponent implements AfterViewInit{
         // this.getComData();
     }
 
+    /**
+     * 从后端获取数据方法
+     * 利用注入服务内方法getTradePieData 获取饼图对应数据
+     * 并且更新初始化配置
+     */
     getComData() {
         this.data.getTradePieData(this.scope).then(response => {
             var myChart = echarts.init(document.getElementById('nationaltrade1'));         

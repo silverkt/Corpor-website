@@ -1,3 +1,6 @@
+/**
+ * 全国凡能收益排行列表组件初始化配置文件
+ */
 export const NationalRankList =  [
             {
                 "id":"1",

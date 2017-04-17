@@ -1,3 +1,6 @@
+/**
+ * 全国凡能收益曲线组件初始化配置文件
+ */
 export const NationalProfitLine = {
     legend: {
         data: ['泛能收益'],

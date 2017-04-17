@@ -1,3 +1,8 @@
+/**
+ * 集团领导地图首页
+ * 由于地图北京不确定，暂时用百度地图替代
+ * 暂时将地图初始化写到组件初始化渲染方法中，后续更换地图后将分离到单独组件
+ */
 import { Component, OnInit } from '@angular/core';
 declare var BMap: any;
 declare var echarts: any;
