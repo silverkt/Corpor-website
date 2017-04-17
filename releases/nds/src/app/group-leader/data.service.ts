@@ -47,6 +47,12 @@ export class GpleaderDataService {
         return this.http.get(url).toPromise();
     }
 
+    getRankListData(scope?: string): Promise<any> {
+        console.log('ranklist'+scope);
+        let url: string = "http://pz.webcity3d.com/eos/web/images/glranklist.json?scope="+scope;
+        return this.http.get(url).toPromise();
+    }
+
 
 
 }

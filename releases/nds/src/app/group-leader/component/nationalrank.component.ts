@@ -58,7 +58,8 @@ export class NationalRankComponent implements AfterViewInit {
             myChart.setOption(this.option1);   
         });
 
-
-
+        this.data.getRankListData(this.scope).then(response => {
+            this.option2 = response.json().list;
+        })
     }
 }
