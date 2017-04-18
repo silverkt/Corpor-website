@@ -1,3 +1,6 @@
+/**
+ * 全国凡能交易双曲线组件初始化配置文件
+ */
 export const NationalTradeLine = {
         legend: {
             data: ['交易量','交易额'],

@@ -1,3 +1,8 @@
+/**
+ * 全国泛能收益状况组件
+ * 此组件内包含两个子组件
+ * 全国泛能收益状况饼图组件和全国泛能收益状况曲线组件
+ */
 import { Component, AfterViewInit, Input } from "@angular/core";
 
 import { NationalProfitLine } from "./nationalprofit.line.option";
@@ -26,6 +31,11 @@ export class NationalProfitComponent implements AfterViewInit{
     option: any = {};
     option1: any = {};
     public _scope: string;
+
+    /**
+     * 通过get方法监听输入属性scope的变化，变化时初始化子组件配置
+     * 而后调用后端获取数据方法
+     */    
     @Input()
     set scope(scope: string) {
         this._scope = scope;
@@ -37,12 +47,20 @@ export class NationalProfitComponent implements AfterViewInit{
         return this._scope;
     }
 
+    /**
+     * 构造函数，注入数据服务
+     */
     constructor( public data: GpleaderDataService ) { }
 
     ngAfterViewInit() {    
 
     }
 
+    /**
+     * 从后端获取数据方法
+     * 利用注入服务内方法getTradePieData 获取饼图对应数据
+     * 并且更新初始化配置
+     */
     getComData() {
         this.data.getProfitPieData(this.scope).then(response => {
             var myChart = echarts.init(document.getElementById('nationalprofit1'));  

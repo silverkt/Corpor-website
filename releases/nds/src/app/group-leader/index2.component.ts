@@ -1,3 +1,6 @@
+/**
+ * 集团领导项目首页
+ */
 import { Component, OnInit } from '@angular/core';
 declare var BMap: any;
 declare var echarts: any;

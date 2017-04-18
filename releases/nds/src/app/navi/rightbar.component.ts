@@ -1,3 +1,8 @@
+/**
+ * 右下导航按钮组件
+ * 此组件目前只有view，布局外观样式等
+ * 尚未实线具体逻辑
+ */
 import { Component } from "@angular/core";
 
 @Component({

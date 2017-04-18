@@ -1,3 +1,6 @@
+/**
+ * 数据获取服务
+ */
 import { Injectable } from "@angular/core";
 import { Http, Response } from "@angular/http";
 

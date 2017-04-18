@@ -1,3 +1,8 @@
+/**
+ * 左下导航组件 分别为 
+ * 区域地图和凡能项目导航
+ * 此处导航和主模块中的导航组件中的逻辑相配合共同完成导航功能
+ */
 import { Component } from "@angular/core";
 
 @Component({
