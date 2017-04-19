@@ -12,6 +12,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from "./app.routing.component";
 import { BottombarNaviComponent } from "./navi/bottombar.component";
+import { CompareTradeComponent } from "./group-leader/component/comparetrade.component";
 import { GroupIndexComponent } from './group-leader/index.component';
 import { GroupIndex2Component } from './group-leader/index2.component';
 import { LeftbarNaviComponent } from "./navi/leftbar.component";
@@ -29,6 +30,7 @@ import { TopbarNaviComponent } from "./navi/topbar.component";
   declarations: [
     AppComponent,
     BottombarNaviComponent,
+    CompareTradeComponent,
     GroupIndexComponent,
     GroupIndex2Component,
     LeftbarNaviComponent,

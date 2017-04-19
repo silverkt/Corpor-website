@@ -13,6 +13,10 @@ declare var echarts: any;
     styleUrls: ['index2.component.css'],
 })
 export class GroupIndex2Component implements OnInit {
+    clickedScope: any = {
+        name: "全国",
+        id: 1
+    };
     ngOnInit() {
         // 百度地图API功能
 	var map = new BMap.Map("allmap");    // 创建Map实例
@@ -25,52 +29,7 @@ export class GroupIndex2Component implements OnInit {
 
 
     //========================
-     
-
-var option = {
-    color: ['#9bbb59'],
  
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        top: '6%',
-        containLabel: true,
-        tooltip: {
-            
-        formatter: '{a},{b}'
- 
-            
-        }
-    },
-    xAxis : [
-        {
-            
-            type : 'category',
-            data : ['项目1', '项目2', '项目3', '项目4', '项目5', '项目6'],
- 
-        }
-    ],
-    yAxis : [
-        {
-            name : 'MW',
-            type : 'value',
-            nameLocation: 'middle',
-            nameGap: 30
-        }
-    ],
-    series : [
-        {
-            name:'直接访问',
-            type:'bar',
-            barWidth: '40%',
-            data:[10, 52, 200, 334, 390, 330]
-        }
-    ]
-};
- var myChart = echarts.init(document.getElementById('tt1'));  
-           
-            myChart.setOption( option); 
 
 
 

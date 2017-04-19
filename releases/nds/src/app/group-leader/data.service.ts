@@ -28,6 +28,7 @@ export class GpleaderDataService {
 
     /**
      * 获取集团领导区域地图首页全国泛能收益状况数据
+     * Param scope:string   scope为区域代码
      */
     getProfitPieData(scope?: string): Promise<any> {
         console.log('profilePie'+scope);
@@ -43,6 +44,7 @@ export class GpleaderDataService {
 
     /**
      * 获取集团领导区域地图首页区域泛能收入排行榜数据
+     * Param scope:string   scope为区域代码
      */
     getRankPieData(scope?: string): Promise<any> {
         console.log('rankPle'+scope);
@@ -55,6 +57,8 @@ export class GpleaderDataService {
         let url: string = "http://pz.webcity3d.com/eos/web/images/glranklist.json?scope="+scope;
         return this.http.get(url).toPromise();
     }
+
+    
 
 
 
