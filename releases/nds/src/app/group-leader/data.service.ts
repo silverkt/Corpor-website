@@ -58,7 +58,32 @@ export class GpleaderDataService {
         return this.http.get(url).toPromise();
     }
 
-    
+    /**
+     * 获取集团领导泛能项目首页泛能交易对比数据
+     */
+    getCompareTradeData(scope?: string): Promise<any> {
+        console.log('comparetrade'+scope);
+        let url: string = "http://pz.webcity3d.com/eos/web/images/glcomparetrdebar.json?scope="+scope;
+        return this.http.get(url).toPromise();
+    }
+
+    /**
+     * 获取集团领导泛能项目首页综合运行时间对比数据
+     */
+    getCompareRunningData(scope?: string): Promise<any> {
+        console.log('comparerun'+scope);
+        let url: string = "http://pz.webcity3d.com/eos/web/images/glcomparerunbar.json?scope="+scope;
+        return this.http.get(url).toPromise();
+    }
+
+    /**
+     * 获取集团领导泛能项目首页项目收益对比数据
+     */
+    getCompareBenifitData(scope?: string): Promise<any> {
+        console.log('comparebenifit'+scope);
+        let url: string = "http://pz.webcity3d.com/eos/web/images/glcomparebenifitbar.json?scope="+scope;
+        return this.http.get(url).toPromise();
+    }
 
 
 

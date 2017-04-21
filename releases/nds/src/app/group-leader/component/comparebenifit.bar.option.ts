@@ -1,7 +1,7 @@
 /**
- * 泛能交易对比柱状图组件配置文件
+ * 项目收益对比柱状图组件配置文件
  */
-export const CompareTradeBar = {
+export const CompareBenifitBar = {
     color: ['#9bbb59'], 
     grid: {
         left: '3%',
@@ -32,7 +32,7 @@ export const CompareTradeBar = {
             name:'直接访问',
             type:'bar',
             barWidth: '40%',
-            data:[10, 52, 200, 334, 390, 330]
+            data:[100, 52, 200, 334, 390, 330]
         }
     ]
 };

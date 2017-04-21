@@ -1,30 +1,30 @@
 /**
- * 泛能交易对比组件
+ * 综合运行时间对比组件
  * 此组件包含柱状图组件
  */
 import { Component, AfterViewInit, Input } from "@angular/core";
-import { CompareTradeBar } from "./comparetrade.bar.option";
+import { CompareRunningBar } from "./comparerunning.bar.option";
 
 import { GpleaderDataService } from "../data.service";
 declare var echarts: any;
 
 @Component({
-    moduleId: 'compare-trade',
-    selector: 'compare-trade',
+    moduleId: 'compare-run',
+    selector: 'compare-run',
     template: `
-        <div class="compare-trade" id="compare-trade">  
+        <div class="compare-run" id="compare-run">  
         </div>
     `,
     styles: [`
-        .compare-trade {
+        .compare-run {
             width: 100%;
             height: 100%;
         }
     `],
     providers: [ GpleaderDataService ]
 })
-export class CompareTradeComponent implements AfterViewInit{
-    option: any = CompareTradeBar;
+export class CompareRunningComponent implements AfterViewInit{
+    option: any = CompareRunningBar;
     _scope: string;
     
     /**
@@ -53,10 +53,10 @@ export class CompareTradeComponent implements AfterViewInit{
      * 并且更新初始化配置
      */
     getComData() {
-        this.data.getCompareTradeData(this.scope).then(response=>{
+        this.data.getCompareRunningData(this.scope).then(response=>{
             this.option.xAxis[0].data = response.json().barx;
             this.option.series[0].data = response.json().bary;
-            var myChart = echarts.init(document.getElementById('compare-trade'));  
+            var myChart = echarts.init(document.getElementById('compare-run'));  
             myChart.setOption(this.option); 
         });
     }
