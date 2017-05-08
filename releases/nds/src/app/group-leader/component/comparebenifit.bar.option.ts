@@ -21,7 +21,7 @@ export const CompareBenifitBar = {
     ],
     yAxis : [
         {
-            name : 'MW',
+            name : '万元',
             type : 'value',
             nameLocation: 'middle',
             nameGap: 30

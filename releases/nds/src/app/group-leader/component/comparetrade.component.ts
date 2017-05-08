@@ -60,4 +60,5 @@ export class CompareTradeComponent implements AfterViewInit{
             myChart.setOption(this.option); 
         });
     }
+    
 }

@@ -21,7 +21,7 @@ export const CompareRunningBar = {
     ],
     yAxis : [
         {
-            name : 'MW',
+            name : '小时',
             type : 'value',
             nameLocation: 'middle',
             nameGap: 30
