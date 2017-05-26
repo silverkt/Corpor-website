@@ -4,8 +4,9 @@
  * 暂时将地图初始化写到组件初始化渲染方法中，后续更换地图后将分离到单独组件
  */
 import { Component, OnInit } from '@angular/core';
-declare var BMap: any;
+declare var AMap: any;
 declare var echarts: any;
+declare var provinces: any;
  
 
 @Component({
@@ -25,11 +26,25 @@ export class GroupIndexComponent implements OnInit {
 
     ngOnInit() {
         // 百度地图API功能
-	var map = new BMap.Map("allmap");    // 创建Map实例
-	map.centerAndZoom(new BMap.Point(116.404, 36.915), 6);  // 初始化地图,设置中心点坐标和地图级别
-	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-	map.enableScrollWheelZoom(false);     //开启鼠标滚轮缩放   
+        var map = new AMap.Map('allmap',{
+            resizeEnable: true,
+            zoom: 10,
+            center: [116.480983, 40.0958]
+        });
+        map.setZoom(5);
+        map.setCenter([116.39,39.9]);
+        map.setFeatures(['bg','road'])//多个种类要素显示 
+
+
+                
+        var marker = new AMap.Marker({
+            icon: 'assets/xinaoicon.png',
+            position: provinces[8].center.split(',')             
+        })
+        marker.setMap(map);
+        marker.on('click',function(){
+            console.log('shanghaiclicked')
+        })
 ////////////////////////////////////
 
 

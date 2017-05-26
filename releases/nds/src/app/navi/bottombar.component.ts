@@ -10,11 +10,9 @@ import { Component } from "@angular/core";
     selector: 'bottom-navi',
     template: `
         <div class="btn-group">
-            <a class="btn btn-primary">能源结构</a>
-            <a class="btn btn-primary">产能分析</a>
-            <a class="btn btn-primary">社会效益</a>
-            <a class="btn btn-primary">泛能交易</a>
-            <a class="btn btn-primary">对比排名</a>
+            <a class="btn btn-primary" routerLink="/group-leader/map" >首页</a>
+            <a class="btn btn-primary">分区</a>
+            <a class="btn btn-primary">重点项目</a>
         </div> 
     `,
     styles: [``],
