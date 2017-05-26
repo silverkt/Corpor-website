@@ -7,15 +7,31 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
-import { AppComponent } from './app.component';
+ 
 import { GroupIndexComponent } from './group-leader/index.component';
 import { GroupIndex2Component } from './group-leader/index2.component';
+
+import { HomeIndexComponent } from "./home/index.component";
+import { PartitionIndexComponent } from "./partition/index.component";
+import { ProjectsIndexComponent } from "./projects/index.component";
 
 
 const routes: Routes = [
                             {   
                                 path: '',
-                                component: GroupIndexComponent,
+                                component: HomeIndexComponent,
+                            },
+                            {   
+                                path: 'home/index',
+                                component: HomeIndexComponent,
+                            },
+                            {   
+                                path: 'partition/index',
+                                component: PartitionIndexComponent,
+                            },
+                            {   
+                                path: 'projects/index',
+                                component: ProjectsIndexComponent,
                             },
                             {   
                                 path: 'group-leader/map',
@@ -24,11 +40,7 @@ const routes: Routes = [
                             {   
                                 path: 'group-leader/project',
                                 component: GroupIndex2Component,
-                            },
-                            { 
-                                path: ':id',
-                                component: AppComponent,
-                            }                                         
+                            }                                        
                             
                         ];
 @NgModule({

@@ -10,9 +10,9 @@ import { Component } from "@angular/core";
     selector: 'bottom-navi',
     template: `
         <div class="btn-group">
-            <a class="btn btn-primary" routerLink="/group-leader/map" >首页</a>
-            <a class="btn btn-primary">分区</a>
-            <a class="btn btn-primary">重点项目</a>
+            <a class="btn btn-primary" routerLink="/home/index" >首页</a>
+            <a class="btn btn-primary" routerLink="/partition/index">分区</a>
+            <a class="btn btn-primary" routerLink="/projects/index">重点项目</a>
         </div> 
     `,
     styles: [``],

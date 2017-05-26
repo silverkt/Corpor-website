@@ -9,7 +9,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
+ 
 import { AppRoutingModule } from "./app.routing.component";
 import { BottombarNaviComponent } from "./navi/bottombar.component";
 import { CompareBenifitComponent } from "./group-leader/component/comparebenifit.component";
@@ -27,10 +27,16 @@ import { TopbarNaviComponent } from "./navi/topbar.component";
 
 
 
+import { HomeIndexComponent } from "./home/index.component";
+import { PartitionIndexComponent } from "./partition/index.component";
+import { ProjectsIndexComponent } from "./projects/index.component";
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent,
+  
     BottombarNaviComponent,
     CompareBenifitComponent,
     CompareRunningComponent,
@@ -44,6 +50,10 @@ import { TopbarNaviComponent } from "./navi/topbar.component";
     RightbarNaviComponent,
     RootComponent,
     TopbarNaviComponent,
+
+    HomeIndexComponent,
+    PartitionIndexComponent,
+    ProjectsIndexComponent,
     
   ],
   imports: [

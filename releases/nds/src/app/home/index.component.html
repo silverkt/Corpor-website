@@ -1,0 +1,95 @@
+<div id="allmap"></div>
+
+
+
+<div class="topbar">
+    <div class="topcontent">
+      
+        <h1>全国泛能云运营业务展示中心</h1>
+       
+    </div>
+</div>
+
+
+<div class="leftbottomnav">
+    <leftbar-navi></leftbar-navi>
+</div>
+
+
+<div class="bottombar">
+    <div class="bottomcontent">     
+        <bottom-navi></bottom-navi>
+    </div>
+</div>
+
+
+
+
+
+<div class="leftbar">
+  
+
+
+    <article class="today">
+ 
+        <section>
+            <div class="leftbarblock"> 
+               <h2>2017-02-21</h2>
+            </div>
+            <div class="leftbarblock"> 
+                今日供气量：<span class="one">368</span><span class="two">Nm2</span>  今日供电量：<span class="one">368</span><span class="two">MWh</span> 
+            </div>
+            <div class="leftbarblock"> 
+                今日供蒸气量：<span class="one">368</span><span class="two">MWh</span>  今日冷/热量：<span class="one">368</span><span class="two">MWh</span> 
+            </div>
+        </section>
+    </article>
+     <Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br>
+    <article class="introduce">
+        
+        <section>
+            <div class="leftbarblock"> 
+                公司泛能业务已拓展**个城市，覆盖面积约**平方公里，服务人口约**万人<br>
+                已建**个泛能站、**个泛能网<br>
+                在建**个泛能站、**个泛能网
+            </div>
+        </section>
+    </article>
+</div>
+
+<div class="rightbar">  
+    <article>
+       
+        <section>
+             
+            <div class="barblock" (click)="changeScope()">
+                 <div class="title">全国泛能交易情况</div>
+                <national-trade [scope]="clickedScope.name"></national-trade>
+            </div>
+        </section>
+    </article>
+
+
+    <article>
+        <section>
+            <div class="barblock">
+                 <div class="title">全国泛能收益状况</div>
+                <national-profit [scope]="clickedScope.name"></national-profit>
+            </div>
+        </section>
+    </article>   
+
+
+
+    <article>
+        <section>
+            <div class="barblock">
+                 <div class="title">全国泛能收益排行榜</div>
+                <national-rank [scope]="clickedScope.name"></national-rank>
+            </div>
+        </section>
+    </article>      
+ 
+  
+  
+  </div>
