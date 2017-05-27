@@ -18,8 +18,15 @@ export class PartitionIndexComponent implements OnDestroy{
 
     createComponent(str: string) {
         this.container.clear();
-        const factory: ComponentFactory<TestComponent> = 
-        this.resolver.resolveComponentFactory(TestComponent);
+    
+        if (str == 'success') {
+            var factory: ComponentFactory<TestComponent> = 
+            this.resolver.resolveComponentFactory(TestComponent);
+        } else {
+            var factory: ComponentFactory<Test1Component> = 
+            this.resolver.resolveComponentFactory(Test1Component);
+        }
+       
         this.componentRef = this.container.createComponent(factory);
         console.log(str);
     }
