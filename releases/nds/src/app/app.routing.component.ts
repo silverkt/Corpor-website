@@ -40,7 +40,12 @@ const routes: Routes = [
                             {   
                                 path: 'group-leader/project',
                                 component: GroupIndex2Component,
-                            }                                        
+                            },
+                                                        {   
+                                path: 'group-leader/tt',
+                                component: PartitionIndexComponent,
+                                 
+                            },                                        
                             
                         ];
 @NgModule({

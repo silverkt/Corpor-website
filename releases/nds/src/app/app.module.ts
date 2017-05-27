@@ -5,7 +5,7 @@
  */
 
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -32,6 +32,10 @@ import { PartitionIndexComponent } from "./partition/index.component";
 import { ProjectsIndexComponent } from "./projects/index.component";
 
 
+import { TestComponent } from "./partition/test.component";
+import { Test1Component } from "./partition/test1.component";
+
+
 
 
 @NgModule({
@@ -54,6 +58,8 @@ import { ProjectsIndexComponent } from "./projects/index.component";
     HomeIndexComponent,
     PartitionIndexComponent,
     ProjectsIndexComponent,
+    TestComponent,
+    Test1Component
     
   ],
   imports: [
@@ -62,6 +68,9 @@ import { ProjectsIndexComponent } from "./projects/index.component";
     HttpModule,
     AppRoutingModule
   ],
+  entryComponents:[ TestComponent, Test1Component ], 
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  
   providers: [],
   bootstrap: [RootComponent]
 })
