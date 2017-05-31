@@ -12,15 +12,9 @@ import { HttpModule } from '@angular/http';
  
 import { AppRoutingModule } from "./app.routing.component";
 import { BottombarNaviComponent } from "./navi/bottombar.component";
-import { CompareBenifitComponent } from "./group-leader/component/comparebenifit.component";
-import { CompareRunningComponent } from "./group-leader/component/comparerunning.component";
-import { CompareTradeComponent } from "./group-leader/component/comparetrade.component";
-import { GroupIndexComponent } from './group-leader/index.component';
-import { GroupIndex2Component } from './group-leader/index2.component';
+ 
 import { LeftbarNaviComponent } from "./navi/leftbar.component";
-import { NationalProfitComponent } from "./group-leader/component/nationalprofit.component";
-import { NationalRankComponent } from "./group-leader/component/nationalrank.component";
-import { NationalTradeComponent } from "./group-leader/component/nationaltrade.component";
+ 
 import { RightbarNaviComponent } from "./navi/rightbar.component";
 import { RootComponent } from "./root.component";
 import { TopbarNaviComponent } from "./navi/topbar.component";
@@ -28,12 +22,24 @@ import { TopbarNaviComponent } from "./navi/topbar.component";
 
 
 import { HomeIndexComponent } from "./home/index.component";
+import { OperationComponent } from "./home/operation.component";
 import { PartitionIndexComponent } from "./partition/index.component";
 import { ProjectsIndexComponent } from "./projects/index.component";
+import { TradeComponent } from "./home/trade.component";
 
 
+//home index
+import { CompareBenifitComponent } from "./home/component/comparebenifit.component";
+import { CompareRunningComponent } from "./home/component/comparerunning.component";
+import { CompareTradeComponent } from "./home/component/comparetrade.component";
+import { NationalProfitComponent } from "./home/component/nationalprofit.component";
+import { NationalRankComponent } from "./home/component/nationalrank.component";
+import { NationalTradeComponent } from "./home/component/nationaltrade.component";
+
+ 
 import { TestComponent } from "./partition/test.component";
 import { Test1Component } from "./partition/test1.component";
+
 
 
 
@@ -42,24 +48,29 @@ import { Test1Component } from "./partition/test1.component";
   declarations: [
   
     BottombarNaviComponent,
-    CompareBenifitComponent,
-    CompareRunningComponent,
-    CompareTradeComponent,
-    GroupIndexComponent,
-    GroupIndex2Component,
+    
     LeftbarNaviComponent,
-    NationalProfitComponent,
-    NationalRankComponent,
-    NationalTradeComponent,
+ 
     RightbarNaviComponent,
     RootComponent,
     TopbarNaviComponent,
 
     HomeIndexComponent,
+    OperationComponent,
     PartitionIndexComponent,
     ProjectsIndexComponent,
+    TradeComponent,
     TestComponent,
-    Test1Component
+    Test1Component,
+
+    CompareBenifitComponent,
+    CompareRunningComponent,
+    CompareTradeComponent,
+    NationalProfitComponent,
+    NationalRankComponent,
+    NationalTradeComponent
+
+
     
   ],
   imports: [

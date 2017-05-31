@@ -8,10 +8,11 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
  
-import { GroupIndexComponent } from './group-leader/index.component';
-import { GroupIndex2Component } from './group-leader/index2.component';
+ 
 
 import { HomeIndexComponent } from "./home/index.component";
+import { OperationComponent } from "./home/operation.component";
+import { TradeComponent } from "./home/trade.component";
 import { PartitionIndexComponent } from "./partition/index.component";
 import { ProjectsIndexComponent } from "./projects/index.component";
 
@@ -34,17 +35,12 @@ const routes: Routes = [
                                 component: ProjectsIndexComponent,
                             },
                             {   
-                                path: 'group-leader/map',
-                                component: GroupIndexComponent,
+                                path: 'home/operation',
+                                component: OperationComponent,
                             },
                             {   
-                                path: 'group-leader/project',
-                                component: GroupIndex2Component,
-                            },
-                                                        {   
-                                path: 'group-leader/tt',
-                                component: PartitionIndexComponent,
-                                 
+                                path: 'home/trade',
+                                component: TradeComponent,
                             },                                        
                             
                         ];

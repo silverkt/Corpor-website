@@ -32,7 +32,7 @@ export class PartitionIndexComponent implements OnDestroy{
     }
 
     ngOnDestroy() {
-        this.componentRef.destroy();
+        //this.componentRef.destroy();
     }
 
     

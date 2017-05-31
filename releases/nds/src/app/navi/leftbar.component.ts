@@ -10,8 +10,8 @@ import { Component } from "@angular/core";
     selector: 'leftbar-navi',
     template: `
     <div class="btn-group">
-        <a class="btn btn-primary" routerLink="/group-leader/map" >运营管理</a>
-        <a class="btn btn-primary" routerLink="/group-leader/tt" >能源交易</a>
+        <a class="btn btn-primary" routerLink="/home/operation" >运营管理</a>
+        <a class="btn btn-primary" routerLink="/home/trade" >能源交易</a>
     </div>
     `,
     styles: [``],
