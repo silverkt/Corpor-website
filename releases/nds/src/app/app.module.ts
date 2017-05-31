@@ -36,7 +36,12 @@ import { NationalProfitComponent } from "./home/component/nationalprofit.compone
 import { NationalRankComponent } from "./home/component/nationalrank.component";
 import { NationalTradeComponent } from "./home/component/nationaltrade.component";
 
- 
+//projects
+import { Project1Component } from "./projects/project1.component";
+import { Project2Component } from "./projects/project2.component";
+import { Project3Component } from "./projects/project3.component";
+import { Project4Component } from "./projects/project4.component";
+
 import { TestComponent } from "./partition/test.component";
 import { Test1Component } from "./partition/test1.component";
 
@@ -68,7 +73,13 @@ import { Test1Component } from "./partition/test1.component";
     CompareTradeComponent,
     NationalProfitComponent,
     NationalRankComponent,
-    NationalTradeComponent
+    NationalTradeComponent,
+
+
+    Project1Component,
+    Project2Component,
+    Project3Component,
+    Project4Component,
 
 
     

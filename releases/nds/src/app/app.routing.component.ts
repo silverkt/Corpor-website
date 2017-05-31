@@ -16,6 +16,12 @@ import { TradeComponent } from "./home/trade.component";
 import { PartitionIndexComponent } from "./partition/index.component";
 import { ProjectsIndexComponent } from "./projects/index.component";
 
+//projects
+import { Project1Component } from "./projects/project1.component";
+import { Project2Component } from "./projects/project2.component";
+import { Project3Component } from "./projects/project3.component";
+import { Project4Component } from "./projects/project4.component";
+
 
 const routes: Routes = [
                             {   
@@ -41,7 +47,24 @@ const routes: Routes = [
                             {   
                                 path: 'home/trade',
                                 component: TradeComponent,
-                            },                                        
+                            },
+                            {
+                                path: 'projects/pv',
+                                component: Project1Component,
+                            },
+                            {
+                                path: 'projects/cchp',
+                                component: Project2Component,
+                            },
+                            {
+                                path: 'projects/pump',
+                                component: Project3Component,
+                            },
+                            {
+                                path: 'projects/gas',
+                                component: Project4Component,
+                            }
+
                             
                         ];
 @NgModule({
