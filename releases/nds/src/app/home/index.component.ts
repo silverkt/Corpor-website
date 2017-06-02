@@ -25,7 +25,7 @@ export class HomeIndexComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
-        // 百度地图API功能
+     
         var map = new AMap.Map('allmap',{
             resizeEnable: true,
             zoom: 10,
