@@ -36,15 +36,21 @@ export class HomeIndexComponent implements OnInit {
         map.setFeatures(['bg','road'])//多个种类要素显示 
 
 
+        for(var i=0; i<34; i+=3) {
+            var marker = new AMap.Marker({
+                icon: 'assets/xinaoicon.png',
+                position: provinces[i].center.split(',')             
+            })
+            marker.setMap(map);
+            marker.on('click',function(){
+                console.log('shanghaiclicked')
+            })
+        }
                 
-        var marker = new AMap.Marker({
-            icon: 'assets/xinaoicon.png',
-            position: provinces[8].center.split(',')             
-        })
-        marker.setMap(map);
-        marker.on('click',function(){
-            console.log('shanghaiclicked')
-        })
+
+
+
+      
 ////////////////////////////////////
 
 
