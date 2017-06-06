@@ -6,7 +6,7 @@
 import { Component, AfterViewInit, Input } from "@angular/core";
 import { EnergyStructurePie } from "./energystructure.pie.option";
 
-import { GpleaderDataService } from "../data.service";
+import { HomeDataService } from "../home.data.service";
 declare var echarts: any;
 
 @Component({
@@ -23,7 +23,7 @@ declare var echarts: any;
             height: 230px;
         }    
     `],
-    providers:[ GpleaderDataService ],
+    providers:[ HomeDataService ],
 })
 export class EnergyStructureComponent implements AfterViewInit{    
     option: any = {};
@@ -37,8 +37,8 @@ export class EnergyStructureComponent implements AfterViewInit{
     @Input() 
     set scope(scope: string) {
         this._scope = scope;
-        this.option = NationalTradePie; 
-        this.option1 = NationalTradeLine;
+        this.option = EnergyStructurePie; 
+        this.option1 = EnergyStructurePie;
         this.getComData();        
     }
     get scope(): string {
@@ -48,7 +48,7 @@ export class EnergyStructureComponent implements AfterViewInit{
     /**
      * 构造函数，注入数据服务
      */
-    constructor(public data: GpleaderDataService) { }
+    constructor(public data: HomeDataService) { }
     ngAfterViewInit() {
         // this.option = NationalTradePie; 
         // this.option1 = NationalTradeLine;
