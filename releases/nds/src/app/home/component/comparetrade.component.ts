@@ -1,6 +1,6 @@
 /**
  * 泛能交易对比组件
- * 此组件包含柱状图组件
+ * 此组件包含柱状图组件 
  */
 import { Component, AfterViewInit, Input } from "@angular/core";
 import { CompareTradeBar } from "./comparetrade.bar.option";
