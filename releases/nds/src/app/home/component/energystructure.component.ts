@@ -10,8 +10,8 @@ import { HomeDataService } from "../home.data.service";
 declare var echarts: any;
 
 @Component({
-    moduleId: 'national-trade',
-    selector: 'national-trade',
+    moduleId: 'energy-structure',
+    selector: 'energy-structure',
     template: `
                 <div class="row">
                     <div class="col-md-6" id="homeEnergyStructure1"></div>
