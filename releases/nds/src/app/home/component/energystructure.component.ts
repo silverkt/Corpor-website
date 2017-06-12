@@ -6,7 +6,7 @@
 import { Component, AfterViewInit, Input } from "@angular/core";
 import { EnergyStructurePie } from "./energystructure.pie.option";
 
-import { HomeDataService } from "../home.data.service";
+import { EnnDataService } from "../enn.data.service";
 declare var echarts: any;
 
 @Component({
@@ -15,7 +15,7 @@ declare var echarts: any;
     template: `
                 <div class="row">
                     <div class="col-md-6" id="homeEnergyStructure1"></div>
-                    <div class="col-md-6" id="homeEnergyStructure1"></div>
+                    <div class="col-md-6" id="homeEnergyStructure2"></div>
                 </div> 
     `,
     styles:[`    
@@ -23,7 +23,7 @@ declare var echarts: any;
             height: 230px;
         }    
     `],
-    providers:[ HomeDataService ],
+    providers:[ EnnDataService ],
 })
 export class EnergyStructureComponent implements AfterViewInit{    
     option: any = {};
@@ -48,7 +48,7 @@ export class EnergyStructureComponent implements AfterViewInit{
     /**
      * 构造函数，注入数据服务
      */
-    constructor(public data: HomeDataService) { }
+    constructor(public data: EnnDataService) { }
     ngAfterViewInit() {
         // this.option = NationalTradePie; 
         // this.option1 = NationalTradeLine;
@@ -61,13 +61,13 @@ export class EnergyStructureComponent implements AfterViewInit{
      * 并且更新初始化配置
      */
     getComData() {
-        this.data.getTradePieData(this.scope).then(response => {
+        this.data.getData(this.scope).then(response => {
             var myChart = echarts.init(document.getElementById('nationaltrade1'));         
             this.option.series[0].data = response.json().pie;
             myChart.setOption(this.option);        
         }); 
 
-        this.data.getTradeLineData(this.scope).then(response => {
+        this.data.getData(this.scope).then(response => {
             var myChart = echarts.init(document.getElementById('nationaltrade2'));         
             this.option1.xAxis.data = response.json().linex;
             this.option1.series[0].data = response.json().liney1;

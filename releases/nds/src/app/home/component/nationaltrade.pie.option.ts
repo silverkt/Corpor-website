@@ -2,6 +2,7 @@
  * 全国凡能交易饼图组件初始化配置文件
  */
 export const NationalTradePie = {
+ 
     title: {
                 text: '多能源成交占比',
                 x: 'center',

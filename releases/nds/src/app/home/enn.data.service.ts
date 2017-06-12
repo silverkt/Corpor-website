@@ -7,10 +7,10 @@ import { Http, Response } from "@angular/http";
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class HomeDataService {
+export class EnnDataService {
     constructor( public http: Http) { }
 
-    getData(url: string, scope?: string): Promise<any> {
+    getData(url: string): Promise<any> {
         return this.http.get(url).toPromise();
     }
 }

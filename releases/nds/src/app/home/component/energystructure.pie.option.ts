@@ -2,6 +2,7 @@
  * 全国凡能交易饼图组件初始化配置文件
  */
 export const EnergyStructurePie = {
+    api: 'http://pz.webcity3d.com/eos/web/images/pie.json?scope=',
     title: {
                 text: '多能源成交占比',
                 x: 'center',
