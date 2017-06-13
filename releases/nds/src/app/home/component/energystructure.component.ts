@@ -62,17 +62,15 @@ export class EnergyStructureComponent implements AfterViewInit{
      */
     getComData() {
         this.data.getData(this.scope).then(response => {
-            var myChart = echarts.init(document.getElementById('nationaltrade1'));         
+            var myChart = echarts.init(document.getElementById('homeEnergyStructure1'));         
             this.option.series[0].data = response.json().pie;
             myChart.setOption(this.option);        
         }); 
 
         this.data.getData(this.scope).then(response => {
-            var myChart = echarts.init(document.getElementById('nationaltrade2'));         
-            this.option1.xAxis.data = response.json().linex;
-            this.option1.series[0].data = response.json().liney1;
-            this.option1.series[1].data = response.json().liney2;         
-            myChart.setOption(this.option1);        
+            var myChart = echarts.init(document.getElementById('homeEnergyStructure2'));         
+            this.option.series[0].data = response.json().pie;
+            myChart.setOption(this.option);       
         });          
 
     }
