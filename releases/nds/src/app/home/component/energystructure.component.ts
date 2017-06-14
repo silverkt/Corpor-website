@@ -37,8 +37,8 @@ export class EnergyStructureComponent implements AfterViewInit{
     @Input() 
     set scope(scope: string) {
         this._scope = scope;
-        this.option = EnergyStructurePie; 
-        this.option1 = EnergyStructurePie;
+        this.option.api = "http://pz.webcity3d.com/eos/web/images/pie.json?scope="+ this.scope;
+        this.option1.api = "http://pz.webcity3d.com/eos/web/images/pie.json?scope="+ this.scope;
         this.getComData();        
     }
     get scope(): string {
@@ -48,11 +48,15 @@ export class EnergyStructureComponent implements AfterViewInit{
     /**
      * 构造函数，注入数据服务
      */
-    constructor(public data: EnnDataService) { }
+    constructor(public data: EnnDataService) {
+        this.option = EnergyStructurePie; 
+        this.option1 = EnergyStructurePie;        
+     }
     ngAfterViewInit() {
         // this.option = NationalTradePie; 
         // this.option1 = NationalTradeLine;
         // this.getComData();
+
     }
 
     /**
@@ -61,6 +65,7 @@ export class EnergyStructureComponent implements AfterViewInit{
      * 并且更新初始化配置
      */
     getComData() {
+         
         this.data.getData(this.scope).then(response => {
             var myChart = echarts.init(document.getElementById('homeEnergyStructure1'));         
             this.option.series[0].data = response.json().pie;
