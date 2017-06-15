@@ -23,7 +23,7 @@ declare var echarts: any;
             height: 230px;
         }    
     `],
-    providers:[ EnnDataService ],
+    providers:[ EnnDataService ], 
 })
 export class EnergyStructureComponent implements AfterViewInit{    
     option: any = {};
@@ -66,16 +66,16 @@ export class EnergyStructureComponent implements AfterViewInit{
      */
     getComData() {
          
-        this.data.getData(this.scope).then(response => {
+        this.data.getData(this.option.api).then(response => {
             var myChart = echarts.init(document.getElementById('homeEnergyStructure1'));         
             this.option.series[0].data = response.json().pie;
             myChart.setOption(this.option);        
         }); 
 
-        this.data.getData(this.scope).then(response => {
+        this.data.getData(this.option1.api).then(response => {
             var myChart = echarts.init(document.getElementById('homeEnergyStructure2'));         
             this.option.series[0].data = response.json().pie;
-            myChart.setOption(this.option);       
+            myChart.setOption(this.option1);       
         });          
 
     }
