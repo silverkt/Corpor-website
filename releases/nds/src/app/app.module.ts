@@ -37,6 +37,7 @@ import { NationalRankComponent } from "./home/component/nationalrank.component";
 import { NationalTradeComponent } from "./home/component/nationaltrade.component";
 
 import { EnergyStructureComponent } from "./home/component/energystructure.component";
+import { EnergySupplyComponent } from "./home/component/energysupply.component";
 
 //projects
 import { Project1Component } from "./projects/project1.component";
@@ -77,6 +78,7 @@ import { Test1Component } from "./partition/test1.component";
     NationalRankComponent,
     NationalTradeComponent,
     EnergyStructureComponent,
+    EnergySupplyComponent,
 
 
     Project1Component,

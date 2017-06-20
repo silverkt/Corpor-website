@@ -4,8 +4,6 @@
  * 全国能源结构饼图组件和其中可再生能源细分饼图组件
  */
 import { Component, AfterViewInit, Input } from "@angular/core";
-//import { EnergyStructurePie } from "./energystructure.pie.option";
-
 import { EnnDataService } from "../enn.data.service";
  
 
@@ -14,26 +12,24 @@ import { EnnDataService } from "../enn.data.service";
     selector: 'energy-supply',
     template: `
                 <div class="row">
-                    <div class="col-md-6" id="homeEnergyStructure1"></div>
-                    <div class="col-md-6" id="homeEnergyStructure2"></div>
+                    <div class="col-md-12" id="home-energy-supply"> 
+                    <div *ngIf="flag">sdfasdf </div>
+                    </div>
+                     
                 </div> 
     `,
     styles:[`    
-        .col-md-6 {    
+        .col-md-12 {    
             height: 230px;
         }    
     `],
     providers:[ EnnDataService ], 
 })
-export class EnergyStructureComponent implements AfterViewInit{    
- 
+export class EnergySupplyComponent implements AfterViewInit{    
+    public flag: boolean = false;
     public _scope: string;
     public data_api: string;
-
-    public pt1: any;
-    public pt2: any;
-    public pt3: any;
-    public pt0: any;
+    public list: any;
 
     /**
      * 通过get方法监听输入属性scope的变化，变化时初始化子组件配置
@@ -42,8 +38,8 @@ export class EnergyStructureComponent implements AfterViewInit{
     @Input() 
     set scope(scope: string) {
         this._scope = scope;
-        this.data_api = "http://pz.webcity3d.com/eos/web/images/suply.json?scope="+ this.scope;
-        this.getComData();        
+        this.data_api = "http://pz.webcity3d.com/eos/web/images/supply.json?scope="+ this.scope;
+        this.getComData(this.data_api);        
     }
     get scope(): string {
         return this._scope;
@@ -67,12 +63,11 @@ export class EnergyStructureComponent implements AfterViewInit{
      * 利用注入服务内方法getTradePieData 获取饼图对应数据
      * 并且更新初始化配置
      */
-    getComData() {         
-        this.data.getData(this.data_api).then(response => {
-            this.pt0 =  response.json().pt[0];
-            this.pt1 =  response.json().pt[1];
-            this.pt2 =  response.json().pt[2];
-            this.pt3 =  response.json().pt[3];     
+    getComData(api: string) {         
+        this.data.getData(api).then(response => {
+            console.log(response.json());
+            this.list = response.json();
+            this.flag = true;
         }); 
 
           

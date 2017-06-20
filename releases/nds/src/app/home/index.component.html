@@ -63,7 +63,7 @@
         <section>
              
             <div class="barblock" (click)="changeScope()">
-                 <div class="title">能源结构</div>
+                 <!--<div class="title">能源结构</div>-->
                 <energy-structure [scope]="clickedScope.name"></energy-structure>
             </div>
         </section>
@@ -74,7 +74,7 @@
         <section>
             <div class="barblock">
                  <div class="title">全国泛能收益状况</div>
-                <national-profit [scope]="clickedScope.name"></national-profit>
+                <energy-supply> [scope]="clickedScope.name"></energy-supply>
             </div>
         </section>
     </article>   
