@@ -67,8 +67,7 @@ export class EnergyStructureComponent implements AfterViewInit{
      * 利用注入服务内方法getTradePieData 获取饼图对应数据
      * 并且更新初始化配置
      */
-    getComData() {
-         
+    getComData() {         
         this.data.getData(this.data_api).then(response => {
             this.pt0 =  response.json().pt[0];
             this.pt1 =  response.json().pt[1];

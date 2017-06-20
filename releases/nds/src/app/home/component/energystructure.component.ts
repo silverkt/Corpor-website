@@ -12,7 +12,7 @@ declare var echarts: any;
 @Component({
     moduleId: 'energy-structure',
     selector: 'energy-structure',
-    template: `
+    template: `<div *ngIf="flag"><span *ngFor="let item of pie">{{item.name +' '+ item.value + item.unit}}&nbsp;&nbsp;</span></div>
                 <div class="row">
                     <div class="col-md-6" id="homeEnergyStructure1"></div>
                     <div class="col-md-6" id="homeEnergyStructure2"></div>
@@ -25,9 +25,10 @@ declare var echarts: any;
     `],
     providers:[ EnnDataService ], 
 })
-export class EnergyStructureComponent implements AfterViewInit{    
-    option: any = {};
-    option1: any = {};
+export class EnergyStructureComponent implements AfterViewInit{ 
+    flag: boolean = false;
+    public pie: any;
+    public option: any = {};
     public _scope: string;
 
     /**
@@ -37,9 +38,14 @@ export class EnergyStructureComponent implements AfterViewInit{
     @Input() 
     set scope(scope: string) {
         this._scope = scope;
-        this.option.api = "http://pz.webcity3d.com/eos/web/images/pie.json?scope="+ this.scope;
-        this.option1.api = "http://pz.webcity3d.com/eos/web/images/pie.json?scope="+ this.scope;
-        this.getComData();        
+        this.option.api = "http://pz.webcity3d.com/eos/web/images/structpie1.json?scope="+ this.scope;
+        this.getComData('homeEnergyStructure1', this.option.api, this.option).then(response => {
+            this.pie = response;
+            this.flag = true;
+        });
+         
+        this.option.api = "http://pz.webcity3d.com/eos/web/images/structpie2.json?scope="+ this.scope;
+        this.getComData('homeEnergyStructure2', this.option.api, this.option);          
     }
     get scope(): string {
         return this._scope;
@@ -50,7 +56,7 @@ export class EnergyStructureComponent implements AfterViewInit{
      */
     constructor(public data: EnnDataService) {
         this.option = EnergyStructurePie; 
-        this.option1 = EnergyStructurePie;        
+         
      }
     ngAfterViewInit() {
         // this.option = NationalTradePie; 
@@ -64,19 +70,27 @@ export class EnergyStructureComponent implements AfterViewInit{
      * 利用注入服务内方法getTradePieData 获取饼图对应数据
      * 并且更新初始化配置
      */
-    getComData() {
-         
-        this.data.getData(this.option.api).then(response => {
-            var myChart = echarts.init(document.getElementById('homeEnergyStructure1'));         
-            this.option.series[0].data = response.json().pie;
-            myChart.setOption(this.option);        
+    getComData(htmlLabel: string, api: string, chartOption: any): Promise<any>  {  
+                 
+    return this.data.getData(api).then(response => {
+            var myChart = echarts.init(document.getElementById(htmlLabel));
+            var pie = response.json().struct; 
+            let pieData: Array<any> = [];
+            pie.forEach(element => {
+                pieData.push({"name": element.name,"value": element.percent});
+            });        
+            chartOption.series[0].data = pieData;
+            chartOption.title.text = response.json().title;
+            myChart.setOption(chartOption);            
+            return pie;    
         }); 
+        
 
-        this.data.getData(this.option1.api).then(response => {
-            var myChart = echarts.init(document.getElementById('homeEnergyStructure2'));         
-            this.option.series[0].data = response.json().pie;
-            myChart.setOption(this.option1);       
-        });          
+        // this.data.getData(this.option1.api).then(response => {
+        //     var myChart = echarts.init(document.getElementById('homeEnergyStructure2'));         
+        //     this.option.series[0].data = response.json().pie;
+        //     myChart.setOption(this.option1);       
+        // });          
 
     }
 }

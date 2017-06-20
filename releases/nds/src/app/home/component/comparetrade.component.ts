@@ -45,7 +45,9 @@ export class CompareTradeComponent implements AfterViewInit{
      */
     constructor(public data: GpleaderDataService ) { }
 
-    ngAfterViewInit() { }
+    ngAfterViewInit() { 
+ 
+    }
 
     /**
      * 从后端获取数据方法
