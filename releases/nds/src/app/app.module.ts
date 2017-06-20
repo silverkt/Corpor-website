@@ -38,7 +38,8 @@ import { NationalTradeComponent } from "./home/component/nationaltrade.component
 
 import { EnergyStructureComponent } from "./home/component/energystructure.component";
 import { EnergySupplyComponent } from "./home/component/energysupply.component";
-
+import { EnergyEcoComponent } from "./home/component/energyeco.component";
+import { EnergySocietyComponent } from "./home/component/energysociety.component";
 //projects
 import { Project1Component } from "./projects/project1.component";
 import { Project2Component } from "./projects/project2.component";
@@ -79,6 +80,8 @@ import { Test1Component } from "./partition/test1.component";
     NationalTradeComponent,
     EnergyStructureComponent,
     EnergySupplyComponent,
+    EnergyEcoComponent,
+    EnergySocietyComponent,
 
 
     Project1Component,

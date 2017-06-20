@@ -8,8 +8,8 @@ import { EnnDataService } from "../enn.data.service";
  
 
 @Component({
-    moduleId: 'energy-supply',
-    selector: 'energy-supply',
+    moduleId: 'energy-eco',
+    selector: 'energy-eco',
     template: `
                 <div class="row">
                     <div class="col-md-12" id="home-energy-supply"> 
@@ -39,7 +39,7 @@ import { EnnDataService } from "../enn.data.service";
     `],
     providers:[ EnnDataService ], 
 })
-export class EnergySupplyComponent implements AfterViewInit{    
+export class EnergyEcoComponent implements AfterViewInit{    
     public flag: boolean = false;
     public _scope: string;
     public data_api: string;
@@ -52,7 +52,7 @@ export class EnergySupplyComponent implements AfterViewInit{
     @Input() 
     set scope(scope: string) {
         this._scope = scope;
-        this.data_api = "http://pz.webcity3d.com/eos/web/images/supply.json?scope="+ this.scope;
+        this.data_api = "http://pz.webcity3d.com/eos/web/images/economic.json?scope="+ this.scope;
         this.getComData(this.data_api);        
     }
     get scope(): string {

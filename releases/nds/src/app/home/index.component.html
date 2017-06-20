@@ -73,11 +73,31 @@
     <article>
         <section>
             <div class="barblock">
-                 <div class="title">全国泛能收益状况</div>
-                <energy-supply> [scope]="clickedScope.name"></energy-supply>
+                 <!--<div class="title">全国泛能收益状况</div>-->
+                <energy-supply  [scope]="clickedScope.name"></energy-supply>
             </div>
         </section>
     </article>   
+
+
+    <article>
+        <section>
+            <div class="barblock">
+                 <!--<div class="title">全国泛能收益状况</div>-->
+                <energy-eco  [scope]="clickedScope.name"></energy-eco>
+            </div>
+        </section>
+    </article>  
+
+
+    <article>
+        <section>
+            <div class="barblock">
+                 <!--<div class="title">全国泛能收益状况</div>-->
+                <energy-society  [scope]="clickedScope.name"></energy-society>
+            </div>
+        </section>
+    </article>  
 
 
 
