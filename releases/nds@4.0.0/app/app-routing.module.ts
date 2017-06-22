@@ -7,6 +7,7 @@ import { Mainboardlv2Component } from './mainboard.lv2.component';
 import { TestComponent } from './test.component';
 
 
+
 const routes: Routes = [
                             {   
                                 path: '',

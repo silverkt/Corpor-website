@@ -4,30 +4,33 @@
  * 暂时将地图初始化写到组件初始化渲染方法中，后续更换地图后将分离到单独组件
  */
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 declare var AMap: any;
 declare var echarts: any;
 declare var provinces: any;
  
 
 @Component({
-    moduleId: 'home-index',
+    moduleId: 'proj-index',
     selector: 'app-root',
     templateUrl: 'index.component.html',
     styleUrls: ['index.component.css'],
 })
-export class HomeIndexComponent implements OnInit {
+export class ProjcIndexComponent implements OnInit {
     clickedScope: any = {
         name: "全国",
         id: 1
     };
    
 
-    constructor(public router: Router ) { }
+    constructor(public route: ActivatedRoute) { }
 
-    ngOnInit() {
-       
-        let outerThis = this.router;
+    ngOnInit(): void {
+        this.route.params.subscribe((v:any) => {
+            console.log(v.id);
+            console.log(v.s);
+            this.changeScope(v.id);
+        });
         var map = new AMap.Map('allmap',{
             resizeEnable: false,
             dragEnable: false,
@@ -39,18 +42,7 @@ export class HomeIndexComponent implements OnInit {
         map.setCenter([116.39,39.9]);
         map.setFeatures(['bg','road'])//多个种类要素显示 
 
-
-        for(let i=0; i<34; i+=3) {
-            let marker = new AMap.Marker({
-                icon: 'assets/xinaoicon.png',
-                position: provinces[i].center.split(',')             
-            })
-            marker.setMap(map);
-            marker.on('click',function(){
-                console.log(i+'shanghaiclicked'); 
-                outerThis.navigate(['/proj', i, 'tt']);           
-            })
-        }
+ 
                 
 
 
@@ -67,8 +59,8 @@ export class HomeIndexComponent implements OnInit {
 
 
 
-    changeScope() {
-        this.clickedScope.name = "山东";
+    changeScope(scope) {
+        this.clickedScope.name = scope;
         console.log('changeScope');      
     }
 }

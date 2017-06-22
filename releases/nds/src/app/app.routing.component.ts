@@ -11,6 +11,7 @@ import { RouterModule, Routes } from "@angular/router";
  
 
 import { HomeIndexComponent } from "./home/index.component";
+import { ProjcIndexComponent } from "./proj/index.component";
 import { OperationComponent } from "./home/operation.component";
 import { TradeComponent } from "./home/trade.component";
 import { PartitionIndexComponent } from "./partition/index.component";
@@ -63,6 +64,10 @@ const routes: Routes = [
                             {
                                 path: 'projects/gas',
                                 component: Project4Component,
+                            },
+                            {
+                                path: 'proj/:id/:s',
+                                component: ProjcIndexComponent,
                             }
 
                             

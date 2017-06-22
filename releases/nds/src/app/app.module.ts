@@ -22,6 +22,7 @@ import { TopbarNaviComponent } from "./navi/topbar.component";
 
 
 import { HomeIndexComponent } from "./home/index.component";
+import { ProjcIndexComponent } from "./proj/index.component";
 import { OperationComponent } from "./home/operation.component";
 import { PartitionIndexComponent } from "./partition/index.component";
 import { ProjectsIndexComponent } from "./projects/index.component";
@@ -29,15 +30,18 @@ import { TradeComponent } from "./home/trade.component";
 
 
 //home index
- 
 import { NationalRankComponent } from "./home/component/nationalrank.component";
  
-
 import { EnergyStructureComponent } from "./home/component/energystructure.component";
 import { EnergySupplyComponent } from "./home/component/energysupply.component";
 import { EnergyEcoComponent } from "./home/component/energyeco.component";
 import { EnergySocietyComponent } from "./home/component/energysociety.component";
 import { EnergyDailyComponent } from "./home/component/energydaily.component";
+
+//proj index
+ 
+
+
 //projects
 import { Project1Component } from "./projects/project1.component";
 import { Project2Component } from "./projects/project2.component";
@@ -63,6 +67,7 @@ import { Test1Component } from "./partition/test1.component";
     TopbarNaviComponent,
 
     HomeIndexComponent,
+    ProjcIndexComponent,
     OperationComponent,
     PartitionIndexComponent,
     ProjectsIndexComponent,
