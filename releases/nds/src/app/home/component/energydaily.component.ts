@@ -15,7 +15,16 @@ import { EnnDataService } from "../enn.data.service";
                     <div class="col-md-12" id="home-energy-supply" > 
                         <div *ngIf="flag">
                             <div class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{list.title}}</div>
-                            <span *ngFor="let item of list.struct">{{item.name}}<br>{{item.value}}<br>{{item.unit}}</span>
+                            <span *ngFor="let item of list.struct"> 
+<ul class="list-group">
+  <li class="list-group-item list-group-item-success">{{item.name}}</li>
+  <li class="list-group-item list-group-item-info">{{item.value}}</li>
+  <li class="list-group-item list-group-item-warning">{{item.unit}}</li>
+</ul> 
+                            
+                            </span>
+
+               
                         </div>
                     </div>
                      
