@@ -40,6 +40,7 @@ import { EnergyStructureComponent } from "./home/component/energystructure.compo
 import { EnergySupplyComponent } from "./home/component/energysupply.component";
 import { EnergyEcoComponent } from "./home/component/energyeco.component";
 import { EnergySocietyComponent } from "./home/component/energysociety.component";
+import { EnergyDailyComponent } from "./home/component/energydaily.component";
 //projects
 import { Project1Component } from "./projects/project1.component";
 import { Project2Component } from "./projects/project2.component";
@@ -82,6 +83,7 @@ import { Test1Component } from "./partition/test1.component";
     EnergySupplyComponent,
     EnergyEcoComponent,
     EnergySocietyComponent,
+    EnergyDailyComponent,
 
 
     Project1Component,
