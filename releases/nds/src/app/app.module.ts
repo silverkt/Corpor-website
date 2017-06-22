@@ -29,12 +29,9 @@ import { TradeComponent } from "./home/trade.component";
 
 
 //home index
-import { CompareBenifitComponent } from "./home/component/comparebenifit.component";
-import { CompareRunningComponent } from "./home/component/comparerunning.component";
-import { CompareTradeComponent } from "./home/component/comparetrade.component";
-import { NationalProfitComponent } from "./home/component/nationalprofit.component";
+ 
 import { NationalRankComponent } from "./home/component/nationalrank.component";
-import { NationalTradeComponent } from "./home/component/nationaltrade.component";
+ 
 
 import { EnergyStructureComponent } from "./home/component/energystructure.component";
 import { EnergySupplyComponent } from "./home/component/energysupply.component";
@@ -73,12 +70,7 @@ import { Test1Component } from "./partition/test1.component";
     TestComponent,
     Test1Component,
 
-    CompareBenifitComponent,
-    CompareRunningComponent,
-    CompareTradeComponent,
-    NationalProfitComponent,
     NationalRankComponent,
-    NationalTradeComponent,
     EnergyStructureComponent,
     EnergySupplyComponent,
     EnergyEcoComponent,
