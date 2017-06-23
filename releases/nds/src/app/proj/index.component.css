@@ -3,8 +3,10 @@
     height: 100%;
     overflow: hidden;
     margin:0;font-family:"微软雅黑";
+    background-image:url(/assets/stationbg.png);
 }
 
+ 
 
 .topbar {
     width: 100%;
@@ -52,7 +54,7 @@
 
 
 .leftbar {
-    width: 30%;
+    width: 35%;
     height: 100%;
     position: absolute;
     top:40px;

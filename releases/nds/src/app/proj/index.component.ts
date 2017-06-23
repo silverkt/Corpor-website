@@ -21,6 +21,7 @@ export class ProjcIndexComponent implements OnInit {
         name: "全国",
         id: 1
     };
+    public station: any = {};
    
 
     constructor(public route: ActivatedRoute) { }
@@ -29,18 +30,17 @@ export class ProjcIndexComponent implements OnInit {
         this.route.params.subscribe((v:any) => {
             console.log(v.id);
             console.log(v.s);
+            this.station.title = v.s;
             this.changeScope(v.id);
         });
-        var map = new AMap.Map('allmap',{
-            resizeEnable: false,
-            dragEnable: false,
-            doubleClickZoom: false,
-            zoom: 10,
-            center: [116.480983, 40.0958]
-        });
-        map.setZoom(5);
-        map.setCenter([116.39,39.9]);
-        map.setFeatures(['bg','road'])//多个种类要素显示 
+        // var map = new AMap.Map('allmap',{
+        //     resizeEnable: false,
+        //     zoom: 10,
+        //     center: [116.480983, 40.0958]
+        // });
+        // map.setZoom(5);
+        // map.setCenter([116.39,39.9]);
+        // map.setFeatures(['bg','road'])//多个种类要素显示 
 
  
                 
