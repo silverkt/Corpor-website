@@ -67,11 +67,13 @@ export class HomeIndexComponent implements OnInit {
         let outerThis = this.router;
 
         this.data.getData(api).then(response => {
-            let list: any = response.json().list;
+            let list: any = response.json().struct;
             list.forEach(element => {
+                let local = [element.longitude, element.latitude];
+                console.log(local);
                 let marker = new AMap.Marker({
                     icon: 'assets/xinaoicon.png',
-                    position: element.location.split(',')             
+                    position: local          
                 })
                 marker.setMap(this.map);
                 marker.on('click',function(){
