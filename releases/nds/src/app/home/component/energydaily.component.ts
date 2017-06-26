@@ -17,7 +17,7 @@ import { EnnDataService } from "../enn.data.service";
                             <div class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{list.title}}</div>
                             <span *ngFor="let item of list.struct"> 
 <ul class="list-group">
-  <li class="list-group-item list-group-item-success">{{item.name}}</li>
+  <li class="list-group-item list-group-item-success" style="font-weight:bold;">{{item.name}}</li>
   <li class="list-group-item list-group-item-info">{{item.value}}</li>
   <li class="list-group-item list-group-item-warning">{{item.unit}}</li>
 </ul> 
@@ -44,7 +44,11 @@ import { EnnDataService } from "../enn.data.service";
             text-align: center;
             padding-left: 40px;
             padding-top:20px;
-        }    
+        }  
+        li {
+            width:110px;
+            font-size:10px;
+        }  
     `],
     providers:[ EnnDataService ], 
 })

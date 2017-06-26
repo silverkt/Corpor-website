@@ -14,8 +14,36 @@ import { EnnDataService } from "../enn.data.service";
                 <div class="row">
                     <div class="col-md-12" id="home-energy-supply"> 
                         <div *ngIf="flag">
-                            <div class="title">{{list.title}}</div>
-                            <span *ngFor="let item of list.struct">{{item.name}}<br>{{item.value}}<br>{{item.unit}}</span>
+                            <div class="title" style="margin-top:20px; margin-bottom:10px;">{{list.title}}</div>
+
+<div style="background-color:#838d58; border-radius:5px; width:250px;height:80px;padding:15px; float:left;margin-right:50px;">
+<div style=" color:#fff; float:left;width:50px;height:50px;font-size:32px;"><i class="icon-fire"></i></div>
+<div style=" color:#fff; float:left;"><div style="border-bottom-style:solid; border-bottom-width:1px;border-bottom-color:#fff;font-size:16px;padding-bottom:5px;">{{list.struct[0].name}} {{list.struct[0].unit}}</div><div style="text-align:left;padding-top:5px;">{{list.struct[0].value}}</div></div>
+</div>
+
+
+<div style="background-color:#6fa652; border-radius:5px; width:250px;height:80px;padding:15px;float:left;">
+<div style=" color:#fff; float:left;width:50px;height:50px;font-size:32px;"><i class="icon-bolt"></i></div>
+<div style=" color:#fff; float:left;"><div style="border-bottom-style:solid; border-bottom-width:1px;border-bottom-color:#fff;font-size:16px;padding-bottom:5px;">{{list.struct[1].name}} {{list.struct[1].unit}}</div><div style="text-align:left;padding-top:5px;">{{list.struct[1].value}}</div></div>
+</div>
+
+
+<div style="background-color:#039d91; border-radius:5px; width:250px;height:80px;padding:15px; float:left;margin-right:50px;margin-top:20px;">
+<div style=" color:#fff; float:left;width:50px;height:50px;font-size:32px;"><i class="icon-tint"></i></div>
+<div style=" color:#fff; float:left;"><div style="border-bottom-style:solid; border-bottom-width:1px;border-bottom-color:#fff;font-size:16px;padding-bottom:5px;">{{list.struct[2].name}} {{list.struct[2].unit}}</div><div style="text-align:left;padding-top:5px;">{{list.struct[2].value}}</div></div>
+</div>
+
+
+<div style="background-color:#22a86d; border-radius:5px; width:250px;height:80px;padding:15px;float:left;margin-top:20px;">
+<div style=" color:#fff; float:left;width:50px;height:50px;font-size:32px;"><i class="icon-asterisk"></i></div>
+<div style=" color:#fff; float:left;"><div style="border-bottom-style:solid; border-bottom-width:1px;border-bottom-color:#fff;font-size:16px;padding-bottom:5px;">{{list.struct[3].name}} {{list.struct[3].unit}}</div><div style="text-align:left;padding-top:5px;">{{list.struct[3].value}}</div></div>
+</div>
+
+
+                           <!--   <span *ngFor="let item of list.struct">
+
+                            
+                     {{item.name}}<br>{{item.value}}<br>{{item.unit}}</span>  -->
                         </div>
                     </div>
                      

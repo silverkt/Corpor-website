@@ -14,8 +14,51 @@ import { EnnDataService } from "../enn.data.service";
                 <div class="row">
                     <div class="col-md-12" id="home-energy-supply"> 
                         <div *ngIf="flag">
-                            <div class="title">{{list.title}}</div>
-                            <span *ngFor="let item of list.struct">{{item.name}}<br>{{item.value}}<br>{{item.unit}}</span>
+                            <div class="title" style="margin-top:20px; margin-bottom:10px;">{{list.title}}</div>
+
+<div style="width:130px;height:130px; background-color:#838d58; float:left;margin-right:10px;padding:10px; border-radius:130px;text-align:center;">
+    <div style="width:110px;height:110px; background-color:#fff; float:left;margin-right:10px;padding:10px; border-radius:110px;text-align:center;">
+    <div style="font-size:12px; font-weight:bold; margin-top:20px; ">{{list.struct[0].name}}</div>
+    <div style="padding-top:10px;">{{list.struct[0].value}}</div>
+    <div style="font-size:10px; font-weight:bold;">{{list.struct[0].unit}}</div>
+    </div>
+</div> 
+
+
+
+<div style="width:130px;height:130px; background-color:#725289; float:left;margin-right:10px;padding:10px;  margin-left:70px;margin-right:70px;text-align:center;border-radius:130px;">
+    <div style="width:110px;height:110px; background-color:#fff; float:left;margin-right:10px;padding:10px;   text-align:center;border-radius:130px;">
+    <div style="font-size:12px; font-weight:bold; margin-top:20px;">{{list.struct[1].name}}</div>
+    <div style="padding-top:10px;">{{list.struct[1].value}}</div>
+    <div style="font-size:10px; font-weight:bold;">{{list.struct[1].unit}}</div>
+    </div> 
+</div> 
+
+
+
+<div style="width:130px;height:130px; background-color:#ab524f; float:left;margin-right:10px;padding:10px; border-radius:130px;text-align:center;">
+    <div style="width:110px;height:110px; background-color:#fff; float:left;margin-right:10px;padding:10px; border-radius:130px;text-align:center;">
+    <div style="font-size:12px; font-weight:bold;   margin-top:20px;">{{list.struct[2].name}}</div>
+    <div style="padding-top:10px;">{{list.struct[2].value}}</div>
+    <div style="font-size:10px; font-weight:bold;">{{list.struct[2].unit}}</div>
+    </div> 
+</div> 
+
+
+
+
+                      <!--      <span *ngFor="let item of list.struct">
+                            
+                            
+                      <div style="width:130px;height:130px; background-color:#aa5251; float:left;margin-right:10px;padding:10px; border-radius:130px;">
+<div style="font-size:12px; font-weight:bold; background-color:#715389;color:#fff;border-radius:130px;padding:5px;margin-top:20px;">{{item.name}}</div>
+<div style="padding-top:10px;">{{item.value}}</div>
+<div style="font-size:10px; font-weight:bold;">{{item.unit}}</div>
+</div> 
+                            
+                            
+                            
+                            </span> -->
                         </div>
                     </div>
                      
@@ -33,8 +76,8 @@ import { EnnDataService } from "../enn.data.service";
         span {
             float: left;
             text-align: center;
-            padding-left: 40px;
-            padding-top:20px;
+            padding:20px;
+           
         }    
     `],
     providers:[ EnnDataService ], 

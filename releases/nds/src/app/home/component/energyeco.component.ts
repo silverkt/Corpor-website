@@ -13,9 +13,20 @@ import { EnnDataService } from "../enn.data.service";
     template: `
                 <div class="row">
                     <div class="col-md-12" id="home-energy-supply"> 
-                        <div *ngIf="flag">
-                            <div class="title">{{list.title}}</div>
-                            <span *ngFor="let item of list.struct">{{item.name}}<br>{{item.value}}<br>{{item.unit}}</span>
+                        <div *ngIf="flag" >
+                            <div class="title" style="margin-top:20px; margin-bottom:10px;">{{list.title}}</div>
+
+
+
+
+                            <span *ngFor="let item of list.struct">
+                            
+<div style="width:130px; background-color:#ececec; float:left;margin-right:10px;padding:10px; border-radius:5px;">
+<div style="font-size:12px; font-weight:bold; background-color:#715389;color:#fff;border-radius:5px;padding:5px;">{{item.name}}</div>
+<div style="padding-top:10px;">{{item.value}}</div>
+<div style="font-size:10px; font-weight:bold;">{{item.unit}}</div>
+</div>                            
+                           </span>
                         </div>
                     </div>
                      
@@ -31,10 +42,7 @@ import { EnnDataService } from "../enn.data.service";
             text-align: center;
         }
         span {
-            float: left;
-            text-align: center;
-            padding-left: 40px;
-            padding-top:20px;
+       
         }    
     `],
     providers:[ EnnDataService ], 

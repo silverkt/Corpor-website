@@ -12,8 +12,8 @@ declare var echarts: any;
 @Component({
     moduleId: 'energy-structure',
     selector: 'energy-structure',
-    template: `<div *ngIf="flag"><span *ngFor="let item of pie">{{item.name +' '+ item.value + item.unit}}&nbsp;&nbsp;</span></div>
-                <div class="row">
+    template: `<div *ngIf="flag" style="text-align:center; font-size:18px;font-weight:bold; padding:15px; color:#00b0f0;"><span  *ngFor="let item of pie">{{item.name +' '+ item.value + item.unit}}&nbsp;&nbsp;</span></div>
+                <div class="row" >
                     <div class="col-md-6" id="homeEnergyStructure1"></div>
                     <div class="col-md-6" id="homeEnergyStructure2"></div>
                 </div> 
