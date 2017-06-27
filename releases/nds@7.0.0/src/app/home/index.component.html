@@ -1,0 +1,108 @@
+<div id="allmap"></div>
+
+
+
+<div class="topbar">
+    <div class="topcontent">
+      
+        <h1>全国泛能云运营业务展示中心</h1>
+       
+    </div>
+</div>
+
+
+<div class="leftbottomnav">
+    <!--<leftbar-navi></leftbar-navi>-->
+</div>
+
+
+<div class="bottombar">
+    <div class="bottomcontent">     
+        <!--<bottom-navi></bottom-navi>-->
+    </div>
+</div>
+
+
+
+
+
+<div class="leftbar">
+  
+
+
+    <article class="today" style="width:300px;">
+ 
+        <section>
+             <energy-daily [scope]="clickedScope.name"></energy-daily>
+
+        </section>
+    </article>
+     <Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br> 
+    <article class="introduce">
+        
+        <section>
+            <div class="leftbarblock" style="font-size:16px;line-height:32px;font-weight:bold;padding:12px;"> 
+                公司泛能业务已拓展36个城市，覆盖面积约600w平方公里，服务人口约1000万人<br>
+                已建12个泛能站、4个泛能网<br>
+                在建60个泛能站、30个泛能网
+            </div>
+        </section>
+    </article>
+</div>
+
+<div class="rightbar">  
+    <article>
+       
+        <section>
+             
+            <div class="barblock" (click)="changeScope()">
+                 <!--<div class="title">能源结构</div>-->
+                <energy-structure [scope]="clickedScope.name"></energy-structure>
+            </div>
+        </section>
+    </article>
+
+
+    <article>
+        <section>
+            <div  >
+                 <!--<div class="title">全国泛能收益状况</div>-->
+                <energy-supply  [scope]="clickedScope.name"></energy-supply>
+            </div>
+        </section>
+    </article>   
+
+
+    <article>
+        <section>
+            <div >
+                 <!--<div class="title">全国泛能收益状况</div>-->
+                <energy-eco  [scope]="clickedScope.name"></energy-eco>
+            </div>
+        </section>
+    </article>  
+
+
+    <article>
+        <section>
+            <div  >
+                 <!--<div class="title">全国泛能收益状况</div>-->
+                <energy-society  [scope]="clickedScope.name"></energy-society>
+            </div>
+        </section>
+    </article>  
+
+
+
+    <!--<article>
+        <section>
+            <div class="barblock">
+                 <div class="title">全国泛能收益排行榜</div>
+                <national-rank [scope]="clickedScope.name"></national-rank>
+            </div>
+        </section>
+    </article>      -->
+ 
+  
+  
+  </div>
