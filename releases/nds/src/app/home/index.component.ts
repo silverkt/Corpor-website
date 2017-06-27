@@ -9,6 +9,7 @@ import { EnnDataService } from "./enn.data.service";
 declare var AMap: any;
 declare var echarts: any;
 declare var provinces: any;
+declare var $: any;
  
 
 @Component({
@@ -19,6 +20,7 @@ declare var provinces: any;
     providers: [EnnDataService],
 })
 export class HomeIndexComponent implements OnInit {
+    public propDiv: boolean = false;
     clickedScope: any = {
         name: "全国",
         id: 1
@@ -65,6 +67,7 @@ export class HomeIndexComponent implements OnInit {
 
     getComData(api: string) {
         let outerThis = this.router;
+        let that = this;
 
         this.data.getData(api).then(response => {
             let list: any = response.json().struct;
@@ -78,7 +81,8 @@ export class HomeIndexComponent implements OnInit {
                 marker.setMap(this.map);
                 marker.on('click',function(){
                     console.log(element.id+'shanghaiclicked'); 
-                    outerThis.navigate(['/proj', element.id, element.name]);           
+                    that.change();
+                   // outerThis.navigate(['/proj', element.id, element.name]);           
                 })
             });
 
@@ -93,5 +97,20 @@ export class HomeIndexComponent implements OnInit {
     changeScope() {
         this.clickedScope.name = "山东";
         console.log('changeScope');      
+    }
+
+    change() {
+        this.propDiv = true;
+         this.map.setZoom(8);
+        this.map.setCenter([116.39,39.9]);
+
+        $(document).ready(function(){
+                $('#scrollbar1').tinyscrollbar();
+            });
+    }
+
+    closeProp() {
+        console.log('boxis shit');
+        this.propDiv = false;
     }
 }
