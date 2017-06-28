@@ -51,7 +51,7 @@ export class HomeIndexComponent implements OnInit {
             resizeEnable: false,
             dragEnable: false,
             doubleClickZoom: false,
-            zoom: 10,
+           // zoom: 10,
             center: [116.480983, 40.0958]
         });
 
@@ -103,6 +103,7 @@ export class HomeIndexComponent implements OnInit {
         this.propDiv = true;
          this.map.setZoom(8);
         this.map.setCenter([116.39,39.9]);
+        this.map.clearMap();
 
         $(document).ready(function(){
                 $('#scrollbar1').tinyscrollbar();
