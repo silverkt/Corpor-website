@@ -12,7 +12,7 @@ declare var echarts: any;
 @Component({
     moduleId: 'energy-structure',
     selector: 'energy-structure',
-    template: `<div *ngIf="flag" style="text-align:center; font-size:18px;font-weight:bold; padding:15px; color:#00b0f0;"><span  *ngFor="let item of pie">{{item.name +' '+ item.value + item.unit}}&nbsp;&nbsp;</span></div>
+    template: `<div *ngIf="flag" style="text-align:center; font-size:16px;font-weight:bold; padding:15px; color:#00b0f0;"><span  *ngFor="let item of pie">{{item.name +' '+ item.value + item.unit}}&nbsp;&nbsp;</span></div>
                 <div class="row" >
                     <div class="col-md-6" id="homeEnergyStructure1"></div>
                     <div class="col-md-6" id="homeEnergyStructure2"></div>
@@ -38,13 +38,13 @@ export class EnergyStructureComponent implements AfterViewInit{
     @Input() 
     set scope(scope: string) {
         this._scope = scope;
-        this.option.api = "http://pz.webcity3d.com/eos/web/images/structpie1.json?scope="+ this.scope;
+        this.option.api = "http://222.222.120.72:8080/reds-rest/webapi/energystruct?scope="+ this.scope;
         this.getComData('homeEnergyStructure1', this.option.api, this.option).then(response => {
             this.pie = response;
             this.flag = true;
         });
          
-        this.option.api = "http://pz.webcity3d.com/eos/web/images/structpie2.json?scope="+ this.scope;
+        this.option.api = "http://222.222.120.72:8080/reds-rest/webapi/reuseenergy?scope="+ this.scope;
         this.getComData('homeEnergyStructure2', this.option.api, this.option);          
     }
     get scope(): string {

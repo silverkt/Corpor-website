@@ -11,7 +11,9 @@ import { Component } from "@angular/core";
     template: `
         <div class="btn-group">
             <a class="btn btn-primary" routerLink="/home/index" >返回全国界面</a>
-            <a class="btn btn-primary" routerLink="#" >进入站内界面</a>
+            <a class="btn btn-primary" href="http://10.38.128.14:2500/" target="_self">进入站内scada界面</a>
+           <!--  <a class="btn btn-primary" routerLink="#" >进入站内scada界面</a> -->
+            
           <!--  <a class="btn btn-primary" routerLink="/partition/index">分区</a>
             <a class="btn btn-primary" routerLink="/projects/index">重点项目</a> -->
         </div> 
