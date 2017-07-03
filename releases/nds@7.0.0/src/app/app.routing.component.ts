@@ -17,6 +17,8 @@ import { TradeComponent } from "./home/trade.component";
 import { PartitionIndexComponent } from "./partition/index.component";
 import { ProjectsIndexComponent } from "./projects/index.component";
 
+import { ScadaIndexComponent } from "./scada/index.component";
+
 //projects
 import { Project1Component } from "./projects/project1.component";
 import { Project2Component } from "./projects/project2.component";
@@ -68,6 +70,10 @@ const routes: Routes = [
                             {
                                 path: 'proj/:id/:s',
                                 component: ProjcIndexComponent,
+                            },
+                            {
+                                path: 'scada/:link',
+                                component: ScadaIndexComponent,
                             }
 
                             
