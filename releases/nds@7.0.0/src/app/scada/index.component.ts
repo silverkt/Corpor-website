@@ -16,7 +16,23 @@ export class ScadaIndexComponent implements OnInit{
             console.log(document.referrer);
             console.log(v.link);
             this.abc = document.getElementById("myframe");
-            this.abc.src = "http://10.38.128.14:2500/1003.htm";
+            
+            this.abc.src = v.link;
+           
+        
+
+            var iframeBodyCover = document.createElement("iframe");  
+            iframeBodyCover.id = "__iframeBodyCover";  
+            iframeBodyCover.style.cssText = "position:absolute;top:0;left:0;width:200px; height:200px;background-color:#000000;filter:alpha(opacity=0);display:none;";  
+            iframeBodyCover.src ="javascript:false;";  
+            document.body.appendChild(iframeBodyCover);  
+            this.abc = document.getElementById("__iframeBodyCover");
+            this.abc.style.zIndex = "998";
+
+
+
+
+          
         });
      }
 

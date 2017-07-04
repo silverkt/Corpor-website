@@ -44,8 +44,7 @@ export class HomeIndexComponent implements OnInit {
          
      }
 
-    ngOnInit() {
-       
+    ngOnInit() {     
         this.map = new AMap.Map('allmap',{
             resizeEnable: false,
             dragEnable: false,
@@ -66,7 +65,6 @@ export class HomeIndexComponent implements OnInit {
 
     getComData(api: string) {
         let outerThis = this.router;
-
         this.data.getData(api).then(response => {
             let list: any = response.json().struct;
             list.forEach(element => {
