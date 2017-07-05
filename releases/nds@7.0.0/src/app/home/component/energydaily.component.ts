@@ -65,7 +65,7 @@ export class EnergyDailyComponent implements AfterViewInit{
     @Input() 
     set scope(scope: string) {
         this._scope = scope;
-        this.data_api = "http://pz.webcity3d.com/eos/web/images/daily.json?scope="+ this.scope;
+        this.data_api = "http://222.222.120.72:8080/reds-rest/webapi/dailyinfo?scope="+ this.scope;
         this.getComData(this.data_api);        
     }
     get scope(): string {

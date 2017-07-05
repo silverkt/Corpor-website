@@ -95,7 +95,7 @@ export class EnergySocietyComponent implements AfterViewInit{
     @Input() 
     set scope(scope: string) {
         this._scope = scope;
-        this.data_api = "http://pz.webcity3d.com/eos/web/images/society.json?scope="+ this.scope;
+        this.data_api = "http://222.222.120.72:8080/reds-rest/webapi/socialeffect?scope="+ this.scope;
         this.getComData(this.data_api);        
     }
     get scope(): string {

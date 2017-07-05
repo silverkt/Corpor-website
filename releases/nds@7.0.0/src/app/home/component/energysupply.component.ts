@@ -108,7 +108,7 @@ export class EnergySupplyComponent implements AfterViewInit{
     getComData(api: string) {         
         this.data.getData(api).then(response => {
             this.list = response.json();
-            this.flag = true;
+            this.flag = true; 
         }); 
 
           

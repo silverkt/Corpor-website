@@ -28,9 +28,7 @@ export class HomeIndexComponent implements OnInit {
     public map: any;
     @Input()
     set scope(scope: string) {
-        this._scope = scope;
-        // let api = "http://pz.webcity3d.com/eos/web/images/list.json?scope="+ this.scope;
-        // this.getComData(api);        
+        this._scope = scope;     
     }
     get scope() {
         return this._scope;
@@ -46,17 +44,17 @@ export class HomeIndexComponent implements OnInit {
 
     ngOnInit() {     
         this.map = new AMap.Map('allmap',{
-            resizeEnable: false,
-            dragEnable: false,
+            resizeEnable: true,
+            dragEnable: true,
             doubleClickZoom: false,
             zoom: 10,
             center: [116.480983, 40.0958]
         });
 
 
-        this.map.setZoom(5);
+        this.map.setZoom(5.3);
         this.map.setCenter([116.39,39.9]);
-        this.map.setFeatures(['bg','road'])//多个种类要素显示 
+        //this.map.setFeatures(['bg','road'])//多个种类要素显示 
         this.getComData(this.data_api)
         
  
@@ -70,13 +68,21 @@ export class HomeIndexComponent implements OnInit {
             list.forEach(element => {
                 let local = [element.longitude, element.latitude];
                 console.log(local);
+                let icons = new AMap.Icon({
+                    size: new AMap.Size(25,25),
+                    image: 'assets/xinaoicon.png'
+                });
                 let marker = new AMap.Marker({
-                    icon: 'assets/xinaoicon.png',
-                    position: local          
+                    icon: icons,
+                    position: local,
+                    label: {
+                        content: element.name,
+                        offset: new AMap.Pixel(30,-10)
+                    }          
                 })
                 marker.setMap(this.map);
                 marker.on('click',function(){
-                    console.log(element.id+'shanghaiclicked'); 
+                    console.log(element.id+'clicked'); 
                     outerThis.navigate(['/proj', element.id, element.name]);           
                 })
             });

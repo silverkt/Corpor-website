@@ -30,8 +30,8 @@ export class BottombarNaviComponent implements OnInit {
 
     ngOnInit() {
         this.router.params.subscribe((params: any) => {
-            console.log("http://pz.webcity3d.com/eos/web/images/scada.json?scope="+params.id);
-            this.http.get("http://pz.webcity3d.com/eos/web/images/scada.json?scope="+params.id).toPromise().then( response => {
+            console.log("http://222.222.120.72:8080/reds-rest/webapi/scada/"+params.id);
+            this.http.get("http://222.222.120.72:8080/reds-rest/webapi/scada/"+params.id).toPromise().then( response => {
                 let a = response.json().scada;
                 this.link =  ['/scada',a];
             });
