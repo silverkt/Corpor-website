@@ -18,6 +18,7 @@ import { PartitionIndexComponent } from "./partition/index.component";
 import { ProjectsIndexComponent } from "./projects/index.component";
 
 import { ScadaIndexComponent } from "./scada/index.component";
+import { StationsIndexComponent } from "./stations/index.component";
 
 //projects
 import { Project1Component } from "./projects/project1.component";
@@ -74,6 +75,10 @@ const routes: Routes = [
                             {
                                 path: 'scada/:link',
                                 component: ScadaIndexComponent,
+                            },
+                            {
+                                path: 'stations/list',
+                                component: StationsIndexComponent,
                             }
 
                             

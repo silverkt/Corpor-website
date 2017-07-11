@@ -42,6 +42,9 @@ import { EnergyDailyComponent } from "./home/component/energydaily.component";
 
 //scada index
 import { ScadaIndexComponent } from "./scada/index.component";
+
+// station index
+import { StationsIndexComponent } from "./stations/index.component";
  
 
 
@@ -91,6 +94,7 @@ import { Test1Component } from "./partition/test1.component";
     Project3Component,
     Project4Component,
     ScadaIndexComponent,
+    StationsIndexComponent,
 
 
     
