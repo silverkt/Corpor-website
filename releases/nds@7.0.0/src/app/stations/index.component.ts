@@ -61,18 +61,16 @@ export class StationsIndexComponent implements OnInit {
         this.getComData(this.data_api)
 
         /**获取全国scada列表 */
-        this.data.getData('http://pz.webcity3d.com/eos/web/images/stationlists.json').then((res:any)=>{
+        this.data.getData('http://10.20.2.26/webapi/scadalist').then((res:any)=>{
         var jsonabj = res.json();            
            this.obj = jsonabj; 
            /**获取全国市场区域*/     
             for (let x in jsonabj) {
                 this.area.push(x);
-            }
-
-     
-
-
+            }  
         });
+
+ 
         
  
     }

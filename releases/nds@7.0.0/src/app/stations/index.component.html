@@ -28,9 +28,10 @@
 
 <div class="leftbar">
   
-<br><Br>
+<br><Br><br><Br>
 
     <div class="btn-group-vertical" role="group" aria-label="...">
+        <button type="button" class="btn btn-default"><strong>泛能站区域列表</strong></button>
   <div *ngFor="let zone of area; let i=index" class="btn-group" role="group">
     <button (click)="zoneMenu(zone)" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       {{zone}}
