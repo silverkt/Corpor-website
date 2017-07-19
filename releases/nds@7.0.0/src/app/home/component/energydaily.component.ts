@@ -8,7 +8,7 @@ import { EnnDataService } from "../enn.data.service";
  
 
 @Component({
-    moduleId: 'energy-daily',
+    
     selector: 'energy-daily',
     template: `
                 <div class="row">
@@ -54,7 +54,7 @@ import { EnnDataService } from "../enn.data.service";
 })
 export class EnergyDailyComponent implements AfterViewInit{    
     public flag: boolean = false;
-    public _scope: string;
+    public _scope?: string;
     public data_api: string;
     public list: any;
 

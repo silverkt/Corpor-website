@@ -11,7 +11,7 @@ declare var provinces: any;
  
 
 @Component({
-    moduleId: 'proj-index',
+   
     selector: 'app-root',
     templateUrl: 'index.component.html',
     styleUrls: ['index.component.css'],
@@ -59,7 +59,7 @@ export class ProjcIndexComponent implements OnInit {
 
 
 
-    changeScope(scope) {
+    changeScope(scope?: string) {
         this.clickedScope.name = scope;
         console.log('changeScope');      
     }
