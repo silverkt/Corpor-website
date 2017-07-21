@@ -1,0 +1,85 @@
+#allmap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin:0;font-family:"微软雅黑";
+}
+
+
+.topbar {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    /*background-color: #fff; */
+    z-index: 1001;
+}
+.topbar .topcontent {
+    text-align: center;
+}
+
+.topbar .topcontent h1{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.bottombar {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1001;
+}
+.bottombar .bottomcontent {
+    text-align: center;
+}
+
+.leftbottomnav {
+    position: absolute;
+    bottom:0px;
+    left: 0px;
+    z-index: 1002;    
+}
+
+.rightbottomnav {
+    position: absolute;
+    bottom:0px;
+    right:0px;
+    z-index: 1002;
+}
+
+
+
+.leftbar {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top:40px;
+    left: 0px;
+    /*background-color: #fff;*/
+    z-index: 1000;
+}
+ 
+
+
+.rightbar {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top:40px;
+    right: 0px;
+/*    background-color: #fff;   */
+    z-index: 1000;
+}
+ 
+
+
+ .div_scroll {
+	width: 100%;
+	height: 200px;
+	overflow: auto;
+	 
+}	
+
+
