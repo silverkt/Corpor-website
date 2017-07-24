@@ -6,7 +6,7 @@
 import { Component, Input, OnInit} from "@angular/core";
 import { PieComponent } from "../../../../components/pie/pie.component";
 import { ChartOpt } from "./chart.option";
-import { DataService } from "../../../../components/pie/data.service";
+import { DataService } from "../../components/pie/data.service";
  
 declare var echarts: any;
 declare var globalvar: any;

@@ -1,12 +1,11 @@
 /**
- * 全国泛能云运营业务展示中心首页能源结构
- * 此组件内包含两个子组件
- * 全国能源结构饼图组件和其中可再生能源细分饼图组件
+ * 饼图图表组件
+ * 此组件内包含三个部分
+ * 组件本身的controller部分和图表的配置文件部分以及组件获取后端数据服务部分
  */
 import { Component, Input, OnInit} from "@angular/core";
 import { ChartOpt } from "./chart.option";
-
-import { DataService } from "./data.service";
+import { DataService } from "../../data.service";
 declare var echarts: any;
 declare var globalvar: any;
 
@@ -34,7 +33,11 @@ export class PieComponent{
     @Input()
     set tscope(tscope: string) {
         this._tscope = tscope;
-    }
+    }    
+    /**
+     * 通过get方法监听输入属性scope的变化，变化时初始化子组件配置
+     * 而后调用后端获取数据方法
+     */
     get tscope(): string {
         this._tscope = this._tscope ? this._tscope : "1"; 
         return this._tscope;
@@ -76,18 +79,11 @@ export class PieComponent{
     /**后端数据请求api */
     public url: string; 
 
+    /**模板id 以便js getElementByID获取 */
     public htmlID;
     
- 
-    public pie: any;
+    /**图表配置对象 json格式 */
     public option: any = {};
-    public _scope: string;
-
-    /**
-     * 通过get方法监听输入属性scope的变化，变化时初始化子组件配置
-     * 而后调用后端获取数据方法
-     */
- 
 
     /**
      * 构造函数，注入数据服务
@@ -96,15 +92,13 @@ export class PieComponent{
         this.option = ChartOpt;            
      }
 
-
     /**
-     * 从后端获取数据方法
-     * 利用注入服务内方法getTradePieData 获取饼图对应数据
-     * 并且更新初始化配置
+     * 当有输入scope范围发生变化的时候，更新组件数据
+     * 包含更新向api请求的url参数
+     * 包含重新请求api对应数据
+     * 包含重新渲染当前图表
      */
-
-
-    private refreshComponent() {
+    protected refreshComponent() {
         this.htmlID = 'pie'+this.rqfor+this.ascope+this.tscope;     
         this.refreshUrl();
         this.getComponentData().then(()=>{
@@ -112,12 +106,18 @@ export class PieComponent{
         });
     }
 
-    private refreshUrl() {
+    /**
+     * 更新向api请求的url参数
+     */
+    protected refreshUrl() {
         this.url = globalvar.api[0].url+"?rqfor="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
         console.log(this.url);
     }
 
-    private getComponentData(): Promise<any> {
+    /**
+     * 请求api对应数据
+     */
+    protected getComponentData(): Promise<any> {
         return this.data.getData(this.url).then(response => {            
             let pieJson = response.json().struct;
             let pieData: Array<any> = [];
@@ -126,10 +126,15 @@ export class PieComponent{
             });
             this.option.series[0].data = pieData;
             this.option.title.text = response.json().title;
+        }).catch(()=>{
+            console.log('Server\'s data service is down!');
         });
     }
 
-    private renderChart() {
+    /**
+     * 渲染当前图表
+     */
+    protected renderChart() {
         let myChart = echarts.init(document.getElementById(this.htmlID));
         myChart.setOption(this.option);   
     }
