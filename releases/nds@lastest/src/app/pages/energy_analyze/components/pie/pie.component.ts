@@ -6,15 +6,15 @@
 import { Component, Input, OnInit} from "@angular/core";
 import { PieComponent } from "../../../../components/pie/pie.component";
 import { ChartOpt } from "./chart.option";
-
-import { DataService1 } from "./data.service";
+import { DataService } from "../../../../components/pie/data.service";
+ 
 declare var echarts: any;
 declare var globalvar: any;
 
 @Component({
     moduleId: 'energy-test',
     selector: 'energy-test',
-    template: `<div id={{htmlID}} class="pie-energy-structure"></div>
+    template: `<div id={{htmlID}} class="pie-energy-structure">sssssssssssssssssssssssssssssssssaaa</div>
     `,
     styles:[`    
         .pie-energy-structure{    
@@ -22,10 +22,8 @@ declare var globalvar: any;
             width: 100px;
         }    
     `],
-    providers:[ DataService1 ], 
+    providers:[ DataService ], 
 })
 export class PieAnalyzeComponent extends PieComponent{ 
-    constructor(data: DataService1) {
-        super(data);
-    }
+ 
 }

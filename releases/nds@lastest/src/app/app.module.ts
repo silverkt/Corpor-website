@@ -33,6 +33,10 @@ import { Line2Component } from "./components/line2/line2.component";
 import { EnergySocietyComponent } from "./components/circle/energysociety.component";
 import { EnergyCircleComponent } from "./components/circle/circle.component";
 
+
+
+import { PieAnalyzeComponent } from "./pages/energy_analyze/components/pie/pie.component";
+
   
 //import { PieAnalyzeComponent } from "./pages/energy_analyze/components/pie/pie.component";
 
@@ -57,7 +61,7 @@ import { EnergyCircleComponent } from "./components/circle/circle.component";
 
 
 
-     //PieAnalyzeComponent
+     PieAnalyzeComponent
   ],
   imports: [
     BrowserModule,

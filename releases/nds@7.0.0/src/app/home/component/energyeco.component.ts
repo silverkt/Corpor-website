@@ -60,7 +60,7 @@ export class EnergyEcoComponent implements AfterViewInit{
     @Input() 
     set scope(scope: string) {
         this._scope = scope;
-        this.data_api = "http://222.222.120.72:8080/reds-rest/webapi/ecoeffect?scope="+ this.scope;
+        this.data_api = "http://222.222.120.72:808/reds-rest/webapi/ecoeffect?scope="+ this.scope;
         this.getComData(this.data_api);        
     }
     get scope(): string {

@@ -41,7 +41,7 @@ export class StationsIndexComponent implements OnInit {
 
     constructor(public router: Router, public data: EnnDataService ) {
         this._scope = '1'; //全国
-        this.data_api = "http://222.222.120.72:8080/reds-rest/webapi/stationlist?scope="+ this._scope;
+        this.data_api = "http://222.222.120.72:808/reds-rest/webapi/stationlist?scope="+ this._scope;
          
      }
 
@@ -61,7 +61,7 @@ export class StationsIndexComponent implements OnInit {
         this.getComData(this.data_api)
 
         /**获取全国scada列表 */
-        this.data.getData('http://10.20.2.26/webapi/scadalist').then((res:any)=>{
+        this.data.getData('http://222.222.120.72:808/reds-rest/webapi/scadalist').then((res:any)=>{
         var jsonabj = res.json();            
            this.obj = jsonabj; 
            /**获取全国市场区域*/     

@@ -38,7 +38,7 @@ export class HomeIndexComponent implements OnInit {
     constructor(public router: Router, public data: EnnDataService ) {
         this._scope = '1'; //全国
         //this.data_api = "http://pz.webcity3d.com/eos/web/images/list.json?sscope="+ this._scope;
-        this.data_api = "http://222.222.120.72:8080/reds-rest/webapi/stationlist?scope="+ this._scope;
+        this.data_api = "http://222.222.120.72:808/reds-rest/webapi/stationlist?scope="+ this._scope;
          
      }
 
