@@ -25,7 +25,7 @@ import { SocialEffectComponent } from "./pages/social_effect/social_effect.page"
 
 
 
-import { PieComponent } from "./components/pie/pie.component";
+
 import { MapComponent } from "./components/map/map.component";
 import { Pie2Component } from "./components/pie2/pie2.component";
 import { LineComponent } from "./components/line/line.component";
@@ -33,6 +33,8 @@ import { Line2Component } from "./components/line2/line2.component";
 import { EnergySocietyComponent } from "./components/circle/energysociety.component";
 import { EnergyCircleComponent } from "./components/circle/circle.component";
 
+
+import { PieStructComponent } from "./pages/energy_structure/pie/pie.component";
 
 
 import { PieAnalyzeComponent } from "./pages/energy_analyze/components/pie/pie.component";
@@ -51,12 +53,14 @@ import { PieAnalyzeComponent } from "./pages/energy_analyze/components/pie/pie.c
     SocialEffectComponent,
     EnergySocietyComponent, 
     BottomNaviComponent,   
-    PieComponent,  
+  
     Pie2Component, 
     LineComponent,
     Line2Component,
     EnergyCircleComponent,
     MapComponent, 
+
+    PieStructComponent,
 
 
 

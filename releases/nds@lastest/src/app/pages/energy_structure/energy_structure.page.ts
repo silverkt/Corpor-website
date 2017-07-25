@@ -7,5 +7,10 @@ import { Component } from "@angular/core";
     styleUrls: ['energy_structure.page.css']
 })
 export class EnStructComponent {
-
+    tscope: string;
+ 
+    changeScope(tscope:string) {
+        this.tscope = tscope;
+        console.log(tscope);
+    }
 }

@@ -10,8 +10,8 @@ declare var echarts: any;
 declare var globalvar: any;
 
 @Component({
-    moduleId: 'energy-structure',
-    selector: 'energy-structure',
+    moduleId: 'silver-pie',
+    selector: 'silver-pie',
     template: `<div id={{htmlID}} class="pie-energy-structure"></div>
     `,
     styles:[`    
@@ -33,6 +33,7 @@ export class PieComponent{
     @Input()
     set tscope(tscope: string) {
         this._tscope = tscope;
+        this.refreshComponent();
     }    
     /**
      * 通过get方法监听输入属性scope的变化，变化时初始化子组件配置
@@ -54,6 +55,7 @@ export class PieComponent{
     @Input()
     set ascope(ascope: string) {
         this._ascope = ascope;
+        this.refreshComponent();        
     }
     get ascope(): string {
         this._ascope = this._ascope ? this._ascope : "1";
