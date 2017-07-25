@@ -113,7 +113,6 @@ export class PieComponent{
      */
     protected refreshUrl() {
         this.url = globalvar.api[0].url+"?rqfor="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
-        console.log(this.url);
     }
 
     /**

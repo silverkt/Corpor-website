@@ -17,15 +17,14 @@ export const ChartOpt = {
         radius: [0,'60%'],
         label: {
             normal: {
-                formatter: '{b}\n{d}%'
+                position: 'inside',
+                formatter: '{b}\n{d}%',
+                textStyle: {
+                    fontWeight: '10'
+                }
             }
         },
-        labelLine: {
-            normal: {
-                length: 15,
-                length2: 15,
-            }
-        },
+        
         data: [{name:'其他',value:10},{name:'燃气',value:10},{name:'电力',value:60},{name:'冷/热',value:20}]
     }]
 }

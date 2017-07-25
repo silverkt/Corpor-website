@@ -37,7 +37,7 @@ import { EnergyCircleComponent } from "./components/circle/circle.component";
 import { PieStructComponent } from "./pages/energy_structure/pie/pie.component";
 
 
-import { PieAnalyzeComponent } from "./pages/energy_analyze/components/pie/pie.component";
+import { PieAnalyzeComponent } from "./pages/energy_analyze/pie/pie.component";
 
   
 //import { PieAnalyzeComponent } from "./pages/energy_analyze/components/pie/pie.component";

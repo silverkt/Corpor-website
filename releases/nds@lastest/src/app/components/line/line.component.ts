@@ -6,7 +6,7 @@
 import { Component, Input, OnInit} from "@angular/core";
 import { ChartOpt } from "./chart.option";
 
-import { DataService } from "./data.service";
+import { DataService } from "../../data.service";
 declare var echarts: any;
 declare var globalvar: any;
 
@@ -113,7 +113,7 @@ export class LineComponent{
     }
 
     private refreshUrl() {
-        this.url = globalvar.api[0].url+"?rqfor="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
+        this.url = globalvar.api[0].url+"?rqforline="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
         console.log(this.url);
     }
 
