@@ -92,7 +92,7 @@ export class LineComponent{
     /**
      * 构造函数，注入数据服务
      */
-    constructor(public data: DataService) {
+    constructor(public data: DataService) {  
         this.option = ChartOpt;            
      }
 
@@ -104,7 +104,7 @@ export class LineComponent{
      */
 
 
-    private refreshComponent() {
+    protected refreshComponent() {
         this.htmlID = 'line'+this.rqfor+this.ascope+this.tscope;     
         this.refreshUrl();
         this.getComponentData().then(()=>{
@@ -112,25 +112,26 @@ export class LineComponent{
         });
     }
 
-    private refreshUrl() {
-        this.url = globalvar.api[0].url+"?rqforline="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
+    protected refreshUrl() {
+        this.url = globalvar.api[1].url+"?rqforline="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
         console.log(this.url);
     }
 
-    private getComponentData(): Promise<any> {
-        return Promise.resolve(1);
-        // return this.data.getData(this.url).then(response => {            
-        //     let pieJson = response.json().struct;
-        //     let pieData: Array<any> = [];
-        //     pieJson.forEach(element => {
-        //         pieData.push({"name": element.name,"value": element.percent});
-        //     });
-        //     this.option.series[0].data = pieData;
-        //     this.option.title.text = response.json().title;
-        // });
+    protected getComponentData(): Promise<any> {
+        return this.data.getData(this.url).then(response => {
+            let lineJson = response.json();
+            //this.option.title.text = lineJson.title;
+            this.option.legend.data = lineJson.data_type;  
+            this.option.xAxis.name = lineJson.x_line.name;
+            this.option.xAxis.data = lineJson.x_line.data;
+            this.option.yAxis.name = lineJson.y_line.name;
+            this.option.series = lineJson.y_line.series;       
+        }).catch(()=>{
+            console.log('Server\'s data service is down!');
+        });
     }
 
-    private renderChart() {
+    protected renderChart() {
         let myChart = echarts.init(document.getElementById(this.htmlID));
         myChart.setOption(this.option);   
     }
