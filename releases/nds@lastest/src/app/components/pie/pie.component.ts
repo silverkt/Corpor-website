@@ -120,13 +120,14 @@ export class PieComponent{
      */
     protected getComponentData(): Promise<any> {
         return this.data.getData(this.url).then(response => {            
-            let pieJson = response.json().struct;
-            let pieData: Array<any> = [];
-            pieJson.forEach(element => {
-                pieData.push({"name": element.name,"value": element.percent});
-            });
-            this.option.series[0].data = pieData;
-            this.option.title.text = response.json().title;
+            let pieJson = response.json();
+            // let pieData: Array<any> = [];
+            // pieJson.forEach(element => {
+            //     pieData.push({"name": element.name,"value": element.percent});
+            // });
+            this.option.series[0].data = pieJson.data;
+            this.option.title.text = pieJson.title;
+            this.option.series[0].label.normal.formatter = '{b}\n{d}'+pieJson.unit;   
         }).catch(()=>{
             console.log('Server\'s data service is down!');
         });

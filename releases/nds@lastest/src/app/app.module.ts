@@ -38,6 +38,10 @@ import { PieStructComponent } from "./pages/energy_structure/pie/pie.component";
 
 import { PieAnalyzeComponent } from "./pages/energy_analyze/pie/pie.component";
 import { LineAnalyzeComponent } from "./pages/energy_analyze/line/line.component";
+
+
+import { PieEcoComponent } from "./pages/eco_effect/pie/pie.component";
+import { LineEcoComponent } from "./pages/eco_effect/line/line.component";
   
 //import { PieAnalyzeComponent } from "./pages/energy_analyze/components/pie/pie.component";
 
@@ -64,7 +68,9 @@ import { LineAnalyzeComponent } from "./pages/energy_analyze/line/line.component
 
 
 
-     PieAnalyzeComponent
+     PieAnalyzeComponent,
+     PieEcoComponent,
+     LineEcoComponent
   ],
   imports: [
     BrowserModule,

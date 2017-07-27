@@ -124,7 +124,7 @@ export class LineComponent{
             this.option.legend.data = lineJson.data_type;  
             this.option.xAxis.name = lineJson.x_line.name;
             this.option.xAxis.data = lineJson.x_line.data;
-            this.option.yAxis.name = lineJson.y_line.name;
+            this.option.yAxis[0].name = lineJson.y_line.name;
             this.option.series = lineJson.y_line.series;       
         }).catch(()=>{
             console.log('Server\'s data service is down!');

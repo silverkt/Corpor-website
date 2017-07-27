@@ -11,8 +11,8 @@ declare var echarts: any;
 declare var globalvar: any;
 
 @Component({
-    moduleId: 'line-analyze',
-    selector: 'line-analyze',
+    moduleId: 'line-eco',
+    selector: 'line-eco',
     template: `<div id={{htmlID}} class="line-energy-structure"></div>
     `,
     styles:[`    
@@ -23,7 +23,7 @@ declare var globalvar: any;
     `],
     providers:[ DataService ], 
 })
-export class LineAnalyzeComponent extends LineComponent{ 
+export class LineEcoComponent extends LineComponent{ 
     constructor(data: DataService) {
         super(data);
         this.option = ChartOpt;   
@@ -32,7 +32,7 @@ export class LineAnalyzeComponent extends LineComponent{
      * 更新向api请求的url参数
      */
     protected refreshUrl() {
-        this.url = globalvar.api[2].url+"?rqfor="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
+        this.url = globalvar.api[4].url+"?rqfor2="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
         console.log(this.url);
     }
 }

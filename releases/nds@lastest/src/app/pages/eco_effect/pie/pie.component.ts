@@ -11,8 +11,8 @@ declare var echarts: any;
 declare var globalvar: any;
 
 @Component({
-    moduleId: 'pie-analyze',
-    selector: 'pie-analyze',
+    moduleId: 'pie-eco',
+    selector: 'pie-eco',
     template: `<div id={{htmlID}} class="pie-energy-structure"></div>
     `,
     styles:[`    
@@ -23,7 +23,7 @@ declare var globalvar: any;
     `],
     providers:[ DataService ], 
 })
-export class PieAnalyzeComponent extends PieComponent{ 
+export class PieEcoComponent extends PieComponent{ 
     constructor(data: DataService) {
         super(data);
         this.option = ChartOpt;   
@@ -32,7 +32,7 @@ export class PieAnalyzeComponent extends PieComponent{
      * 更新向api请求的url参数
      */
     protected refreshUrl() {
-        this.url = globalvar.api[1].url+"?rqfor2="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
+        this.url = globalvar.api[3].url+"?rqfor2="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
         console.log(this.url);
     }
 }
