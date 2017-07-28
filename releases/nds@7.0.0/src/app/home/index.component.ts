@@ -20,8 +20,8 @@ declare var provinces: any;
 })
 export class HomeIndexComponent implements OnInit {
     clickedScope: any = {
-        name: "全国",
-        id: 1
+        name: " ",
+        id: " "
     };
     public _scope: string;
     public data_api: string;
@@ -36,9 +36,9 @@ export class HomeIndexComponent implements OnInit {
    
 
     constructor(public router: Router, public data: EnnDataService ) {
-        this._scope = '1'; //全国
+        this._scope = ' '; //全国
         //this.data_api = "http://pz.webcity3d.com/eos/web/images/list.json?sscope="+ this._scope;
-        this.data_api = "http://222.222.120.72:808/reds-rest/webapi/stationlist?scope="+ this._scope;
+        this.data_api = "http://222.222.120.72:808/reds-rest/webapi/stationlist/"+ this._scope;
          
      }
 

@@ -97,7 +97,7 @@ export class StationsIndexComponent implements OnInit {
                 marker.setMap(this.map);
                 marker.on('click',function(){
                     console.log(element.id+'clicked'); 
-                    outerThis.navigate(['/scada', 'http://10.38.128.14/'+element.id+'.htm',]);           
+                    outerThis.navigate(['/scada', 'http://10.38.128.14:2500/'+element.id+'.htm',]);           
                 })
             });
 

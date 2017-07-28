@@ -80,7 +80,7 @@ export class EnergySupplyComponent implements AfterViewInit{
     @Input() 
     set scope(scope: string) {
         this._scope = scope;
-        this.data_api = "http://222.222.120.72:808/reds-rest/webapi/supplyanalyze?scope="+ this.scope;
+        this.data_api = "http://222.222.120.72:808/reds-rest/webapi/supplyanalyze/"+ this.scope;
         this.getComData(this.data_api);        
     }
     get scope(): string {

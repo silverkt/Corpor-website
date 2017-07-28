@@ -11,6 +11,7 @@ export class EnnDataService {
     constructor( public http: Http) { }
 
     getData(url: string): Promise<any> {
+        console.log(url);
         return this.http.get(url).toPromise();
     }
 }
