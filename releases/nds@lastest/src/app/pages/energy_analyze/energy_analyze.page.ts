@@ -6,6 +6,6 @@ import { Component } from "@angular/core";
     templateUrl: 'energy_analyze.page.html',
     styleUrls: ['energy_analyze.page.css']
 })
-export class EnAnalyzeComponent {
+export class EnAnalyzePage {
 
 }

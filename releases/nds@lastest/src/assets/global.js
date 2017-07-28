@@ -26,6 +26,16 @@ var globalvar = {
             "label": "经济效用坐标曲线",
             "url": "http://pz.webcity3d.com/eos/web/images/rems/xyline3.json"
         },
+        {
+            "id": 5,
+            "label": "社会效用环状",
+            "url": "http://pz.webcity3d.com/eos/web/images/rems/circle4.json"
+        },
+        {
+            "id": 6,
+            "label": "社会效用坐标曲线",
+            "url": "http://pz.webcity3d.com/eos/web/images/rems/xyline4.json"
+        },
 
     ]
 }

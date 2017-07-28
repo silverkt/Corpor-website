@@ -11,31 +11,31 @@ import { RouterModule, Routes } from "@angular/router";
  
 
 import { IndexComponent } from "./pages/index/index.component";
-import { EnStructComponent } from "./pages/energy_structure/energy_structure.page";
-import { EnAnalyzeComponent } from "./pages/energy_analyze/energy_analyze.page"; 
-import { EcoEffectComponent } from "./pages/eco_effect/eco_effect.page";
-import { SocialEffectComponent } from "./pages/social_effect/social_effect.page";
+import { EnStructPage } from "./pages/energy_structure/energy_structure.page";
+import { EnAnalyzePage } from "./pages/energy_analyze/energy_analyze.page"; 
+import { EcoEffectPage } from "./pages/eco_effect/eco_effect.page";
+import { SocialEffectPage } from "./pages/social_effect/social_effect.page";
 
 const routes: Routes = [
                             {   
                                 path: '',
-                                component: EnStructComponent,
+                                component: EnStructPage,
                             },
                             {   
                                 path: 'enstruct',
-                                component: EnStructComponent,
+                                component: EnStructPage,
                             },
                             {
                                 path: 'enanalyze',
-                                component: EnAnalyzeComponent,
+                                component: EnAnalyzePage,
                             },
                             {
                                 path: 'ecoeffect',
-                                component: EcoEffectComponent,
+                                component: EcoEffectPage,
                             },
                             {
                                 path: 'socialeffect',
-                                component: SocialEffectComponent,
+                                component: SocialEffectPage,
                             },                        
                             {   
                                 path: 'partition/index',

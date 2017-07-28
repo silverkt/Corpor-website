@@ -12,65 +12,52 @@ import { AppRoutingModule } from "./app.routing.component";
 import { RootComponent } from "./root.component";
 
 import { BottomNaviComponent } from "./navigations/bottom.navi";
-
-import { IndexComponent } from "./pages/index/index.component";
-import { EnStructComponent } from "./pages/energy_structure/energy_structure.page";
-import { EnAnalyzeComponent } from "./pages/energy_analyze/energy_analyze.page";
-import { EcoEffectComponent } from "./pages/eco_effect/eco_effect.page";
-import { SocialEffectComponent } from "./pages/social_effect/social_effect.page";
-
-
-
-
-
-
-
-
 import { MapComponent } from "./components/map/map.component";
-import { Pie2Component } from "./components/pie2/pie2.component";
-import { Line2Component } from "./components/line2/line2.component";
-import { EnergySocietyComponent } from "./components/circle/energysociety.component";
-import { EnergyCircleComponent } from "./components/circle/circle.component";
+import { PieComponent } from "./components/pie/pie.component";
+import { LineComponent } from "./components/line/line.component";
+import { CircleComponent } from "./components/circle/circle.component";
+import { IndexComponent } from "./pages/index/index.component";
 
-
+import { EnStructPage } from "./pages/energy_structure/energy_structure.page";
 import { PieStructComponent } from "./pages/energy_structure/pie/pie.component";
 
-
+import { EnAnalyzePage } from "./pages/energy_analyze/energy_analyze.page";
 import { PieAnalyzeComponent } from "./pages/energy_analyze/pie/pie.component";
 import { LineAnalyzeComponent } from "./pages/energy_analyze/line/line.component";
 
-
+import { EcoEffectPage } from "./pages/eco_effect/eco_effect.page";
 import { PieEcoComponent } from "./pages/eco_effect/pie/pie.component";
 import { LineEcoComponent } from "./pages/eco_effect/line/line.component";
-  
-//import { PieAnalyzeComponent } from "./pages/energy_analyze/components/pie/pie.component";
+
+import { SocialEffectPage } from "./pages/social_effect/social_effect.page";
+import { CircleSocialComponent } from "./pages/social_effect/circle/circle.component";
+import { LineSocialComponent } from "./pages/social_effect/line/line.component";
 
 
 @NgModule({
   declarations: [
     RootComponent,
     IndexComponent,
-    EnStructComponent,
-    EnAnalyzeComponent,
-    EcoEffectComponent,
-    SocialEffectComponent,
-    EnergySocietyComponent, 
+    PieComponent,
+    LineComponent,
+    CircleComponent,
+
+    EnStructPage,
+       PieStructComponent,
+    EnAnalyzePage,
+       PieAnalyzeComponent,
+       LineAnalyzeComponent,
+    EcoEffectPage,
+       PieEcoComponent,
+       LineEcoComponent,
+    SocialEffectPage,
+       CircleSocialComponent,
+       LineSocialComponent,
+ 
     BottomNaviComponent,   
-  
-    Pie2Component, 
-    LineAnalyzeComponent,
-    Line2Component,
-    EnergyCircleComponent,
-    MapComponent, 
 
-    PieStructComponent,
-
-
-
-
-     PieAnalyzeComponent,
-     PieEcoComponent,
-     LineEcoComponent
+    MapComponent,   
+ 
   ],
   imports: [
     BrowserModule,

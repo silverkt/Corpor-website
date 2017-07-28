@@ -6,16 +6,27 @@
     <div class ="overpage">
         <div class="title">社会效用</div>
 
-      <span style="float:left;padding-top:50px;padding-right:20px;">当日</span>  <energy-circle></energy-circle>
+      <span style="float:left;padding-top:50px;padding-right:20px;">当日</span>  
+      <social-circle [rqfor]="1" [tscope]="4"></social-circle>
+      <social-circle [rqfor]="2" [tscope]="4"></social-circle>
+      <social-circle [rqfor]="3" [tscope]="4"></social-circle>
                            
    
-      <energy-structure4 [ascope]="1" [tscope]="2" [rqfor]="3" style="float:left;"  ></energy-structure4><br style="clear:both;">
-       <span style="float:left;padding-top:50px;padding-right:20px;">当月</span>  <energy-circle></energy-circle>
- <energy-structure4 [ascope]="2" [tscope]="2" [rqfor]="3" style="float:left;"  ></energy-structure4><br style="clear:both;">
+      <line-social [ascope]="1" [tscope]="2" [rqfor]="3" style="float:left;"  ></line-social><br style="clear:both;">
+       <span style="float:left;padding-top:50px;padding-right:20px;">当月</span>  
+       <social-circle [rqfor]="1" [tscope]="3"></social-circle>
+       <social-circle [rqfor]="2" [tscope]="3"></social-circle>
+       <social-circle [rqfor]="3" [tscope]="3"></social-circle>
+       
+ <line-social [ascope]="2" [tscope]="2" [rqfor]="3" style="float:left;"  ></line-social><br style="clear:both;">
  
-     <span style="float:left;padding-top:50px;padding-right:20px;">当年</span>   <energy-circle></energy-circle>
+     <span style="float:left;padding-top:50px;padding-right:20px;">当年</span>   
+     <social-circle [rqfor]="1" [tscope]="2"></social-circle>
+     <social-circle [rqfor]="2" [tscope]="2"></social-circle>
+     <social-circle [rqfor]="3" [tscope]="2"></social-circle>
 
-    <energy-structure4 [ascope]="4" [tscope]="2" [rqfor]="3" style="float:left;"  ></energy-structure4>
+
+    <line-social [ascope]="4" [tscope]="2" [rqfor]="3" style="float:left;"  ></line-social>
  
     </div>
    

@@ -6,6 +6,6 @@ import { Component } from "@angular/core";
     templateUrl: 'social_effect.page.html',
     styleUrls: ['social_effect.page.css']
 })
-export class SocialEffectComponent {
+export class SocialEffectPage {
 
 }

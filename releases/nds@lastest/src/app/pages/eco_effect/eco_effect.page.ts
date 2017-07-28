@@ -6,6 +6,6 @@ import { Component } from "@angular/core";
     templateUrl: 'eco_effect.page.html',
     styleUrls: ['eco_effect.page.css']
 })
-export class EcoEffectComponent {
+export class EcoEffectPage {
 
 }

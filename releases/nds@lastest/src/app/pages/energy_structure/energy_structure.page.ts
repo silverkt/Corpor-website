@@ -6,7 +6,7 @@ import { Component } from "@angular/core";
     templateUrl: 'energy_structure.page.html',
     styleUrls: ['energy_structure.page.css']
 })
-export class EnStructComponent {
+export class EnStructPage {
     tscope: string;
  
     changeScope(tscope:string) {
