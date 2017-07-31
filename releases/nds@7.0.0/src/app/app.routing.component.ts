@@ -31,6 +31,7 @@ const routes: Routes = [
                             {   
                                 path: '',
                                 component: HomeIndexComponent,
+                                pathMatch: "full"
                             },
                             {   
                                 path: 'home/index',
