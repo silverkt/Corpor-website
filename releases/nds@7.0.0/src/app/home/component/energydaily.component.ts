@@ -4,6 +4,7 @@
  * 全国能源结构饼图组件和其中可再生能源细分饼图组件
  */
 import { Component, AfterViewInit, Input } from "@angular/core";
+import { Router } from "@angular/router";
 import { EnnDataService } from "../enn.data.service";
  
 
@@ -75,7 +76,7 @@ export class EnergyDailyComponent implements AfterViewInit{
     /**
      * 构造函数，注入数据服务
      */
-    constructor(public data: EnnDataService) {
+    constructor(public data: EnnDataService, public router: Router) {
              
      }
     ngAfterViewInit() {
@@ -94,6 +95,8 @@ export class EnergyDailyComponent implements AfterViewInit{
         this.data.getData(api).then(response => {
             this.list = response.json();
             this.flag = true;
+        }).catch(err=>{
+            this.router.navigate(['error']);
         }); 
 
           

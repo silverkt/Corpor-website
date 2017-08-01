@@ -27,6 +27,9 @@ import { Project3Component } from "./projects/project3.component";
 import { Project4Component } from "./projects/project4.component";
 
 
+import { ErrorComponent } from "./proj/error.component";
+
+
 const routes: Routes = [
                             {   
                                 path: '',
@@ -80,6 +83,10 @@ const routes: Routes = [
                             {
                                 path: 'stations/list',
                                 component: StationsIndexComponent,
+                            },
+                            {
+                                path: 'error',
+                                component: ErrorComponent,
                             }
 
                             

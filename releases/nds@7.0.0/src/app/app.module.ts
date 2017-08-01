@@ -58,7 +58,7 @@ import { TestComponent } from "./partition/test.component";
 import { Test1Component } from "./partition/test1.component";
 
 
-
+import { ErrorComponent } from "./proj/error.component";
 
 
 @NgModule({
@@ -95,6 +95,7 @@ import { Test1Component } from "./partition/test1.component";
     Project4Component,
     ScadaIndexComponent,
     StationsIndexComponent,
+    ErrorComponent
 
 
     
