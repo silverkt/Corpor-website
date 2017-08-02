@@ -37,5 +37,52 @@ var globalvar = {
             "url": "http://pz.webcity3d.com/eos/web/images/rems/xyline4.json"
         },
 
-    ]
+    ],
+    "navi": {
+        "a" : [      //场景A
+            {
+                "scene": "a",
+                "title": "能源结构",
+                "url": "/enstruct"
+            },
+            {
+                "scene": "a",
+                "title": "能源分析",
+                "url": "/enanalyze"
+            },
+            {
+                "scene": "a",
+                "title": "经济效用",
+                "url": "/ecoeffect"
+            },
+            {
+                "scene": "a",
+                "title": "社会效用",
+                "url": "/socialeffect"
+            }
+        ],
+        "b" : [       //场景B
+            {
+                "scene": "b",
+                "title": "能源结构b",
+                "url": "enstruct"
+            },
+            {
+                "scene": "b",
+                "title": "能源分析b",
+                "url": "enanalyze"
+            },
+            {
+                "scene": "b",
+                "title": "经济效用b",
+                "url": "ecoeffect"
+            },
+            {
+                "scene": "b",
+                "title": "社会效用b",
+                "url": "socialeffect"
+            }
+        ]    
+        
+    }
 }

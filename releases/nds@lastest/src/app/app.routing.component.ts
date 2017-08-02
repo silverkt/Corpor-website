@@ -22,19 +22,19 @@ const routes: Routes = [
                                 component: EnStructPage,
                             },
                             {   
-                                path: 'enstruct',
+                                path: 'enstruct/:scene',
                                 component: EnStructPage,
                             },
                             {
-                                path: 'enanalyze',
+                                path: 'enanalyze/:scene',
                                 component: EnAnalyzePage,
                             },
                             {
-                                path: 'ecoeffect',
+                                path: 'ecoeffect/:scene',
                                 component: EcoEffectPage,
                             },
                             {
-                                path: 'socialeffect',
+                                path: 'socialeffect/:scene',
                                 component: SocialEffectPage,
                             },                        
                             {   

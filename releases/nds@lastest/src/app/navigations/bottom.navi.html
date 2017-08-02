@@ -1,9 +1,5 @@
   <div class="buttons">
-                                <div class="btn-group">
-                                    <a class="btn btn-primary" [routerLink]="'/enstruct'" >能源结构</a>
-                                    <a class="btn btn-primary" [routerLink]="'/enanalyze'" >供能分析</a>
-                                    <a class="btn btn-primary" [routerLink]="'/ecoeffect'">经济效用</a>
-                                    <a class="btn btn-primary" [routerLink]="'/socialeffect'">社会效用</a>
-                        
-                                </div> 
-                                </div>    
+       <div class="btn-group">
+                      <a *ngFor="let a of navi" class="btn btn-primary" [routerLink]="'/'+a.url+'/'+a.scene">{{a.title}}</a>
+         </div> 
+  </div>    

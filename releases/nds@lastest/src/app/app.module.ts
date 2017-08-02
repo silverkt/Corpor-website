@@ -16,6 +16,8 @@ import { MapComponent } from "./components/map/map.component";
 import { PieComponent } from "./components/pie/pie.component";
 import { LineComponent } from "./components/line/line.component";
 import { CircleComponent } from "./components/circle/circle.component";
+
+
 import { IndexComponent } from "./pages/index/index.component";
 
 import { EnStructPage } from "./pages/energy_structure/energy_structure.page";
