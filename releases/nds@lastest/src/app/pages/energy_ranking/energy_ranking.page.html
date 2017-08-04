@@ -1,0 +1,40 @@
+
+<all-map></all-map>
+
+<div class="topdiv">
+     
+    <div class ="overpage">
+        <div class="title">能源结构</div>
+
+                           <div class="buttons">
+                                <div class="btn-group">
+                                    <a class="btn btn-primary" (click)="changeScope('1')">累计</a>
+                                    <a class="btn btn-primary" (click)="changeScope('2')">当年</a>
+                                    <a class="btn btn-primary" (click)="changeScope('3')">当月</a>
+                                    <a class="btn btn-primary" (click)="changeScope('4')">当日</a>
+                        
+                                </div> 
+                                </div>     
+
+      
+<p-tabView (onChange)="handleChange($event)">
+  <p-tabPanel header="综合能效排名"  >
+    Content 1
+  </p-tabPanel>
+  <p-tabPanel header="Header 2"  >
+    Content 2
+  </p-tabPanel>
+  <p-tabPanel header="Header 3"  >
+    Content 3
+  </p-tabPanel>
+</p-tabView>
+
+ 
+
+ 
+    </div>
+   
+</div>
+<div class="buttondiv">
+<bottom-navi></bottom-navi>
+</div>

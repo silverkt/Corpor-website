@@ -113,7 +113,7 @@ export class LineComponent{
     }
 
     protected refreshUrl() {
-        this.url = globalvar.api[1].url+"?rqforline="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
+        this.url = globalvar.api[1].url+"?rqfor="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
         console.log(this.url);
     }
 

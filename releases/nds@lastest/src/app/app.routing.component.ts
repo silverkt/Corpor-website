@@ -15,6 +15,7 @@ import { EnStructPage } from "./pages/energy_structure/energy_structure.page";
 import { EnAnalyzePage } from "./pages/energy_analyze/energy_analyze.page"; 
 import { EcoEffectPage } from "./pages/eco_effect/eco_effect.page";
 import { SocialEffectPage } from "./pages/social_effect/social_effect.page";
+import { EnRankPage } from "./pages/energy_ranking/energy_ranking.page";
 
 const routes: Routes = [
                             {   
@@ -40,6 +41,10 @@ const routes: Routes = [
                             {   
                                 path: 'partition/index',
                                 component: IndexComponent,
+                            },
+                            {   
+                                path: 'ranking/:scene',
+                                component: EnRankPage,
                             },
                           
                             {

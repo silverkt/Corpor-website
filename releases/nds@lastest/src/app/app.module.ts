@@ -35,6 +35,13 @@ import { SocialEffectPage } from "./pages/social_effect/social_effect.page";
 import { CircleSocialComponent } from "./pages/social_effect/circle/circle.component";
 import { LineSocialComponent } from "./pages/social_effect/line/line.component";
 
+import { EnRankPage } from "./pages/energy_ranking/energy_ranking.page";
+
+
+
+import { TabViewModule } from 'primeng/primeng';
+
+import {ButtonModule} from 'primeng/primeng';
 
 @NgModule({
   declarations: [
@@ -55,17 +62,21 @@ import { LineSocialComponent } from "./pages/social_effect/line/line.component";
     SocialEffectPage,
        CircleSocialComponent,
        LineSocialComponent,
+    EnRankPage,
  
     BottomNaviComponent,   
 
     MapComponent,   
+   
  
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+     TabViewModule,
+     ButtonModule
   ],
   //entryComponents:[ TestComponent, Test1Component ], 
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

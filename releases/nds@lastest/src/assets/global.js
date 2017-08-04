@@ -36,6 +36,11 @@ var globalvar = {
             "label": "社会效用坐标曲线",
             "url": "http://pz.webcity3d.com/eos/web/images/rems/xyline4.json"
         },
+        {
+            "id": 7,
+            "label": "排名列表",
+            "url": "http://pz.webcity3d.com/eos/web/images/rems/list5.json"
+        },
 
     ],
     "navi": {
