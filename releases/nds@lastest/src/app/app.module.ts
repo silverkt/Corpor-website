@@ -16,6 +16,7 @@ import { MapComponent } from "./components/map/map.component";
 import { PieComponent } from "./components/pie/pie.component";
 import { LineComponent } from "./components/line/line.component";
 import { CircleComponent } from "./components/circle/circle.component";
+import { ListComponent } from "./components/list/list.component";
 
 
 import { IndexComponent } from "./pages/index/index.component";
@@ -50,6 +51,7 @@ import {ButtonModule} from 'primeng/primeng';
     PieComponent,
     LineComponent,
     CircleComponent,
+    ListComponent,
 
     EnStructPage,
        PieStructComponent,

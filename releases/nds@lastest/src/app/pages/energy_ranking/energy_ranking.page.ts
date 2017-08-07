@@ -8,6 +8,7 @@ import { Component } from "@angular/core";
     styleUrls: ['energy_ranking.page.css']
 })
 export class EnRankPage {
+    rqfor: string;
     tscope: string;
  
  
@@ -18,5 +19,6 @@ export class EnRankPage {
 
     handleChange(e){
         console.log(e.index);
+        this.rqfor = e.index+1;
     }
 }

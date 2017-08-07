@@ -3,7 +3,10 @@ import { DataService } from "../../data.service";
 declare var globalvar: any;
 @Component({
     moduleId: 'compnent-list',
-    template: ``,
+    selector: 'compnent-list',
+    template: `
+        <li *ngFor="let x of option.list">{{x.no}}{{x.name}}{{x.value}}</li>
+    `,
     styles: [''],
     providers: [DataService]
 })
