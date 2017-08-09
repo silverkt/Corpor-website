@@ -68,7 +68,9 @@ export class ListComponent {
     
  
    
-    public option: any;
+    public option: any= {
+        "list" : []	
+    };
  
 
     /**

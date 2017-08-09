@@ -37,6 +37,7 @@ import { CircleSocialComponent } from "./pages/social_effect/circle/circle.compo
 import { LineSocialComponent } from "./pages/social_effect/line/line.component";
 
 import { EnRankPage } from "./pages/energy_ranking/energy_ranking.page";
+import { ListRankingComponent } from "./pages/energy_ranking/list/ranking.component"; 
 
 
 
@@ -65,6 +66,8 @@ import {ButtonModule} from 'primeng/primeng';
        CircleSocialComponent,
        LineSocialComponent,
     EnRankPage,
+      ListRankingComponent,
+
  
     BottomNaviComponent,   
 

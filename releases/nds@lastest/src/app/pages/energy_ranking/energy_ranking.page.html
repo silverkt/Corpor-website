@@ -4,23 +4,23 @@
 <div class="topdiv">
      
     <div class ="overpage">
-        <div class="title">能源结构</div>
+        <div class="title">全国排名</div>
 
                           
 
       
 <p-tabView (onChange)="handleChange($event)">
   <p-tabPanel header="综合排名"  >
-    <compnent-list [rqfor]="rqfor"></compnent-list>
+    <list-ranking *ngIf="ds.a" [rqfor]="rqfor"></list-ranking>
   </p-tabPanel>
   <p-tabPanel header="能效排名"  >
-    <compnent-list [rqfor]="rqfor"></compnent-list>
+    <list-ranking *ngIf="ds.b" [rqfor]="rqfor"></list-ranking>
   </p-tabPanel>
   <p-tabPanel header="经济性排名"  >
-    <compnent-list [rqfor]="rqfor"></compnent-list>
+    <list-ranking *ngIf="ds.c" [rqfor]="rqfor"></list-ranking>
   </p-tabPanel>
   <p-tabPanel header="生态排名"  >
-    <compnent-list [rqfor]="rqfor"></compnent-list>
+    <list-ranking *ngIf="ds.d" [rqfor]="rqfor"></list-ranking>
   </p-tabPanel>
 </p-tabView>
 

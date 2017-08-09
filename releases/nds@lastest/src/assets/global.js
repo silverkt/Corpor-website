@@ -64,6 +64,11 @@ var globalvar = {
                 "scene": "a",
                 "title": "社会效用",
                 "url": "/socialeffect"
+            },
+            {
+                "scene": "a",
+                "title": "全国排名",
+                "url": "/ranking"
             }
         ],
         "b" : [       //场景B
@@ -87,7 +92,35 @@ var globalvar = {
                 "title": "社会效用b",
                 "url": "socialeffect"
             }
-        ]    
+        ],
+        "t" : [      //场景temp
+ 
+            {
+                "scene": "t",
+                "title": "能源结构",
+                "url": "/enstruct"
+            },
+            {
+                "scene": "t",
+                "title": "能源分析",
+                "url": "/enanalyze"
+            },
+            {
+                "scene": "t",
+                "title": "经济效用",
+                "url": "/ecoeffect"
+            },
+            {
+                "scene": "t",
+                "title": "社会效用",
+                "url": "/socialeffect"
+            },
+            {
+                "scene": "t",
+                "title": "全国排名",
+                "url": "/ranking"
+            }
+        ]  
         
     }
 }
