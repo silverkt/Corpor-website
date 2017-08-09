@@ -36,7 +36,7 @@ export class MapComponent implements OnInit{
 
         this.map.setZoom(5.3);
         this.map.setCenter([116.39,39.9]);
-        this.map.setFeatures(['bg','road'])//多个种类要素显示 
+        //this.map.setFeatures(['bg','road'])//多个种类要素显示 
  
     } 
   

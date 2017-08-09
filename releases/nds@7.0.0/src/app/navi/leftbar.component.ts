@@ -9,11 +9,33 @@ import { Component } from "@angular/core";
     moduleId: 'leftbar-navi',
     selector: 'leftbar-navi',
     template: `
+    <div class="buttondiv">
     <div class="btn-group">
-        <a class="btn btn-primary" routerLink="/home/operation" >运营管理</a>
-        <a class="btn btn-primary" routerLink="/home/trade" >能源交易</a>
+ 
+               <a  class="btn btn-primary" href="http://222.222.120.73:808/v7.1/#/">全国首页</a> 
+               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.1/#/enstruct/a">能源结构</a>
+               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.1/#/enanalyze/a">能源分析</a>
+               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.1/#/ecoeffect/a">经济效用</a>
+               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.1/#/socialeffect/a">社会效用</a>
+               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.1/#/ranking/a">全国排名</a>
+   
+
+    </div>
     </div>
     `,
-    styles: [``],
+    styles: [`
+    
+.buttondiv {
+    width: 600px;
+ 
+    position: absolute;
+    bottom:20px;
+    left: 0px;
+    /*background-color: #fff; */
+    z-index: 1001;
+      
+}
+    
+    `],
 })
 export class LeftbarNaviComponent {}
