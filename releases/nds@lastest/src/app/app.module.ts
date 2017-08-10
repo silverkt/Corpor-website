@@ -5,6 +5,7 @@
  */
 
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -39,11 +40,14 @@ import { LineSocialComponent } from "./pages/social_effect/line/line.component";
 import { EnRankPage } from "./pages/energy_ranking/energy_ranking.page";
 import { ListRankingComponent } from "./pages/energy_ranking/list/ranking.component"; 
 
+import { OperSerPage } from "./pages/energy_oper_ser/energy_oper_ser.page";
 
+import { OperStdPage } from "./pages/energy_oper_std/energy_oper_std.page";
 
 import { TabViewModule } from 'primeng/primeng';
-
-import {ButtonModule} from 'primeng/primeng';
+import { ButtonModule } from 'primeng/primeng';
+import { FieldsetModule } from 'primeng/primeng';
+import { PanelModule } from 'primeng/primeng';
 
 @NgModule({
   declarations: [
@@ -67,6 +71,8 @@ import {ButtonModule} from 'primeng/primeng';
        LineSocialComponent,
     EnRankPage,
       ListRankingComponent,
+    OperSerPage,
+    OperStdPage,
 
  
     BottomNaviComponent,   
@@ -77,11 +83,15 @@ import {ButtonModule} from 'primeng/primeng';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
-     TabViewModule,
-     ButtonModule
+
+      TabViewModule,
+      ButtonModule,
+      FieldsetModule,
+      PanelModule,
   ],
   //entryComponents:[ TestComponent, Test1Component ], 
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

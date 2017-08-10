@@ -12,12 +12,15 @@ import { Component } from "@angular/core";
     <div class="buttondiv">
     <div class="btn-group">
  
-               <a  class="btn btn-primary" href="http://222.222.120.73:808/v7.1/#/">全国首页</a> 
-               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.1/#/enstruct/a">能源结构</a>
-               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.1/#/enanalyze/a">能源分析</a>
-               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.1/#/ecoeffect/a">经济效用</a>
-               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.1/#/socialeffect/a">社会效用</a>
-               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.1/#/ranking/a">全国排名</a>
+               <a  class="btn btn-primary" href="http://222.222.120.73:808/v7.2/#/">全国首页</a> 
+               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.2/#/enstruct/a">能源结构</a>
+               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.2/#/enanalyze/a">能源分析</a>
+               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.2/#/ecoeffect/a">经济效用</a>
+               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.2/#/socialeffect/a">社会效用</a>
+               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.2/#/ranking/a">全国排名</a>
+               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.2/#/operser/a">高级运营</a>
+               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.2/#/operstd/a">标准化运营</a>
+
    
 
     </div>
@@ -26,7 +29,7 @@ import { Component } from "@angular/core";
     styles: [`
     
 .buttondiv {
-    width: 600px;
+    width: 700px;
  
     position: absolute;
     bottom:20px;

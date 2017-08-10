@@ -69,7 +69,17 @@ var globalvar = {
                 "scene": "a",
                 "title": "全国排名",
                 "url": "/ranking"
-            }
+            },
+            {
+                "scene": "a",
+                "title": "高级运营",
+                "url": "/operser"
+            },
+            {
+                "scene": "a",
+                "title": "标准化运营",
+                "url": "/operstd"
+            }                         
         ],
         "b" : [       //场景B
             {

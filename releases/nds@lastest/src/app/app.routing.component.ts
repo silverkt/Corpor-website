@@ -16,6 +16,8 @@ import { EnAnalyzePage } from "./pages/energy_analyze/energy_analyze.page";
 import { EcoEffectPage } from "./pages/eco_effect/eco_effect.page";
 import { SocialEffectPage } from "./pages/social_effect/social_effect.page";
 import { EnRankPage } from "./pages/energy_ranking/energy_ranking.page";
+import { OperSerPage } from "./pages/energy_oper_ser/energy_oper_ser.page";
+import { OperStdPage } from "./pages/energy_oper_std/energy_oper_std.page";
 
 const routes: Routes = [
                             {   
@@ -46,6 +48,15 @@ const routes: Routes = [
                                 path: 'ranking/:scene',
                                 component: EnRankPage,
                             },
+                            {   
+                                path: 'operser/:scene',
+                                component: OperSerPage,
+                            },
+                            {   
+                                path: 'operstd/:scene',
+                                component: OperStdPage,
+                            },
+                            
                           
                             {
                                 path: 'proj/:id/:s',
