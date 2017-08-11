@@ -41,6 +41,16 @@ var globalvar = {
             "label": "排名列表",
             "url": "http://pz.webcity3d.com/eos/web/images/rems/list5.json"
         },
+        {
+            "id": 8,
+            "label": "高级运营",
+            "url": "http://pz.webcity3d.com/eos/web/images/rems/operser8.json"
+        },
+        {
+            "id": 9,
+            "label": "标准化运营",
+            "url": "http://pz.webcity3d.com/eos/web/images/rems/operstd9.json"
+        },
 
     ],
     "navi": {

@@ -9,25 +9,25 @@
     <div class ="overpage">
         <div class="title">高级运营</div>
 
-
+ 
 
 <div style="width:98%;">        
 <br><br>  
 <p-panel header="故障分析" [toggleable]="true">
-    故障分多少类（按设备分类），各类故障发生的原因有几种<br>
-    故障的解决方案有几种
+    故障分{{res.errtype}}类（按设备分类），各类故障发生的原因有{{res.errreason}}种<br>
+    故障的解决方案有{{res.errsolu}}种
 </p-panel>
   <br> 
 <p-panel header="备品备件" [toggleable]="true">
-    全国共有多少个备件库，各库中备件的种类及数量各多少
+    全国共有{{res.backres}}个备件库，各库中备件的种类{{res.backtype}}及数量{{res.backno}}
 </p-panel>
   <br> 
 <p-panel header="经验分享" [toggleable]="true">
-    经验共多少条，分几类，更新的频率及每次更新的个数
+    经验共{{res.exps}}条，分{{res.exptype}}类，更新的频率{{res.expfreq}}及每次更新的{{res.expno}}
 </p-panel>
   <br> 
 <p-panel header="运营报表" [toggleable]="true">
-    可生成的报表种类及个数
+    可生成的报表{{res.diatype}}类及{{res.diano}}个
 </p-panel>
 
 

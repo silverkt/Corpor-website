@@ -10,26 +10,28 @@
         <div class="title">标准化运营</div>
 
 
+ 
+
 
 <div style="width:98%;">        
 <br><br>  
 <p-panel header="标准站的种类及个数" [toggleable]="true">
-    显示全国各有几类标准站，每类标准站各有多少个
+    显示全国各有{{res.stationtype}}类标准站，每类标准站各有{{res.stationno}}个
 </p-panel>
   <br> 
 <p-panel header="运营人员配置" [toggleable]="true">
-    显示全国共有几类运营人员，每一类运营人员的人数<br>
-    各类运营人员拥有资质的比例
+    显示全国共有{{res.opertype}}类运营人员，每一类运营人员的人数{{res.operno}}<br>
+    各类运营人员拥有资质的比例{{res.operrate}}
 </p-panel>
   <br> 
 <p-panel header="人员培训的情况" [toggleable]="true">
-    显示共有几类培训，每一类培训通过人数、参训人数、待训人数
+    显示共有{{res.traintype}}类培训，每一类培训通过人数{{res.trainno1}}、参训人数{{res.trainno2}}、待训人数{{res.trainno3}}
 </p-panel>
   <br> 
 <p-panel header="故障管理制度" [toggleable]="true">
-    故障按等级划分共几类(严重程度)，每类分别有多少个<br>
-    各类故障平均响应时间的统计<br>
-    故障重复发生率
+    故障按等级划分共{{res.errtype}}类(严重程度)，每类分别有{{res.errno}}个<br>
+    各类故障平均响应时间的统计{{res.errtime}}<br>
+    故障重复发生率{{res.errrate}}
 </p-panel>
 
 
