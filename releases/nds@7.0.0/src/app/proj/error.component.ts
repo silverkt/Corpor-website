@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
     styleUrls: ['error.component.css'],
 })
 export class ErrorComponent implements AfterViewInit{
-    public timer: number = 5 ;
+    public timer: number = 3 ;
     constructor(public router: Router) {}
     ngAfterViewInit() {
         let inval = setInterval(()=>{

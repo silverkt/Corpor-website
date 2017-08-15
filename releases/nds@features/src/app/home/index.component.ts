@@ -17,7 +17,7 @@ declare var $: any;
     selector: 'app-root',
     templateUrl: 'index.component.html',
     styleUrls: ['index.component.css'],
-    providers: [EnnDataService],
+    providers: [EnnDataService]
 })
 export class HomeIndexComponent implements OnInit {
     public propDiv: boolean = false;

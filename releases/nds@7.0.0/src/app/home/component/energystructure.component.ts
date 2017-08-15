@@ -38,13 +38,22 @@ export class EnergyStructureComponent implements AfterViewInit{
     @Input() 
     set scope(scope: string) {
         this._scope = scope;
-        this.option.api = "http://222.222.120.72:808/reds-rest/webapi/energystruct/"+ this.scope;
+        if(scope==' ') {
+            this.option.api = "http://222.222.120.72:808/reds/webapi/energystruct";
+        } else {
+            this.option.api = "http://222.222.120.72:808/reds/webapi/energystruct/"+ this.scope;
+        }
+        
         this.getComData('homeEnergyStructure1', this.option.api, this.option).then(response => {
             this.pie = response;
             this.flag = true;
         });
-         
-        this.option.api = "http://222.222.120.72:808/reds-rest/webapi/reuseenergy/"+ this.scope;
+        if(scope==' ') {
+            this.option.api = "http://222.222.120.72:808/reds/webapi/reuseenergy";
+        } else {
+            this.option.api = "http://222.222.120.72:808/reds/webapi/reuseenergy/"+ this.scope;
+        }
+        
         this.getComData('homeEnergyStructure2', this.option.api, this.option);          
     }
     get scope(): string {

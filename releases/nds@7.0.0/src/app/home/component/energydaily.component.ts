@@ -66,7 +66,11 @@ export class EnergyDailyComponent implements AfterViewInit{
     @Input() 
     set scope(scope: string) {
         this._scope = scope;
-        this.data_api = "http://222.222.120.72:808/reds-rest/webapi/dailyinfo/"+ this.scope;
+        if(scope==' ') {
+            this.data_api = "http://222.222.120.72:808/reds/webapi/dailyinfo";
+        } else {
+            this.data_api = "http://222.222.120.72:808/reds/webapi/dailyinfo/"+ this.scope;
+        }        
         this.getComData(this.data_api);        
     }
     get scope(): string {
