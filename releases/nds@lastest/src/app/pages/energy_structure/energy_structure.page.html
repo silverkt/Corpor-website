@@ -1,31 +1,50 @@
-
-<all-map></all-map>
-
-<div class="topdiv">
  
-<div class="bigtitle">全国泛能云运营业务展示中心</div>
 
-    <div class ="overpage">
-        <div class="title">能源结构</div>
+ 
+<bottom-navi></bottom-navi>
 
-                           <div class="buttons">
+
+<div>
+ <div style="width:1300px;margin: 0 auto;">
+ <ol class="breadcrumb" >    
+  <li>首页</li>
+  <li>能源结构</li>
+ 
+</ol> 
+
+
+<p-panel header="能源结构">
+   <br><br>
+       <energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="1" style="float: left;"></energy-structure>
+<energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="2" style="float: left;"></energy-structure>
+<energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="3" style="float: left;"></energy-structure>
                                 <div class="btn-group">
-                                    <a class="btn btn-primary" (click)="changeScope('1')">累计</a>
-                                    <a class="btn btn-primary" (click)="changeScope('2')">当年</a>
-                                    <a class="btn btn-primary" (click)="changeScope('3')">当月</a>
-                                    <a class="btn btn-primary" (click)="changeScope('4')">当日</a>
+                                    <a class="btn btn-default" (click)="changeScope('1')">累计</a>
+                                    <a class="btn btn-default" (click)="changeScope('2')">当年</a>
+                                    <a class="btn btn-default" (click)="changeScope('3')">当月</a>
+                                    <a class="btn btn-default" (click)="changeScope('4')">当日</a>
                         
                                 </div> 
-                                </div>     
+                                    
 
       
 
-<energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="1" style="float: left;"></energy-structure>
-<energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="2" style="float: left;"></energy-structure>
-<energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="3" style="float: left;"></energy-structure>
-    </div>
+
+
+
+</p-panel>
+
+
+
+
+
+</div>
+
+ 
    
 </div>
-<div class="buttondiv">
-<bottom-navi></bottom-navi>
-</div>
+
+ 
+
+
+ 

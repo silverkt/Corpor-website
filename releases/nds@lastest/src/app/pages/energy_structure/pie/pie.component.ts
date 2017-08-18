@@ -17,8 +17,8 @@ declare var globalvar: any;
     `,
     styles:[`    
         .pie-energy-structure{    
-            height: 450px;
-            width: 430px;
+            height: 420px;
+            width: 420px;
         }    
     `],
     providers:[ DataService ], 
