@@ -34,5 +34,6 @@ export class LineAnalyzeComponent extends LineComponent{
     protected refreshUrl() {
         this.url = globalvar.api[2].url+"?rqfor="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
         console.log(this.url);
+         
     }
 }
