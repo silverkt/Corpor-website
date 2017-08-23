@@ -18,7 +18,7 @@ declare var globalvar: any;
     styles:[`    
         .line-energy-structure{    
             height: 150px;
-            width: 800px;
+            width: 760px;
         }     
     `],
     providers:[ DataService ], 

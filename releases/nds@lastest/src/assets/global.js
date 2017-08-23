@@ -14,7 +14,7 @@ var globalvar = {
         {
             "id": 2,
             "label": "能源分析坐标曲线",
-            "url": "http://pz.webcity3d.com/eos/web/images/rems/xyline2.json"
+            "url": "http://222.222.120.72:808/redsv9/webapi/trend?rqfor=entrend"
         },
         {
             "id": 3,

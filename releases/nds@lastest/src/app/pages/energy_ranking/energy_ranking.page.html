@@ -1,16 +1,31 @@
-
-<all-map></all-map>
-
-<div class="topdiv">
  
-  
-<div class="bigtitle">全国泛能云运营业务展示中心</div>
 
-    <div class ="overpage">
-        <div class="title">全国排名</div>
 
-                          
 
+
+ 
+
+
+
+
+
+<bottom-navi></bottom-navi>
+
+
+
+
+<div>
+ <div style="width:1300px;margin: 0 auto;">
+ <ol class="breadcrumb" >    
+  <li>首页</li>
+  <li>经济效用</li>
+ 
+</ol> 
+
+
+<p-panel header="供能分析">
+   <br><br>
+   
       
 <p-tabView (onChange)="handleChange($event)">
   <p-tabPanel header="综合排名"  >
@@ -26,13 +41,22 @@
     <list-ranking *ngIf="ds.d" [rqfor]="rqfor"></list-ranking>
   </p-tabPanel>
 </p-tabView>
+                                    
+
+      
+
+
+<div style="clear:both;"><br><br></div>
+
+</p-panel>
+
+
+
+
+
+</div>
 
  
-
- 
-    </div>
    
 </div>
-<div class="buttondiv">
-<bottom-navi></bottom-navi>
-</div>
+ 
