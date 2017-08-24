@@ -1,0 +1,20 @@
+.bgimg{
+    position: absolute;
+    z-index: 999;
+}
+.data{
+    position: absolute;
+    z-index: 1001
+}
+
+.data .heat {
+    color: #fe0000;
+}
+
+.data .gas {
+    color: #fffe00;
+}
+
+.data .cool {
+    color: #0071c1;
+}
