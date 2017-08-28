@@ -7,14 +7,111 @@
     z-index: 1001
 }
 
-.data .heat {
+.data .hot {
+    width:150px;
     color: #fe0000;
+    position: absolute;
 }
 
 .data .gas {
-    color: #fffe00;
+    width:150px;
+    color: #ffc000;
+    position: absolute;
 }
 
-.data .cool {
+.data .cold {
+    width:150px;
     color: #0071c1;
+    position: absolute;
+}
+
+.data .elec {
+    width:150px;
+    color: #793a46;
+    position: absolute;
+}
+
+.gas0 {
+    left: 300px;
+    top:360px;
+}
+
+.gas1 {
+    left: 870px;
+    top:675px;
+}
+
+.gas2 {
+    left: 870px;
+    top:810px;
+}
+
+.hot0 {
+    left: 780px;
+    top:950px;
+}
+
+.cold0 {
+    left: 700px;
+    top:470px;
+}
+
+.cold1 {
+    left: 540px;
+    top: 695px;
+}
+
+.cold2 {
+    left: 400px;
+    top: 825px;
+}
+
+.cold3 {
+    left: 540px;
+    top: 825px;
+}
+
+.cold4 {
+    left: 540px;
+    top: 945px;
+}
+
+.elec0 {
+    left:220px;
+    top:410px;
+}
+
+.elec1 {
+    left:350px;
+    top:465px;
+}
+
+.elec2 {
+    left:700px;
+    top:450px;
+}
+
+.elec3 {
+    left:210px;
+    top:540px;
+}
+
+.elec4 {
+    left:150px;
+    top:620px;
+}
+
+.elec5 {
+    left:870px;
+    top:635px;
+}
+
+.elec6 {
+    left:870px;
+    top:765px;
+}
+
+.elec7 {
+    left:980px;
+    top:865px;
 }
