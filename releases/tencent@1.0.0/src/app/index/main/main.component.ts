@@ -1,7 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Observable} from 'rxjs/Observable';
+import { Observable } from 'rxjs/Observable';
+ 
 import 'rxjs/add/observable/interval';
+import 'rxjs/add/observable/merge';
+
+
+//import  'rxjs';
+
+import 'rxjs/add/operator/map';
 
  
 
@@ -138,60 +145,34 @@ export class MainComponent implements OnInit {
   constructor(public http: HttpClient) { }
 
   ngOnInit() {
+      // let url = 'http://pz.webcity3d.com/eos/web/images/rems/txdata.json';
+      // let x = Observable.interval(1000);
+
  
+      // let stop = x.subscribe( 
+      //     res=> {
+      //       console.log(res);          
+      //       this.http.get<any>(url).subscribe({
+      //         next: rqdata=>{
+      //           this.reqData = rqdata;
+      //         },
+      //         error: err=> {
+      //         console.log('shit On again');
+      //         stop.unsubscribe();
+      //         }
+      //       });
+      //     }
+      // ); 
+      
       
 
-let x = Observable.interval(1000);
- let m = x.subscribe(res=> {
-   console.log(res);
- });
+      var observable1 = Observable.interval(1000);
+var observable2 = Observable.interval(2000);
+var merged = Observable.merge(observable1, observable2);
 
- setTimeout(()=>{
-   m.unsubscribe();
-   console.log('shit over');
-   
- },10000)
+merged.subscribe(rs=>{
+  console.log(rs);
+});
 
-
- let sx = Observable.create(observer=>{
-   observer.next('shit1');
-  
-   observer.next('shit2');
-   var i = 0;
-   setInterval(()=>{
-     i = i +1;
-     observer.next(i);
-   },2000);
- })
-
- let f = sx.subscribe(res=>{
-   console.log(res)
- })
-
-
-
-
-  setTimeout(()=>{
-   f.unsubscribe();
-   console.log('shit over again');
-   
- },20000)
-
-
-   setTimeout(()=>{
-    sx.subscribe(res=> {
-      console.log(res);
-    });
- },25000)
-    // .sampleTime(2000).subscribe(
-    //   res => {
-    //     console.log(res.unit);
-    //   },
-    //   err => {
-    //     console.log('errorl');
-    //   }
-    // )
   }
-
-
 }
