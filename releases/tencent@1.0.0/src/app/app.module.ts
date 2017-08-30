@@ -33,8 +33,8 @@ import { PieModule } from "./pie/pie.component"
     
     RouterModule.forRoot(routes)
   ],
- 
- 
   bootstrap: [RootComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+ }
