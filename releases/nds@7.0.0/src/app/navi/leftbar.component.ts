@@ -17,7 +17,7 @@ import { Component } from "@angular/core";
                <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.3/#/enanalyze/a">能源分析</a>
                <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.3/#/ecoeffect/a">经济效用</a>
                <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.3/#/socialeffect/a">社会效用</a>
-               <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.3/#/ranking/a">全国排名</a>
+          <!--     <a  class="btn btn-primary" href="http://222.222.120.73:808/v8.3/#/ranking/a">全国排名</a> -->
           
 
    
