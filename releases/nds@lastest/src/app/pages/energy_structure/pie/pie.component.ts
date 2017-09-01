@@ -28,7 +28,7 @@ export class PieStructComponent extends PieComponent{
      * 更新向api请求的url参数
      */
     protected refreshUrl() {
-        this.url = globalvar.api[0].url+"?rqfor="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
+        this.url = globalvar.api[0].url+"&tscope="+this.tscope+"&ascope="+this.ascope;
         console.log(this.url);
     }
 }

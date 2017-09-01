@@ -4,7 +4,7 @@ var globalvar = {
         {
             "id": 0,
             "label": "能源结构",
-            "url": "http://pz.webcity3d.com/eos/web/images/rems/pie1.json"
+            "url": "http://222.222.120.72:808/redsv9/webapi/struct?rqfor=structall"
         },
         {
             "id": 1,
