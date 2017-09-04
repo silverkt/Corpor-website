@@ -18,7 +18,7 @@ export const ChartOpt = {
         label: {
             normal: {
                 position: 'inside',
-                formatter: '{b}\n{d}%',
+                formatter: '{b}\n{c}',
                 textStyle: {
                     fontWeight: '10'
                 }

@@ -4,32 +4,32 @@ var globalvar = {
         {
             "id": 0,
             "label": "能源结构",
-            "url": "http://222.222.120.72:808/redsv9/webapi/struct?rqfor=structall"
+            "url": "http://222.222.120.72:808/redsv9/webapi/struct"
         },
         {
             "id": 1,
             "label": "能源分析饼图",
-            "url": "http://pz.webcity3d.com/eos/web/images/rems/pie2.json"
+            "url": "http://222.222.120.72:808/redsv9/webapi/struct"
         },
         {
             "id": 2,
             "label": "能源分析坐标曲线",
-            "url": "http://222.222.120.72:808/redsv9/webapi/trend?rqfor=entrend"
+            "url": "http://222.222.120.72:808/redsv9/webapi/trend"
         },
         {
             "id": 3,
             "label": "经济效用饼图",
-            "url": "http://pz.webcity3d.com/eos/web/images/rems/pie3.json"
+            "url": "http://222.222.120.72:808/redsv9/webapi/struct"
         },
         {
             "id": 4,
             "label": "经济效用坐标曲线",
-            "url": "http://pz.webcity3d.com/eos/web/images/rems/xyline3.json"
+            "url": "http://222.222.120.72:808/redsv9/webapi/trend"
         },
         {
             "id": 5,
             "label": "社会效用环状",
-            "url": "http://pz.webcity3d.com/eos/web/images/rems/circle4.json"
+            "url": "http://222.222.120.72:808/redsv9/webapi/quantity"
         },
         {
             "id": 6,

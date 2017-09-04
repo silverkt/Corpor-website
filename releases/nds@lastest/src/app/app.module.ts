@@ -35,6 +35,8 @@ import { LineEcoComponent } from "./pages/eco_effect/line/line.component";
 
 import { SocialEffectPage } from "./pages/social_effect/social_effect.page";
 import { CircleSocialComponent } from "./pages/social_effect/circle/circle.component";
+import { Circle1SocialComponent } from "./pages/social_effect/circle/circle.component";
+import { Circle2SocialComponent } from "./pages/social_effect/circle/circle.component";
 import { LineSocialComponent } from "./pages/social_effect/line/line.component";
 
 import { EnRankPage } from "./pages/energy_ranking/energy_ranking.page";
@@ -68,6 +70,8 @@ import { PanelModule } from 'primeng/primeng';
        LineEcoComponent,
     SocialEffectPage,
        CircleSocialComponent,
+       Circle1SocialComponent,
+       Circle2SocialComponent,
        LineSocialComponent,
     EnRankPage,
       ListRankingComponent,

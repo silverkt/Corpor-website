@@ -3,7 +3,7 @@
  * 此组件内包含两个子组件
  * 全国能源结构饼图组件和其中可再生能源细分饼图组件
  */
-import { Component, Input, OnInit} from "@angular/core";
+import { Component, Input, OnInit, AfterViewInit} from "@angular/core";
  
 import { DataService } from "../../data.service";
  
@@ -15,7 +15,7 @@ declare var globalvar: any;
     selector: 'energy-circle',
     template: `
                 
-                    <div class="outcircle"><div class="innercircle"><bR>{{option.title}}<bR>{{option.value}}{{option.unit}}</div></div>
+                    <div class="outcircle" id={{htmlID}}><div class="innercircle"><bR>{{option.title}}<bR>{{option.value}}{{option.unit}}</div></div>
                     
                      
                 
@@ -50,6 +50,9 @@ declare var globalvar: any;
     providers:[ DataService ], 
 })
 export class CircleComponent {    
+    ngAfterViewInit() {
+        this.refreshComponent();
+    }
     /**时间范围 
      * @总累计: 1
      * @当年：2
@@ -60,7 +63,7 @@ export class CircleComponent {
     @Input()
     set tscope(tscope: string) {
         this._tscope = tscope;
-        this.refreshComponent();
+         
     }    
     /**
      * 通过get方法监听输入属性scope的变化，变化时初始化子组件配置
@@ -82,7 +85,7 @@ export class CircleComponent {
     @Input()
     set ascope(ascope: string) {
         this._ascope = ascope;
-        this.refreshComponent();        
+            
     }
     get ascope(): string {
         this._ascope = this._ascope ? this._ascope : "1";
@@ -98,7 +101,7 @@ export class CircleComponent {
     @Input()
     set rqfor(rqfor: string) { 
         this._rqfor = rqfor;       
-        this.refreshComponent();
+       
     }
     get rqfor(): string {
         this._rqfor = this._rqfor ? this._rqfor : "1";
@@ -150,7 +153,7 @@ export class CircleComponent {
     protected getComponentData(): Promise<any> {
         return this.data.getData(this.url).then(response => {            
             let circleJson = response.json();
-            this.option.title = circleJson.title;
+            this.option.title  = circleJson.title;
             this.option.value = circleJson.value;
             this.option.unit = circleJson.unit;
         }).catch(()=>{

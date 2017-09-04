@@ -15,9 +15,9 @@
 
 <p-panel header="能源结构">
    <br><br>
-       <energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="1" style="float: left;"></energy-structure>
-<energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="2" style="float: left;"></energy-structure>
-<energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="3" style="float: left;"></energy-structure>
+       <energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="'structall'" style="float: left;"></energy-structure>
+<energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="'structclear'" style="float: left;"></energy-structure>
+<energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="'structreuse'" style="float: left;"></energy-structure>
                                 <div class="btn-group">
                                     <a class="btn btn-default" (click)="changeScope('1')">累计</a>
                                     <a class="btn btn-default" (click)="changeScope('2')">当年</a>

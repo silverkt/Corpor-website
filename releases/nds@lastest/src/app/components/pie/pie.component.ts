@@ -3,7 +3,7 @@
  * 此组件内包含三个部分
  * 组件本身的controller部分和图表的配置文件部分以及组件获取后端数据服务部分
  */
-import { Component, Input, OnInit} from "@angular/core";
+import { Component, Input, OnInit, AfterViewInit} from "@angular/core";
 import { ChartOpt } from "./chart.option";
 import { DataService } from "../../data.service";
 declare var echarts: any;
@@ -23,6 +23,9 @@ declare var globalvar: any;
     providers:[ DataService ], 
 })
 export class PieComponent{ 
+    ngAfterViewInit() {
+        this.refreshComponent();
+    }
     /**时间范围 
      * @总累计: 1
      * @当年：2
@@ -55,7 +58,7 @@ export class PieComponent{
     @Input()
     set ascope(ascope: string) {
         this._ascope = ascope;
-        this.refreshComponent();        
+              
     }
     get ascope(): string {
         this._ascope = this._ascope ? this._ascope : "1";
@@ -70,8 +73,8 @@ export class PieComponent{
     private _rqfor;
     @Input()
     set rqfor(rqfor: string) { 
-        this._rqfor = rqfor;       
-        this.refreshComponent();
+        this._rqfor = rqfor;   
+      
     }
     get rqfor(): string {
         this._rqfor = this._rqfor ? this._rqfor : "1";
@@ -127,7 +130,7 @@ export class PieComponent{
             // });
             this.option.series[0].data = pieJson.data;
             this.option.title.text = pieJson.title;
-            this.option.series[0].label.normal.formatter = '{b}\n{d}'+pieJson.unit;   
+            this.option.series[0].label.normal.formatter = '{b}\n{c}'+pieJson.unit;   
         }).catch(()=>{
             console.log('Server\'s data service is down!');
         });
