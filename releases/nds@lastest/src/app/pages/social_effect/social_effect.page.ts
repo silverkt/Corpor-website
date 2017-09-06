@@ -7,5 +7,11 @@ import { Component } from "@angular/core";
     styleUrls: ['social_effect.page.css']
 })
 export class SocialEffectPage {
+     trendrqfor = 'socialtrend1';
+
+     changeRqfor(trend: string) {
+         console.log('click3e');
+         this.trendrqfor = trend;
+     }
 
 }

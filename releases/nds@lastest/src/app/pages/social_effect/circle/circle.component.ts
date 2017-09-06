@@ -175,7 +175,7 @@ export class Circle2SocialComponent extends CircleComponent {
     protected getComponentData(): Promise<any> {
         return this.data.getData(this.url).then(response => {            
             let circleJson = response.json();
-            this.option.title  = circleJson.title+this.rqfor;
+            this.option.title  = circleJson.title;
             this.option.value = circleJson.value;
             this.option.unit = circleJson.unit;
         }).catch(()=>{

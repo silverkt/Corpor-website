@@ -23,9 +23,16 @@ declare var globalvar: any;
     providers:[ DataService ], 
 })
 export class PieComponent{ 
+    @Input()
+    htmlID: string;
+
     ngAfterViewInit() {
-        this.refreshComponent();
+        
+        //this.refreshComponent();
     }
+
+ 
+
     /**时间范围 
      * @总累计: 1
      * @当年：2
@@ -36,14 +43,19 @@ export class PieComponent{
     @Input()
     set tscope(tscope: string) {
         this._tscope = tscope;
-        this.refreshComponent();
+        if(this._tscope == 'no') {
+            return;
+        } else {
+            this.refreshComponent();
+        }
+        //
     }    
     /**
      * 通过get方法监听输入属性scope的变化，变化时初始化子组件配置
      * 而后调用后端获取数据方法
      */
     get tscope(): string {
-        this._tscope = this._tscope ? this._tscope : "1"; 
+        this._tscope = this._tscope ? this._tscope : "no"; 
         return this._tscope;
     }
     
@@ -58,10 +70,15 @@ export class PieComponent{
     @Input()
     set ascope(ascope: string) {
         this._ascope = ascope;
+                if(this._ascope == 'no') {
+            return;
+        } else {
+            this.refreshComponent();
+        }
               
     }
     get ascope(): string {
-        this._ascope = this._ascope ? this._ascope : "1";
+        this._ascope = this._ascope ? this._ascope : "no";
         return this._ascope; 
     }
     
@@ -74,18 +91,22 @@ export class PieComponent{
     @Input()
     set rqfor(rqfor: string) { 
         this._rqfor = rqfor;   
+                if(this._rqfor == 'no') {
+            return;
+        } else {
+            this.refreshComponent();
+        }
       
     }
     get rqfor(): string {
-        this._rqfor = this._rqfor ? this._rqfor : "1";
+        this._rqfor = this._rqfor ? this._rqfor : "no";
         return this._rqfor;
     }
 
     /**后端数据请求api */
     public url: string; 
 
-    /**模板id 以便js getElementByID获取 */
-    public htmlID;
+  
     
     /**图表配置对象 json格式 */
     public option: any = {};
@@ -104,7 +125,10 @@ export class PieComponent{
      * 包含重新渲染当前图表
      */
     protected refreshComponent() {
-        this.htmlID = 'pie'+this.rqfor+this.ascope+this.tscope;     
+        if(this.rqfor == 'no' || this.ascope == 'no' || this.tscope == 'no') {
+             
+            return;
+        }  
         this.refreshUrl();
         this.getComponentData().then(()=>{
             this.renderChart();
@@ -124,6 +148,7 @@ export class PieComponent{
     protected getComponentData(): Promise<any> {
         return this.data.getData(this.url).then(response => {            
             let pieJson = response.json();
+        
             // let pieData: Array<any> = [];
             // pieJson.forEach(element => {
             //     pieData.push({"name": element.name,"value": element.percent});
@@ -131,8 +156,6 @@ export class PieComponent{
             this.option.series[0].data = pieJson.data;
             this.option.title.text = pieJson.title;
             this.option.series[0].label.normal.formatter = '{b}\n{c}'+pieJson.unit;   
-        }).catch(()=>{
-            console.log('Server\'s data service is down!');
         });
     }
 

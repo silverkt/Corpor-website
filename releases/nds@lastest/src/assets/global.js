@@ -34,7 +34,7 @@ var globalvar = {
         {
             "id": 6,
             "label": "社会效用坐标曲线",
-            "url": "http://pz.webcity3d.com/eos/web/images/rems/xyline4.json"
+            "url": "http://222.222.120.72:808/redsv9/webapi/trend"
         },
         {
             "id": 7,

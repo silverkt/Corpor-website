@@ -32,7 +32,7 @@ export class LineSocialComponent extends LineComponent{
      * 更新向api请求的url参数
      */
     protected refreshUrl() {
-        this.url = globalvar.api[6].url+"?rqfor2="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
+        this.url = globalvar.api[6].url+"?rqfor="+this.rqfor+"&tscope="+this.tscope+"&ascope="+this.ascope;
         console.log(this.url);
     }
 }
