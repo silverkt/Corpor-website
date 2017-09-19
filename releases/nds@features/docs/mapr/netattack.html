@@ -215,6 +215,7 @@ var series = [];
 [
     ['天津', BJData]
 ].forEach(function(item, i) {
+	console.log( convertData(item[1]));
     series.push(
 
         {
@@ -234,9 +235,9 @@ var series = [];
                     curveness: 0
                 }
             },
-
             data: convertData(item[1])
-        }, {
+        }, 
+        {
             type: 'effectScatter',
             coordinateSystem: 'geo',
             zlevel: 2,

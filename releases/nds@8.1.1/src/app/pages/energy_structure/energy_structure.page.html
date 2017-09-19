@@ -1,0 +1,53 @@
+<all-map></all-map> 
+
+<div class="buttondiv">
+<bottom-navi></bottom-navi>
+</div>
+
+<div class="topdiv">
+ 
+ 
+
+
+<div>
+ <div style="width:1300px;margin: 0 auto;">
+ 
+    
+    <br><br><br><br>
+ <br><br><br><br>
+
+<p-panel header="能源结构">
+   <br><br>
+       <energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="'structall'" [htmlID]="'pie1'" style="float: left;"></energy-structure>
+<energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="'structclear'" [htmlID]="'pie2'" style="float: left;"></energy-structure>
+<energy-structure [ascope]="1" [tscope]="tscope" [rqfor]="'structreuse'" [htmlID]="'pie3'" style="float: left;"></energy-structure>
+                                <div class="btn-group">
+                                    <a class="btn btn-default" (click)="changeScope('1')">累计</a>
+                                    <a class="btn btn-default" (click)="changeScope('2')">当年</a>
+                                    <a class="btn btn-default" (click)="changeScope('3')">当月</a>
+                                    <a class="btn btn-default" (click)="changeScope('4')">当日</a>
+                        
+                                </div> 
+                                    
+
+      
+
+
+
+
+</p-panel>
+
+
+
+
+
+</div>
+
+ 
+   
+</div>
+
+ 
+
+
+ <div class="topdiv">
