@@ -16,7 +16,7 @@
 </head>
 <body>
    
-<div style="width:1920px; height:1080px;" id="mapt"></div>
+<div style="width:1080px; height:980px;" id="mapt"></div>
 
 
  <script type="text/javascript" src="china.js"></script>
@@ -46,24 +46,121 @@ let option = {
         	}
         }
     },
+    legend: {
+    	data: [
+     
+    		{
+    			name: 'shit title2'
+    		},
+    		{
+    			name: 'shit title'
+    		}
+    	]
+    },
+    visualMap: [
+    	{
+    		type: 'continuous',
+    		min: 0,
+    		max: 100,
+    		calculable: true,
+    		dimension: 3,
+    		inRange: {
+    			color: ['#373686', '#431425']
+    		} 
+
+    	}
+    ],
     series: [
     	{
+    	     
+    		name: 'shit title',
     		type: 'scatter',
 	    	coordinateSystem: 'geo',
 	    	label: {
+	    		emphasis: {
+	    			show: true,
+	    			position: 'right',
+	    			formatter: (params) => { return params.data.value[2]+'\n'+params.data.value[3] }
+	    		}
+	    	},
+	    	itemStyle: {
 	    		normal: {
-	    			show: true
+	    			color: '#373686'
+	    		},
+	    		emphasis: {
+	    			color: '#fff',
+	    			textBorderWidth:0
 	    		}
 	    	},
 	    	data: [
-	    		[[1]15.9167, 36.4032, 'liaocheng'],
-	    		[119.1248, 34.552, 'lianyungang']
+		    	{
+		    		name: 'shit1',
+		    		value: [115.9167, 36.4032, 'liaocheng','1']
+		    	},
+		    	{
+		    		name: 'shit2',
+		    		value: [119.1248, 34.552, 'lianyungang','20']	    		
+		    	} 
 	    	] 
+	    },
+	    {
+    	     
+    		name: 'shit title2',
+    		type: 'scatter',
+	    	coordinateSystem: 'geo',
+	    	label: {
+	    		emphasis: {
+	    			show: true,
+	    			position: 'right',
+	    			formatter: (params) => { return params.data.value[2]+'\n'+params.data.value[3] }
+	    		}
+	    	},
+	    	itemStyle: {
+	    		normal: {
+	    			color: '#373686'
+	    		},
+	    		emphasis: {
+	    			color: '#fff',
+	    			textBorderWidth:0
+	    		}
+	    	},
+	    	data: [
+		    	 
+		    	{
+		    		name: 'shit2',
+		    		value: [125.8154, 44.2584, 'lianyungang','30']	    		
+		    	},
+		    	{
+		    		name: 'shit2',
+		    		value: [113.0823, 28.2568, 'lianyungang','40']	    		
+		    	},
+		    	{
+		    		name: 'shit2',
+		    		value: [107.7539, 30.1904, 'lianyungang','70']	    		
+		    	},
+		    	{
+		    		name: 'shit2',
+		    		value: [109.1162, 34.2004, 'lianyungang','90']	    		
+		    	}
+	    	] 
+	    },
+
+	    {
+	    	type: 'lines',
+	    	name: 'xian',
+	    	data: [{
+	    		name: 'shit1',
+	    		coords:[
+	    			[125.8154, 44.2584],
+	    			[107.7539, 30.1904]
+	    		]
+	    	}]
 	    }
+	    
     ] 
 
 }
-
+ 
 
 // let option = {
 // 	geo3D: {
