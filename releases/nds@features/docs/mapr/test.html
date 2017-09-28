@@ -57,19 +57,19 @@ let option = {
     		}
     	]
     },
-    visualMap: [
-    	{
-    		type: 'continuous',
-    		min: 0,
-    		max: 100,
-    		calculable: true,
-    		dimension: 3,
-    		inRange: {
-    			color: ['#373686', '#431425']
-    		} 
+    // visualMap: [
+    // 	{
+    // 		type: 'continuous',
+    // 		min: 0,
+    // 		max: 100,
+    // 		calculable: true,
+    // 		dimension: 3,
+    // 		inRange: {
+    // 			color: ['#373686', '#431425']
+    // 		} 
 
-    	}
-    ],
+    // 	}
+    // ],
     series: [
     	{
     	     
@@ -106,8 +106,13 @@ let option = {
 	    {
     	     
     		name: 'shit title2',
-    		type: 'scatter',
+    		type: 'effectScatter',
 	    	coordinateSystem: 'geo',
+	    	rippleEffect: {
+	    		period: 8,
+	    		scale: 5,
+	    		brushType: 'stroke'
+	    	},
 	    	label: {
 	    		emphasis: {
 	    			show: true,
@@ -148,6 +153,7 @@ let option = {
 	    {
 	    	type: 'lines',
 	    	name: 'xian',
+	    	coordinateSystem: 'geo',
 	    	data: [{
 	    		name: 'shit1',
 	    		coords:[
