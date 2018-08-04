@@ -1,6 +1,6 @@
 <template>
 <div>  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-  <div id="logo-wrapper"><img id="logo" src="../../assets/logo.png"></div>
+  <div id="logo-wrapper"><img id="logo" src="./img/logo.png"></div>
   <el-menu-item index="1">首页</el-menu-item>
   <el-submenu index="2">
     <template slot="title">关于我们</template>
@@ -47,12 +47,12 @@ export default {
 <style lang="stylus" scoped>
 #logo-wrapper
   height: 60px;
-  line-height: 60px;   
+ 
   width: 100px;   
   float: left;
   &:visited
     border: none;
 #logo
-  width: 20px;
-  height: 20px;  
+  width: 60px;
+  height: 60px;  
 </style>
