@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <my-navi></my-navi>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -7,6 +8,16 @@
     <router-view/>
   </div>
 </template>
+<script>
+import Navi from "@/components/navi/Navi.vue"
+export default {
+  name: 'app',
+  components: {
+    'my-navi' : Navi
+  }
+}
+</script>
+
 
 <style lang="stylus">
 #app
