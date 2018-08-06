@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     handleSelect: function() {
-      console.log('shitone');
+      console.log('shitonesss');
     }
   }
 
