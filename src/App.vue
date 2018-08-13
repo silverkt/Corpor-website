@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <my-navi></my-navi>
+    <my-carousel></my-carousel>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -9,11 +10,13 @@
   </div>
 </template>
 <script>
-import Navi from "@/components/navi/Navi.vue"
+import Navi from "@/components/navi/Navi.vue";
+import Carousel from "@/components/carousel/Carousel.vue";
 export default {
   name: 'app',
   components: {
-    'my-navi' : Navi
+    'my-navi' : Navi,
+    'my-carousel': Carousel
   }
 }
 </script>
