@@ -37,7 +37,7 @@ export default {
     }
   },
   created() {
-    console.log('this is ok');
+    console.log('this is');
     this.handleSelect();
   },
   methods: {
