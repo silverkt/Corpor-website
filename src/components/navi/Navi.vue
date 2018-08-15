@@ -30,6 +30,7 @@
 </template>
 <script>
 export default {
+
   name: 'navi',  
   data() {
     return {
@@ -39,12 +40,14 @@ export default {
   created() {
     console.log('this is');
     this.handleSelect();
+    console.log('this is');
   },
   methods: {
     handleSelect: function() {
       console.log('shitonesss');
     }
-  }
+  },
+
 
 }
 </script>
