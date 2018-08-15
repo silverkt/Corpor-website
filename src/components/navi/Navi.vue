@@ -30,21 +30,24 @@
 </template>
 <script>
 export default {
+
   name: 'navi',  
-  a1ddfasdfata() {
+  data() {
     return {
       activeIndex: "1"
     }
   },
-  a1testded() {
+  created() {
     console.log('this is');
     this.handleSelect();
+    console.log('this is');
   },
-  a1sithsidds: {
+  methods: {
     handleSelect: function() {
       console.log('shitonesss');
     }
-  }
+  },
+
 
 }
 </script>
