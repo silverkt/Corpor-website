@@ -31,16 +31,16 @@
 <script>
 export default {
   name: 'navi',  
-  data() {
+  a1ddfasdfata() {
     return {
       activeIndex: "1"
     }
   },
-  created() {
+  a1testded() {
     console.log('this is');
     this.handleSelect();
   },
-  methods: {
+  a1sithsidds: {
     handleSelect: function() {
       console.log('shitonesss');
     }
