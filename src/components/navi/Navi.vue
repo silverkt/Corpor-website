@@ -30,21 +30,23 @@
 </template>
 <script>
 export default {
-  name: 'navi',  
+  name: 'navbbbbi',  
+
+  methods: {
+    handleSelect: function() {
+      console.log('shitonesss');
+    }
+  },
+  created() {
+    this.handleSelect();
+    console.log('this is');
+  },
   data() {
     return {
       activeIndex: "1"
     }
   },
-  created() {
-    console.log('this is');
-    this.handleSelect();
-  },
-  methods: {
-    handleSelect: function() {
-      console.log('shitonesss');
-    }
-  }
+
 
 }
 </script>
