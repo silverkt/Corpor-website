@@ -1,4 +1,4 @@
-# seed
+# seed for ts
 
 ## Project setup
 ```
